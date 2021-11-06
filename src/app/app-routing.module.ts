@@ -45,13 +45,18 @@ const routes: Routes = [
   { path: "examples/login-page", component: LoginpageComponent },
   { path: "examples/pricing-page", component: PricingpageComponent },
   { path: "examples/product-page", component: ProductpageComponent },
-  { path: "examples/reset-page", component: ResetpageComponent }
+  { path: "examples/reset-page", component: ResetpageComponent },
+  { path: "login", component: LoginpageComponent },
+  { path: "signup", component: RegisterpageComponent },
+  { path: "dashboard", component: PresentationComponent },
+  { path: "qrdetails", component: ProductpageComponent },
+  { path: "account", component: AccountsettingsComponent }
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      useHash: true,
+      useHash: false,
       scrollPositionRestoration: "enabled",
       anchorScrolling: "enabled",
       scrollOffset: [0, 64]
