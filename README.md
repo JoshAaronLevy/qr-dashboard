@@ -1,1 +1,1 @@
-# QR Code Dashboard
+# QR Dashboard

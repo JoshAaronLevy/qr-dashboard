@@ -34,7 +34,7 @@
               "src/assets/css/font-awesome.css",
               "src/assets/scss/argon-design-system.scss"
             ],
-            "scripts": [],
+            "scripts": []
           },
           "configurations": {
             "production": {

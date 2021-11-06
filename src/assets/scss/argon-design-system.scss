@@ -4,10 +4,10 @@
  * Argon Desing System PRO Angular - v1.2.0
  =========================================================
 
- * Product Page: https://www.creative-tim.com/product/qr-dashboard
- * Copyright 2021 Creative Tim (http://www.creative-tim.com)
+ * Product Page: https://www.qrdashboard.com/product/qr-dashboard
+ * Copyright 2021 QR Dashboard (http://www.qrdashboard.com)
 
-Coded by www.creative-tim.com
+Coded by www.qrdashboard.com
 
  =========================================================
 
