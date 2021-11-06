@@ -6,11 +6,14 @@
 				<div class="row">
 					<div class="col-lg-10 mx-auto">
 						<h2 class="video-text">QR Dashboard</h2>
-						<div class="login-card col-lg-7 col-md-8 mx-auto">
+						<div class="auth-card col-lg-8 col-md-8 mx-auto">
 							<div class="card bg-secondary shadow border-0">
 								<div class="card-body px-lg-5 py-lg-5">
 									<div class="text-center text-muted mb-4">
 										<h4>Login</h4>
+									</div>
+									<div *ngIf="loginError" class="alert alert-danger" role="alert">
+										<strong>Login Failed:</strong> {{ errorMsg }}
 									</div>
 									<form role="form" [formGroup]="userLogin" (ngSubmit)="login()">
 										<div class="form-group mb-3">
@@ -40,8 +43,11 @@
 											</label>
 										</div>
 										<div class="text-center">
-											<button class="btn btn-primary my-4" type="submit">
+											<button *ngIf="!loading" class="btn btn-primary my-4" type="submit">
 												Login
+											</button>
+											<button *ngIf="loading" class="btn btn-primary my-4" type="submit" disabled="loading">
+												Signing In...
 											</button>
 										</div>
 									</form>

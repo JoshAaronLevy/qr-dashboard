@@ -14,12 +14,15 @@ import swal from "sweetalert2";
 	]
 })
 export class RegisterpageComponent implements OnInit {
+	loading: boolean;
 	username: string;
 	userSignUp: FormGroup;
 	userEmail: string;
 	isAgent: string;
 	userPointer: any;
 	passwordConfirmed: boolean;
+	signUpError: boolean;
+	errorMsg: string;
 	constructor(
 		private formBuilder: FormBuilder,
 		public router: Router
@@ -29,6 +32,8 @@ export class RegisterpageComponent implements OnInit {
 	}
 
 	ngOnInit() {
+		this.loading = false;
+		this.signUpError = false;
 		this.username = getStoredUser().username;
 		if (this.username) {
 			this.router.navigate(['/dashboard']);
@@ -42,7 +47,8 @@ export class RegisterpageComponent implements OnInit {
 		});
 	}
 
-	userSignup() {
+	async userSignup() {
+		this.loading = true;
 		const user = new Parse.User();
 		const fullName = `${this.userSignUp.value.firstName} ${this.userSignUp.value.lastName}`;
 		user.set('firstName', this.userSignUp.value.firstName);
@@ -58,16 +64,20 @@ export class RegisterpageComponent implements OnInit {
 		if (this.isAgent === 'YES') {
 			user.set('agentID', this.userSignUp.value.email);
 		}
-		user.signUp().then((user) => {
+		await user.signUp().then((user) => {
 			this.userPointer = user;
 			storeUser(user);
 			if (this.isAgent === 'YES') {
 				this.agentSignup();
 			} else {
-				this.router.navigate(['/dashboard']);
+				this.presentSignUpSuccess();
 			}
+			return user;
 		}).catch((error) => {
-			this.presentSignUpError(error);
+			this.errorMsg = error;
+			this.signUpError = true;
+			this.loading = false;
+			return error;
 		});
 	}
 
@@ -82,35 +92,27 @@ export class RegisterpageComponent implements OnInit {
 		agent.set('user', this.userPointer);
 		agent.set('userPointer', this.userPointer);
 		await agent.save().then((response) => {
-			this.presentLoginSuccess();
+			this.presentSignUpSuccess();
 			return response;
 		}).catch((error) => {
-			this.presentSignUpError(error);
+			this.errorMsg = error;
+			this.signUpError = true;
+			this.loading = false;
+			return error;
 		});
 	}
 
-	presentLoginSuccess() {
+	presentSignUpSuccess() {
 		swal.fire({
 			title: "Success!",
-			timer: 1500,
+			timer: 1000,
 			showConfirmButton: false,
 			icon: "success"
 		});
 		setTimeout(() => {
+			this.loading = false;
 			this.router.navigate(['/dashboard']);
-		}, 1500);
-	}
-
-	presentSignUpError(error) {
-		swal.fire({
-			title: "Sign Up Failed",
-			buttonsStyling: false,
-			customClass: {
-				confirmButton: "btn btn-danger",
-			},
-			icon: "error",
-			html: `<b>${error}</b>`
-		});
+		}, 1000);
 	}
 
 	login() {

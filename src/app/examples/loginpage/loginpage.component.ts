@@ -14,9 +14,12 @@ import swal from "sweetalert2";
 	]
 })
 export class LoginpageComponent implements OnInit {
+	loading: boolean;
 	user: any;
 	userLogin: FormGroup;
 	userEmail: string;
+	loginError: boolean;
+	errorMsg: string;
 	constructor(
 		private formBuilder: FormBuilder,
 		public router: Router
@@ -26,6 +29,8 @@ export class LoginpageComponent implements OnInit {
 	}
 
 	ngOnInit() {
+		this.loading = false;
+		this.loginError = false;
 		this.user = getStoredUser();
 		if (this.user.sessionToken) {
 			this.router.navigate(['/dashboard']);
@@ -37,38 +42,33 @@ export class LoginpageComponent implements OnInit {
 	}
 
 	async login() {
+		this.loginError = false;
+		this.loading = true;
 		const login = this.userLogin.value.userName;
 		const password = this.userLogin.value.password;
 		await Parse.User.logIn(login, password).then((user) => {
 			storeUser(user);
 			this.presentLoginSuccess();
+			return user;
 		}).catch((error) => {
-			this.presentLoginError(error);
+			this.errorMsg = error;
+			this.loginError = true;
+			this.loading = false;
+			return error;
 		});
 	}
 
 	presentLoginSuccess() {
 		swal.fire({
 			title: "Success!",
-			timer: 1500,
+			timer: 1000,
 			showConfirmButton: false,
 			icon: "success"
 		});
 		setTimeout(() => {
+			this.loading = false;
 			this.router.navigate(['/dashboard']);
-		}, 1500);
-	}
-
-	presentLoginError(error) {
-		swal.fire({
-			title: "Login Failed",
-			buttonsStyling: false,
-			customClass: {
-				confirmButton: "btn btn-danger",
-			},
-			icon: "error",
-			html: `<b>${error}</b>`
-		});
+		}, 1000);
 	}
 
 	presentResetPasswordPrompt() {

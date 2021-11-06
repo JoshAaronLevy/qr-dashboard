@@ -4,14 +4,14 @@
 
 .overlap-card {
 	margin-top: -150px !important;
-	z-index: 999 !important;
+	z-index: 99 !important;
 }
 
 .header-4 .video-text {
 	font-size: 4em !important;
 }
 
-.login-card {
+.auth-card {
 	margin-top: 50px !important;
 }
 
@@ -27,4 +27,11 @@ a.auth-form-link:hover {
 	color: #444 !important;
 	cursor: pointer;
 	text-decoration: none;
+}
+
+.alert-danger {
+	padding: .75rem 1rem !important;
+	background-color: #f5365c !important;
+    border-color: #f5365c !important;
+    color: #fff !important;
 }
