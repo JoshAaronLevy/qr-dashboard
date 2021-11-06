@@ -22,47 +22,19 @@
 							<app-picture-upload [avatar]="true"></app-picture-upload>
 							<h3 class="title mt-4">{{ user.firstName }} {{ user.lastName }}</h3>
 						</section>
-						<section>
-							<br />
-
-							<ul class="nav flex-column" role="tablist">
-								<li class="nav-item">
-									<a class="nav-link active" data-toggle="tab" href="#user" role="tablist">
-										<i class="tim-icons icon-single-02"> </i> User
-									</a>
-								</li>
-								<hr class="line-primary" />
-
-								<li class="nav-item">
-									<a class="nav-link" data-toggle="tab" href="#agent" role="tablist">
-										<i class="tim-icons icon-single-02"> </i> Agent
-									</a>
-								</li>
-								<hr class="line-primary" />
-
-								<li class="nav-item">
-									<a class="nav-link" data-toggle="tab" href="#notifications" role="tablist">
-										<i class="tim-icons icon-volume-98"> </i> Notifications
-									</a>
-								</li>
-							</ul>
-						</section>
-						<br />
-						<br />
-						<br />
 					</div>
 				</div>
 				<div class="col-md-8 ml-auto">
 					<div class="section">
 						<div class="tab-content">
-							<div class="tab-pane active" id="user">
+							<div *ngIf="displayUserForm">
 								<div>
 									<header>
 										<h2>User Information</h2>
 									</header>
 									<hr class="line-primary" />
 									<br />
-									<form *ngIf="displayUserForm" role="form" [formGroup]="userEdit"
+									<form role="form" [formGroup]="userEdit"
 										(ngSubmit)="editProfile()">
 										<div class="row">
 											<div class="col-md-3 align-self-center">
@@ -86,7 +58,7 @@
 											<div class="col-md-9 align-self-center">
 												<div class="form-group">
 													<input class="form-control" id="lastName" name="lastName"
-														required="required" type="text" formControlName="lastName" />
+														required type="text" formControlName="lastName" />
 												</div>
 											</div>
 										</div>
@@ -100,7 +72,7 @@
 														class="form-control"
 														id="email"
 														name="email"
-														required="required"
+														required
 														type="email"
 														(keyup)="evaluateEmail()"
 														formControlName="email" />
@@ -116,41 +88,10 @@
 											<div class="col-md-9 align-self-center">
 												<div class="form-group">
 													<input class="form-control" id="confirmEmail" name="confirmEmail"
-														required="required" type="email" />
+														required type="email" />
 												</div>
 											</div>
 										</div>
-										<!-- <div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#phone">
-													Phone Number
-												</label>
-											</div>
-											<div class="col-md-4 align-self-center">
-												<div class="form-group">
-													<input class="form-control" id="phone" (blur)="focus = false"
-														(focus)="focus = true" name="phone" required="required" type="tel"
-														value="+40 745 031 200" />
-												</div>
-											</div>
-										</div> -->
-										<!-- <div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels"> Language </label>
-											</div>
-											<div class="col-md-4 align-self-center">
-												<div class="form-group">
-													<select class="form-control" data-trigger=""
-														id="choices-single-default5" name="choices-single-default">
-														<option selected="selected"> English </option>
-														<option value="2"> French </option>
-														<option value="3"> Spanish </option>
-														<option value="4"> Deutsche </option>
-														<option value="4"> Russian </option>
-													</select>
-												</div>
-											</div>
-										</div> -->
 										<div class="row mt-5">
 											<div class="col-md-6">
 												<button class="btn btn-primary" type="submit">
@@ -164,14 +105,14 @@
 									</form>
 								</div>
 							</div>
-							<div class="tab-pane" id="agent">
+							<div *ngIf="displayAgentForm">
 								<div>
 									<header>
 										<h2>Agent Information</h2>
 									</header>
 									<hr class="line-primary" />
 									<br />
-									<form *ngIf="displayAgentForm" role="form" [formGroup]="agentEdit"
+									<form role="form" [formGroup]="agentEdit"
 										(ngSubmit)="editProfile()">
 										<div class="row">
 											<div class="col-md-3 align-self-center">
@@ -181,8 +122,7 @@
 											</div>
 											<div class="col-md-9 align-self-center">
 												<div class="form-group">
-													<input class="form-control" type="text" formControlName="firstName"
-														value="{{ originalUser.firstName }}" />
+													<input class="form-control" type="text" formControlName="firstName" />
 												</div>
 											</div>
 										</div>
@@ -195,7 +135,7 @@
 											<div class="col-md-9 align-self-center">
 												<div class="form-group">
 													<input class="form-control" id="lastName" name="lastName"
-														required="required" type="text" formControlName="lastName" />
+														required type="text" formControlName="lastName" />
 												</div>
 											</div>
 										</div>
@@ -205,8 +145,8 @@
 											</div>
 											<div class="col-md-9 align-self-center">
 												<div class="form-group">
-													<input class="form-control" id="email" name="email"
-														required="required" type="email" formControlName="email" />
+													<input class="form-control" id="email" name="email" required type="email"
+														(keyup)="evaluateEmail()" formControlName="email" />
 												</div>
 											</div>
 										</div>
@@ -218,173 +158,181 @@
 											</div>
 											<div class="col-md-9 align-self-center">
 												<div class="form-group">
-													<input class="form-control" id="confirmEmail" name="confirmEmail"
-														required="required" type="email" formControlName="email" />
+													<input class="form-control" id="confirmEmail" name="confirmEmail" required type="email" />
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3 align-self-center">
+												<label class="labels" for="#mainPhone">
+													Main Phone #
+												</label>
+											</div>
+											<div class="col-md-9 align-self-center">
+												<div class="form-group">
+													<input class="form-control" id="mainPhone" name="mainPhone" required type="text"
+														formControlName="mainPhone" />
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3 align-self-center">
+												<label class="labels" for="#mobilePhone">
+													Mobile Phone #
+												</label>
+											</div>
+											<div class="col-md-9 align-self-center">
+												<div class="form-group">
+													<input class="form-control" id="mobilePhone" name="mobilePhone" required type="text"
+														formControlName="mobilePhone" />
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3 align-self-center">
+												<label class="labels" for="#company">
+													Company
+												</label>
+											</div>
+											<div class="col-md-9 align-self-center">
+												<div class="form-group">
+													<input class="form-control" id="company" name="company" required type="text"
+														formControlName="company" />
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3 align-self-center">
+												<label class="labels" for="#website">
+													Website
+												</label>
+											</div>
+											<div class="col-md-9 align-self-center">
+												<div class="form-group">
+													<input class="form-control" id="website" name="website" required type="text" formControlName="website" />
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3 align-self-center">
+												<label class="labels" for="#address1">
+													Address Line 1
+												</label>
+											</div>
+											<div class="col-md-9 align-self-center">
+												<div class="form-group">
+													<input class="form-control" id="address1" name="address1" required type="text" formControlName="address1" />
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3 align-self-center">
+												<label class="labels" for="#address2">
+													Address Line 2
+												</label>
+											</div>
+											<div class="col-md-9 align-self-center">
+												<div class="form-group">
+													<input class="form-control" id="address2" name="address2" required type="text" formControlName="address2" />
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3 align-self-center">
+												<label class="labels" for="#city">
+													City
+												</label>
+											</div>
+											<div class="col-md-9 align-self-center">
+												<div class="form-group">
+													<input class="form-control" id="city" name="city" required type="text" formControlName="city" />
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3 align-self-center">
+												<label class="labels" for="#state">
+													State
+												</label>
+											</div>
+											<div class="col-md-9 align-self-center">
+												<div class="form-group">
+													<input class="form-control" id="state" name="state" required type="text" formControlName="state" maxlength="2" placeholder="CA" />
 												</div>
 											</div>
 										</div>
 										<!-- <div class="row">
 											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#phone">
-													Phone Number
-												</label>
+												<label class="labels"> State </label>
 											</div>
 											<div class="col-md-4 align-self-center">
 												<div class="form-group">
-													<input class="form-control" id="phone" (blur)="focus = false"
-														(focus)="focus = true" name="phone" required="required" type="tel"
-														value="+40 745 031 200" />
-												</div>
-											</div>
-										</div> -->
-										<!-- <div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels"> Language </label>
-											</div>
-											<div class="col-md-4 align-self-center">
-												<div class="form-group">
-													<select class="form-control" data-trigger=""
-														id="choices-single-default5" name="choices-single-default">
+													<select formControlName="state" class="form-control" data-trigger="" id="choices-single-default5" name="choices-single-default">
 														<option selected="selected"> English </option>
 														<option value="2"> French </option>
-														<option value="3"> Spanish </option>
-														<option value="4"> Deutsche </option>
-														<option value="4"> Russian </option>
 													</select>
 												</div>
 											</div>
 										</div> -->
+										<div class="row">
+											<div class="col-md-3 align-self-center">
+												<label class="labels" for="#zip">
+													Zip
+												</label>
+											</div>
+											<div class="col-md-9 align-self-center">
+												<div class="form-group">
+													<input class="form-control" id="zip" name="zip" required type="text" formControlName="zip" />
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3 align-self-center">
+												<label class="labels" for="#facebook">
+													Facebook
+												</label>
+											</div>
+											<div class="col-md-9 align-self-center">
+												<div class="form-group">
+													<input class="form-control" id="facebook" name="facebook" required type="url" formControlName="facebook" />
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3 align-self-center">
+												<label class="labels" for="#linkedIn">
+													LinkedIn
+												</label>
+											</div>
+											<div class="col-md-9 align-self-center">
+												<div class="form-group">
+													<input class="form-control" id="linkedIn" name="linkedIn" required type="url" formControlName="linkedIn" />
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-3 align-self-center">
+												<label class="labels" for="#aboutMe">
+													About Me
+												</label>
+											</div>
+											<div class="col-md-9 align-self-center">
+												<div class="form-group">
+													<textarea class="form-control" id="aboutMe" name="aboutMe" required formControlName="aboutMe"></textarea>
+												</div>
+											</div>
+										</div>
 										<div class="row mt-5">
 											<div class="col-md-6">
-												<button class="btn btn-primary" type="submit">
+												<button class="btn btn-success" type="submit">
 													Save Changes
 												</button>
-												<button class="btn btn-outline-primary" type="reset">
+												<button class="btn btn-danger" type="reset">
 													Cancel
 												</button>
 											</div>
 										</div>
 									</form>
-								</div>
-							</div>
-							<div class="tab-pane" id="notifications">
-								<div class="container">
-									<div class="row">
-										<div class="col-12">
-											<alert class="text-small" [type]="'primary'">
-												<i class="icon-shield"> </i>
-												<span>
-													We will never distribute your email address to
-													third parties. Read about email communication in
-													our privacy policy.
-												</span>
-											</alert>
-										</div>
-									</div>
-									<hr />
-
-									<div class="row">
-										<div class="col-12">
-											<form>
-												<h5 class="mb-4">Notification Preferences</h5>
-												<div class="custom-control custom-checkbox mb-3">
-													<input checked="checked" class="custom-control-input"
-														id="notification1" type="checkbox" />
-
-													<label class="custom-control-label" for="notification1">
-														<span> Someone mentions me </span>
-													</label>
-												</div>
-												<div class="custom-control custom-checkbox mb-3">
-													<input checked="checked" class="custom-control-input"
-														id="notification2" type="checkbox" />
-
-													<label class="custom-control-label" for="notification2">
-														<span> Someone follows me </span>
-													</label>
-												</div>
-												<div class="custom-control custom-checkbox mb-3">
-													<input class="custom-control-input" id="notification3"
-														type="checkbox" />
-
-													<label class="custom-control-label" for="notification3">
-														<span> Someone shares my activty </span>
-													</label>
-												</div>
-												<div class="custom-control custom-checkbox mb-3">
-													<input class="custom-control-input" id="notification4"
-														type="checkbox" />
-
-													<label class="custom-control-label" for="notification4">
-														<span> Someone messages me </span>
-													</label>
-												</div>
-												<div class="custom-control custom-checkbox mb-3">
-													<input class="custom-control-input" id="notification5"
-														type="checkbox" />
-
-													<label class="custom-control-label" for="notification5">
-														<span> Someone adds me to a project </span>
-													</label>
-												</div>
-												<div class="custom-control custom-checkbox mb-3">
-													<input class="custom-control-input" id="notification6"
-														type="checkbox" />
-
-													<label class="custom-control-label" for="notification6">
-														<span> Sales and promotions </span>
-													</label>
-												</div>
-												<button class="btn btn-primary btn-sm mt-3 mb-5" type="submit">
-													Update preferences
-												</button>
-											</form>
-										</div>
-									</div>
-									<hr />
-
-									<div class="row">
-										<div class="col-12">
-											<form>
-												<h5>Notification Frequency</h5>
-												<div class="custom-control custom-radio mb-3">
-													<input class="custom-control-input" id="freq1" name="custom-radio-1"
-														type="radio" />
-
-													<label class="custom-control-label" for="freq1">
-														<span> Daily </span>
-													</label>
-												</div>
-												<div class="custom-control custom-radio mb-3">
-													<input class="custom-control-input" id="freq2" name="custom-radio-1"
-														type="radio" />
-
-													<label class="custom-control-label" for="freq2">
-														<span> Weekly </span>
-													</label>
-												</div>
-												<div class="custom-control custom-radio mb-3">
-													<input class="custom-control-input" id="freq3" name="custom-radio-1"
-														type="radio" />
-
-													<label class="custom-control-label" for="freq3">
-														<span> Monthly </span>
-													</label>
-												</div>
-												<div class="custom-control custom-radio mb-3">
-													<input checked="checked" class="custom-control-input" id="freq4"
-														name="custom-radio-1" type="radio" />
-
-													<label class="custom-control-label" for="freq4">
-														<span> Never </span>
-													</label>
-												</div>
-												<button class="btn btn-primary btn-sm mt-3" type="submit">
-													Update
-												</button>
-											</form>
-										</div>
-									</div>
 								</div>
 							</div>
 						</div>

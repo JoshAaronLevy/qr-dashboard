@@ -49,6 +49,7 @@ export class RegisterpageComponent implements OnInit {
 
 	async userSignup() {
 		this.loading = true;
+		this.isAgent = "YES";
 		const user = new Parse.User();
 		const fullName = `${this.userSignUp.value.firstName} ${this.userSignUp.value.lastName}`;
 		user.set('firstName', this.userSignUp.value.firstName);

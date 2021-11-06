@@ -26,6 +26,7 @@ export class AccountsettingsComponent implements OnInit, OnDestroy {
 	agentEdit: FormGroup = new FormGroup({
 		firstName: new FormControl(''),
 		lastName: new FormControl(''),
+		email: new FormControl(''),
 		mainPhone: new FormControl(''),
 		mobilePhone: new FormControl(''),
 		company: new FormControl(''),
@@ -75,13 +76,16 @@ export class AccountsettingsComponent implements OnInit, OnDestroy {
 		const User = new Parse.User();
 		const query = new Parse.Query(User);
 		this.userId = getStoredUser().userId;
+		this.isAgent = true;
 		query.get(this.userId).then((user) => {
 			this.user = parseResult(user);
-			if (this.isAgent === true) {
-				this.checkAgent();
-			} else {
-				this.userForm();
-			}
+			this.agent = this.user;
+			this.agentForm();
+			// if (this.isAgent === true) {
+			// 	this.checkAgent();
+			// } else {
+			// 	this.userForm();
+			// }
 		}, (error) => {
 			this.presentUserError(error);
 		});
@@ -91,21 +95,21 @@ export class AccountsettingsComponent implements OnInit, OnDestroy {
 		const Agents = Parse.Object.extend('Agents');
 		const query = new Parse.Query(Agents);
 		this.username = getStoredUser().username;
-		query.equalTo('agentID', this.username);
-		query.find().then((agent) => {
-			if (agent.length > 0) {
-				this.agent = parseResults(agent);
-				this.agent = this.agent[0];
-				localStorage.setItem('agentId', this.agent.id);
-				this.agentForm();
-			} else {
-				this.isAgent = false;
-			}
-		}, (error) => {
-			this.isAgent = false;
-			return error;
-			// this.presentUserError(error);
-		});
+		// query.equalTo('agentID', this.username);
+		// query.find().then((agent) => {
+		// 	if (agent.length > 0) {
+		// 		this.agent = parseResults(agent);
+		// 		this.agent = this.agent[0];
+		// 		localStorage.setItem('agentId', this.agent.id);
+		// 		this.agentForm();
+		// 	} else {
+		// 		this.isAgent = false;
+		// 	}
+		// }, (error) => {
+		// 	this.isAgent = false;
+		// 	this.presentUserError(error);
+		// 	return error;
+		// });
 	}
 
 	userForm() {
@@ -121,12 +125,13 @@ export class AccountsettingsComponent implements OnInit, OnDestroy {
 	agentForm() {
 		this.displayAgentForm = true;
 		this.displayUserForm = false;
-		const splitName = this.agent.agentDisplayName.split(' ');
-		const agentFirstName = splitName[0];
-		const agentLastName = splitName[1];
+		// const splitName = this.agent.agentDisplayName.split(' ');
+		// const agentFirstName = splitName[0];
+		// const agentLastName = splitName[1];
 		this.agentEdit = this.formBuilder.group({
-			firstName: agentFirstName,
-			lastName: agentLastName,
+			firstName: this.user.firstName,
+			lastName: this.user.lastName,
+			email: this.user.email,
 			mainPhone: this.agent.agentPhoneMain,
 			mobilePhone: this.agent.agentPhoneMobile,
 			company: this.agent.agentOfficeName,
