@@ -49,7 +49,9 @@ const routes: Routes = [
   { path: "login", component: LoginpageComponent },
   { path: "signup", component: RegisterpageComponent },
   { path: "dashboard", component: PresentationComponent },
-  { path: "qrdetails", component: ProductpageComponent },
+  { path: "qrcodes", component: PresentationComponent },
+  { path: "qrcodes/:id", component: ProductpageComponent },
+  { path: "qrcodes/create", component: ProductpageComponent },
   { path: "account", component: AccountsettingsComponent }
 ];
 

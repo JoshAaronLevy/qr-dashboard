@@ -33,7 +33,7 @@ export class LoginpageComponent implements OnInit {
 		this.loginError = false;
 		this.user = getStoredUser();
 		if (this.user.sessionToken) {
-			this.router.navigate(['/dashboard']);
+			this.router.navigate(['/qrcodes']);
 		}
 		this.userLogin = this.formBuilder.group({
 			userName: '',
@@ -61,14 +61,14 @@ export class LoginpageComponent implements OnInit {
 	presentLoginSuccess() {
 		swal.fire({
 			title: "Success!",
-			timer: 1000,
+			timer: 1500,
 			showConfirmButton: false,
 			icon: "success"
 		});
 		setTimeout(() => {
 			this.loading = false;
-			this.router.navigate(['/dashboard']);
-		}, 1000);
+			this.router.navigate(['/qrcodes']);
+		}, 1500);
 	}
 
 	presentResetPasswordPrompt() {

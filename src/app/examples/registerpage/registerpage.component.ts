@@ -36,7 +36,7 @@ export class RegisterpageComponent implements OnInit {
 		this.signUpError = false;
 		this.username = getStoredUser().username;
 		if (this.username) {
-			this.router.navigate(['/dashboard']);
+			this.router.navigate(['/qrcodes']);
 		}
 		this.userSignUp = this.formBuilder.group({
 			firstName: '',
@@ -106,14 +106,14 @@ export class RegisterpageComponent implements OnInit {
 	presentSignUpSuccess() {
 		swal.fire({
 			title: "Success!",
-			timer: 1000,
+			timer: 1500,
 			showConfirmButton: false,
 			icon: "success"
 		});
 		setTimeout(() => {
 			this.loading = false;
-			this.router.navigate(['/dashboard']);
-		}, 1000);
+			this.router.navigate(['/qrcodes']);
+		}, 1500);
 	}
 
 	login() {

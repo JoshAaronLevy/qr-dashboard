@@ -93,7 +93,7 @@ import { PictureUploadComponent } from "./components/picture-upload/picture-uplo
     AlertModule.forRoot(),
     BsDatepickerModule.forRoot(),
     CarouselModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
     // NgxsModule.forRoot([ZooState], {
     //   developmentMode: !environment.production
     // })
