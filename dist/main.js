@@ -20586,7 +20586,7 @@ var QRCodesComponent = /** @class */ (function () {
         this.router.navigate(["/qrcodes/" + this.selectedQRCode.id]);
     };
     QRCodesComponent.ɵfac = function QRCodesComponent_Factory(t) { return new (t || QRCodesComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"])); };
-    QRCodesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: QRCodesComponent, selectors: [["app-qrcodes"]], decls: 20, vars: 2, consts: [[1, "wrapper"], [1, "section-shaped", "my-0", "skew-separator", "skew-mini"], [1, "page-header", "page-header-small", "header-filter"], [1, "page-header-image", 2, "background-image", "url('assets/img/pages/georgie.jpg')"], [1, "container"], [1, "header-body", "text-center", "mb-7"], [1, "row", "justify-content-center"], [1, "col-xl-5", "col-lg-6", "col-md-8", "px-5"], [1, "text-white"], [1, "bg-secondary", "qrcode-container"], [1, "container", "qrcode-card", "bg-white", "card"], [1, "row"], [1, "col-md-12"], [1, "section", "qrcode-section"], [1, "text-center", "qr-button"], ["type", "button", 1, "btn", "btn-primary"], ["class", "text-center", 4, "ngIf"], ["class", "table", 4, "ngIf"], [1, "text-center"], [1, "table"], [1, "table", "table-shopping"], [1, ""], ["class", "qr-code-table", 4, "ngIf"], [1, "qr-code-table"], [4, "ngFor", "ngForOf"], [1, "img-container"], [3, "src", "alt"], [1, "td-name"], [3, "click"], ["placement", "bottom", "containerClass", "code-info-tooltip", 3, "tooltip", "adaptivePosition", "delay", 4, "ngIf"], [4, "ngIf"], [1, "btn", "btn-icon", "btn-primary", 3, "click"], [1, "fa-solid", "fa-eye"], ["placement", "bottom", "containerClass", "code-info-tooltip", 3, "tooltip", "adaptivePosition", "delay"]], template: function QRCodesComponent_Template(rf, ctx) { if (rf & 1) {
+    QRCodesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: QRCodesComponent, selectors: [["app-qrcodes"]], decls: 20, vars: 2, consts: [[1, "wrapper"], [1, "section-shaped", "my-0", "skew-separator", "skew-mini"], [1, "page-header", "page-header-small", "header-filter"], [1, "page-header-image", 2, "background-image", "url('assets/img/pages/georgie.jpg')"], [1, "container"], [1, "header-body", "text-center", "mb-7"], [1, "row", "justify-content-center"], [1, "col-xl-5", "col-lg-6", "col-md-8", "px-5"], [1, "text-white"], [1, "bg-secondary"], [1, "container", "qrcode-card", "bg-white", "card"], [1, "row"], [1, "col-md-12", "qrcode-container"], [1, "section", "qrcode-section"], [1, "text-center", "qr-button"], ["type", "button", 1, "btn", "btn-primary"], ["class", "text-center", 4, "ngIf"], ["class", "table", 4, "ngIf"], [1, "text-center"], [1, "table"], [1, "table", "table-shopping"], [1, ""], ["class", "qr-code-table", 4, "ngIf"], [1, "qr-code-table"], [4, "ngFor", "ngForOf"], [1, "img-container"], [3, "src", "alt"], [1, "td-name"], [3, "click"], ["placement", "bottom", "containerClass", "code-info-tooltip", 3, "tooltip", "adaptivePosition", "delay", 4, "ngIf"], [4, "ngIf"], [1, "btn", "btn-icon", "btn-primary", 3, "click"], [1, "fa-solid", "fa-eye"], ["placement", "bottom", "containerClass", "code-info-tooltip", 3, "tooltip", "adaptivePosition", "delay"]], template: function QRCodesComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -20627,7 +20627,7 @@ var QRCodesComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx.qrcodesFound);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.qrcodesFound);
-        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_7__["TooltipDirective"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["SlicePipe"]], styles: [".qrcode-container[_ngcontent-%COMP%] {\n  margin-top: -120px !important;\n}\n\n.qrcode-card[_ngcontent-%COMP%] {\n  z-index: 999 !important;\n}\n\n.qrcode-section[_ngcontent-%COMP%] {\n  padding-top: 2rem !important;\n}\n\n.qr-button[_ngcontent-%COMP%] {\n  margin-bottom: 20px;\n}\n\n.panel-header-min[_ngcontent-%COMP%] {\n  height: 0px !important;\n}\n\n.qr-code-table[_ngcontent-%COMP%]   tr[_ngcontent-%COMP%]   td[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  color: #5e72e4 !important;\n}\n\n.qr-code-table[_ngcontent-%COMP%]   tr[_ngcontent-%COMP%]   td[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover {\n  color: #333333 !important;\n  cursor: pointer !important;\n}\n\n.table-shopping[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  font-size: 14px;\n  font-weight: 700;\n}\n\n.table-shopping[_ngcontent-%COMP%]   .td-name[_ngcontent-%COMP%]   small[_ngcontent-%COMP%] {\n  color: #444 !important;\n  font-weight: 500 !important;\n  font-size: 14px !important;\n}\n\n.td-name[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover {\n  color: #444 !important;\n  text-decoration: none;\n}\n\n.btn-icon[_ngcontent-%COMP%] {\n  padding: 0.625rem 0.825rem !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3FyY29kZXMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDQyw2QkFBQTtBQUNEOztBQUVBO0VBQ0MsdUJBQUE7QUFDRDs7QUFFQTtFQUNDLDRCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxtQkFBQTtBQUNEOztBQUVBO0VBQ0Msc0JBQUE7QUFDRDs7QUFFQTtFQUNDLHlCQUFBO0FBQ0Q7O0FBRUE7RUFDQyx5QkFBQTtFQUNBLDBCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxlQUFBO0VBQ0EsZ0JBQUE7QUFDRDs7QUFFQTtFQUNDLHNCQUFBO0VBQ0EsMkJBQUE7RUFDQSwwQkFBQTtBQUNEOztBQUVBO0VBQ0Msc0JBQUE7RUFDQSxxQkFBQTtBQUNEOztBQUVBO0VBQ0MscUNBQUE7QUFDRCIsImZpbGUiOiJxcmNvZGVzLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnFyY29kZS1jb250YWluZXIge1xuXHRtYXJnaW4tdG9wOiAtMTIwcHggIWltcG9ydGFudDtcbn1cblxuLnFyY29kZS1jYXJkIHtcblx0ei1pbmRleDogOTk5ICFpbXBvcnRhbnQ7XG59XG5cbi5xcmNvZGUtc2VjdGlvbiB7XG5cdHBhZGRpbmctdG9wOiAycmVtICFpbXBvcnRhbnQ7XG59XG5cbi5xci1idXR0b24ge1xuXHRtYXJnaW4tYm90dG9tOiAyMHB4O1xufVxuXG4ucGFuZWwtaGVhZGVyLW1pbiB7XG5cdGhlaWdodDogMHB4ICFpbXBvcnRhbnQ7XG59XG5cbi5xci1jb2RlLXRhYmxlIHRyIHRkIGEge1xuXHRjb2xvcjogIzVlNzJlNCAhaW1wb3J0YW50O1xufVxuXG4ucXItY29kZS10YWJsZSB0ciB0ZCBhOmhvdmVyIHtcblx0Y29sb3I6ICMzMzMzMzMgIWltcG9ydGFudDtcblx0Y3Vyc29yOiBwb2ludGVyICFpbXBvcnRhbnQ7XG59XG5cbi50YWJsZS1zaG9wcGluZyB0aCB7XG5cdGZvbnQtc2l6ZTogMTRweDtcblx0Zm9udC13ZWlnaHQ6IDcwMDtcbn1cblxuLnRhYmxlLXNob3BwaW5nIC50ZC1uYW1lIHNtYWxsIHtcblx0Y29sb3I6ICM0NDQgIWltcG9ydGFudDtcblx0Zm9udC13ZWlnaHQ6IDUwMCAhaW1wb3J0YW50O1xuXHRmb250LXNpemU6IDE0cHggIWltcG9ydGFudDtcbn1cblxuLnRkLW5hbWUgYTpob3ZlciB7XG5cdGNvbG9yOiAjNDQ0ICFpbXBvcnRhbnQ7XG5cdHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbn1cblxuLmJ0bi1pY29uIHtcblx0cGFkZGluZzogMC42MjVyZW0gMC44MjVyZW0gIWltcG9ydGFudDtcbn0iXX0= */"] });
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["NgForOf"], ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_7__["TooltipDirective"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_6__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_6__["SlicePipe"]], styles: [".qrcode-container[_ngcontent-%COMP%] {\n  margin-top: -120px !important;\n  background-color: #fff;\n}\n\n.qrcode-card[_ngcontent-%COMP%] {\n  z-index: 999 !important;\n}\n\n.qrcode-section[_ngcontent-%COMP%] {\n  padding-top: 2rem !important;\n}\n\n.qr-button[_ngcontent-%COMP%] {\n  margin-bottom: 20px;\n}\n\n.panel-header-min[_ngcontent-%COMP%] {\n  height: 0px !important;\n}\n\n.qr-code-table[_ngcontent-%COMP%]   tr[_ngcontent-%COMP%]   td[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  color: #5e72e4 !important;\n}\n\n.qr-code-table[_ngcontent-%COMP%]   tr[_ngcontent-%COMP%]   td[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover {\n  color: #333333 !important;\n  cursor: pointer !important;\n}\n\n.table-shopping[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  font-size: 14px;\n  font-weight: 700;\n}\n\n.table-shopping[_ngcontent-%COMP%]   .td-name[_ngcontent-%COMP%]   small[_ngcontent-%COMP%] {\n  color: #444 !important;\n  font-weight: 500 !important;\n  font-size: 14px !important;\n}\n\n.td-name[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover {\n  color: #444 !important;\n  text-decoration: none;\n}\n\n.btn-icon[_ngcontent-%COMP%] {\n  padding: 0.625rem 0.825rem !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3FyY29kZXMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDQyw2QkFBQTtFQUNBLHNCQUFBO0FBQ0Q7O0FBRUE7RUFDQyx1QkFBQTtBQUNEOztBQUVBO0VBQ0MsNEJBQUE7QUFDRDs7QUFFQTtFQUNDLG1CQUFBO0FBQ0Q7O0FBRUE7RUFDQyxzQkFBQTtBQUNEOztBQUVBO0VBQ0MseUJBQUE7QUFDRDs7QUFFQTtFQUNDLHlCQUFBO0VBQ0EsMEJBQUE7QUFDRDs7QUFFQTtFQUNDLGVBQUE7RUFDQSxnQkFBQTtBQUNEOztBQUVBO0VBQ0Msc0JBQUE7RUFDQSwyQkFBQTtFQUNBLDBCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxzQkFBQTtFQUNBLHFCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxxQ0FBQTtBQUNEIiwiZmlsZSI6InFyY29kZXMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucXJjb2RlLWNvbnRhaW5lciB7XG5cdG1hcmdpbi10b3A6IC0xMjBweCAhaW1wb3J0YW50O1xuXHRiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xufVxuXG4ucXJjb2RlLWNhcmQge1xuXHR6LWluZGV4OiA5OTkgIWltcG9ydGFudDtcbn1cblxuLnFyY29kZS1zZWN0aW9uIHtcblx0cGFkZGluZy10b3A6IDJyZW0gIWltcG9ydGFudDtcbn1cblxuLnFyLWJ1dHRvbiB7XG5cdG1hcmdpbi1ib3R0b206IDIwcHg7XG59XG5cbi5wYW5lbC1oZWFkZXItbWluIHtcblx0aGVpZ2h0OiAwcHggIWltcG9ydGFudDtcbn1cblxuLnFyLWNvZGUtdGFibGUgdHIgdGQgYSB7XG5cdGNvbG9yOiAjNWU3MmU0ICFpbXBvcnRhbnQ7XG59XG5cbi5xci1jb2RlLXRhYmxlIHRyIHRkIGE6aG92ZXIge1xuXHRjb2xvcjogIzMzMzMzMyAhaW1wb3J0YW50O1xuXHRjdXJzb3I6IHBvaW50ZXIgIWltcG9ydGFudDtcbn1cblxuLnRhYmxlLXNob3BwaW5nIHRoIHtcblx0Zm9udC1zaXplOiAxNHB4O1xuXHRmb250LXdlaWdodDogNzAwO1xufVxuXG4udGFibGUtc2hvcHBpbmcgLnRkLW5hbWUgc21hbGwge1xuXHRjb2xvcjogIzQ0NCAhaW1wb3J0YW50O1xuXHRmb250LXdlaWdodDogNTAwICFpbXBvcnRhbnQ7XG5cdGZvbnQtc2l6ZTogMTRweCAhaW1wb3J0YW50O1xufVxuXG4udGQtbmFtZSBhOmhvdmVyIHtcblx0Y29sb3I6ICM0NDQgIWltcG9ydGFudDtcblx0dGV4dC1kZWNvcmF0aW9uOiBub25lO1xufVxuXG4uYnRuLWljb24ge1xuXHRwYWRkaW5nOiAwLjYyNXJlbSAwLjgyNXJlbSAhaW1wb3J0YW50O1xufSJdfQ== */"] });
     return QRCodesComponent;
 }());
 
@@ -23227,21 +23227,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function QRCodeDetailsComponent_div_20_button_17_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 31);
+function QRCodeDetailsComponent_div_22_button_87_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 53);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, " Save Changes ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } if (rf & 2) {
     var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("disabled", ctx_r1.saveDisabled);
 } }
-function QRCodeDetailsComponent_div_20_button_18_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 32);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 33);
+function QRCodeDetailsComponent_div_22_button_88_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "button", 54);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](1, "span", 55);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2, " Saving... ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 } }
-function QRCodeDetailsComponent_div_20_Template(rf, ctx) { if (rf & 1) {
+function QRCodeDetailsComponent_div_22_Template(rf, ctx) { if (rf & 1) {
     var _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div");
@@ -23250,31 +23250,159 @@ function QRCodeDetailsComponent_div_20_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "hr", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "hr", 21);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "br");
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "form", 20);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function QRCodeDetailsComponent_div_20_Template_form_ngSubmit_7_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r3.editQRCode(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "form", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("ngSubmit", function QRCodeDetailsComponent_div_22_Template_form_ngSubmit_7_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r3.editQRCode(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 21);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "label", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "label", 24);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, " Title ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 23);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 24);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "input", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function QRCodeDetailsComponent_div_20_Template_input_keyup_14_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r5.validateField("tagTitle", 1); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "input", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function QRCodeDetailsComponent_div_22_Template_input_keyup_14_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r5.validateField("tagTitle", 1); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 26);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](17, QRCodeDetailsComponent_div_20_button_17_Template, 2, 1, "button", 28);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](18, QRCodeDetailsComponent_div_20_button_18_Template, 3, 0, "button", 29);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "a", 30);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function QRCodeDetailsComponent_div_20_Template_a_click_19_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r6.cancelChanges(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, " Cancel ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "label", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, " Subtitle ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "input", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function QRCodeDetailsComponent_div_22_Template_input_keyup_21_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r6 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r6.validateField("tagSubTitle", 1); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "label", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, " Company ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "div", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "input", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function QRCodeDetailsComponent_div_22_Template_input_keyup_28_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r7.evaluateEmail(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "div", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "label", 32);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, " Price ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "input", 33);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](36, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "label", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](39, " URL ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](40, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](42, "input", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](43, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](44, "div", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "label", 36);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](46, " Address Line 1 ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](47, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "div", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](49, "input", 37);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](50, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](51, "div", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "label", 38);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](53, " Address Line 2 ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](54, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "div", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](56, "input", 39);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](57, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](58, "div", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "label", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](60, " City ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](62, "div", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "input", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function QRCodeDetailsComponent_div_22_Template_input_keyup_63_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r8.validateField("tagCity", 1); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](64, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](65, "div", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](66, "label", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](67, " State ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](68, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](69, "div", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](70, "input", 43);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function QRCodeDetailsComponent_div_22_Template_input_keyup_70_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r9.validateField("tagState", 2); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](71, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](72, "div", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](73, "label", 44);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](74, " Zip ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](75, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](76, "div", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](77, "input", 45);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](78, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](79, "div", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](80, "label", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](81, " Details ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](82, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](83, "div", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](84, "textarea", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](85, "div", 48);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](86, "div", 49);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](87, QRCodeDetailsComponent_div_22_button_87_Template, 2, 1, "button", 50);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](88, QRCodeDetailsComponent_div_22_button_88_Template, 3, 0, "button", 51);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](89, "a", 52);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function QRCodeDetailsComponent_div_22_Template_a_click_89_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r10.cancelChanges(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](90, " Cancel ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -23287,7 +23415,7 @@ function QRCodeDetailsComponent_div_20_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](ctx_r0.qrCode.tagTitle);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("formGroup", ctx_r0.qrCodeEdit);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](80);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", !ctx_r0.saving);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r0.saving);
@@ -23310,7 +23438,7 @@ var QRCodeDetailsComponent = /** @class */ (function () {
             tagCompany: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"](''),
             tagPrice: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"](''),
             tagUrl: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"](''),
-            tagAddress1: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"](''),
+            tagAddress: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"](''),
             tagAddress2: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"](''),
             tagCity: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"](''),
             tagState: new _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControl"](''),
@@ -23338,7 +23466,7 @@ var QRCodeDetailsComponent = /** @class */ (function () {
             tagCompany: this.qrCode.tagCompany,
             tagPrice: this.qrCode.tagPrice,
             tagUrl: this.qrCode.tagUrl,
-            tagAddress1: this.qrCode.tagAddress1,
+            tagAddress: this.qrCode.tagAddress,
             tagAddress2: this.qrCode.tagAddress2,
             tagCity: this.qrCode.tagCity,
             tagState: this.qrCode.tagState,
@@ -23400,7 +23528,7 @@ var QRCodeDetailsComponent = /** @class */ (function () {
             qrCode.set('tagCompany', _this.qrCodeEdit.value.tagCompany);
             qrCode.set('tagPrice', _this.qrCodeEdit.value.tagPrice);
             qrCode.set('tagUrl', _this.qrCodeEdit.value.tagUrl);
-            qrCode.set('tagAddress1', _this.qrCodeEdit.value.tagAddress1);
+            qrCode.set('tagAddress', _this.qrCodeEdit.value.tagAddress);
             qrCode.set('tagAddress2', _this.qrCodeEdit.value.tagAddress2);
             qrCode.set('tagCity', _this.qrCodeEdit.value.tagCity);
             qrCode.set('tagState', _this.qrCodeEdit.value.tagState);
@@ -23448,7 +23576,7 @@ var QRCodeDetailsComponent = /** @class */ (function () {
         this.router.navigate(['/account']);
     };
     QRCodeDetailsComponent.ɵfac = function QRCodeDetailsComponent_Factory(t) { return new (t || QRCodeDetailsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"])); };
-    QRCodeDetailsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: QRCodeDetailsComponent, selectors: [["app-qrcodedetails"]], decls: 21, vars: 2, consts: [[1, "wrapper"], [1, "section-shaped", "my-0", "skew-separator", "skew-mini"], [1, "page-header", "page-header-small", "header-filter"], [1, "page-header-image", 2, "background-image", "url('assets/img/pages/georgie.jpg')"], [1, "container"], [1, "header-body", "text-center", "mb-7"], [1, "row", "justify-content-center"], [1, "col-xl-5", "col-lg-6", "col-md-8", "px-5"], [1, "text-white"], [1, "bg-secondary"], [1, "container", "bg-white", "card", "mb-0"], [1, "row"], [1, "col-md-4"], [1, "section"], [1, "text-center"], [3, "src"], [1, "col-md-8", "ml-auto"], [1, "tab-content"], [4, "ngIf"], [1, "line-primary"], ["role", "form", "novalidate", "", 3, "formGroup", "ngSubmit"], [1, "col-md-3", "align-self-center"], ["for", "#tagTitle", 1, "labels"], [1, "col-md-9", "align-self-center"], [1, "form-group"], ["id", "tagTitle", "type", "text", "required", "", "formControlName", "tagTitle", 1, "form-control", 3, "keyup"], [1, "row", "mt-5"], [1, "button-group", "col-md-12"], ["class", "btn btn-success", "type", "submit", 3, "disabled", 4, "ngIf"], ["class", "btn btn-success saving-button", "type", "button", "disabled", "", 4, "ngIf"], [1, "btn", "btn-danger", 3, "click"], ["type", "submit", 1, "btn", "btn-success", 3, "disabled"], ["type", "button", "disabled", "", 1, "btn", "btn-success", "saving-button"], ["role", "status", "aria-hidden", "true", 1, "spinner-border", "spinner-border-sm"]], template: function QRCodeDetailsComponent_Template(rf, ctx) { if (rf & 1) {
+    QRCodeDetailsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: QRCodeDetailsComponent, selectors: [["app-qrcodedetails"]], decls: 23, vars: 2, consts: [[1, "wrapper"], [1, "section-shaped", "my-0", "skew-separator", "skew-mini"], [1, "page-header", "page-header-small", "header-filter"], [1, "page-header-image", 2, "background-image", "url('assets/img/pages/georgie.jpg')"], [1, "container"], [1, "header-body", "text-center", "mb-7"], [1, "row", "justify-content-center"], [1, "col-xl-5", "col-lg-6", "col-md-8", "px-5"], [1, "text-white"], [1, "bg-secondary"], [1, "container", "qrcode-card", "bg-white", "card"], [1, "row"], [1, "col-md-12", "qrcode-container"], [1, "section", "qrcode-section"], [1, "col-md-4"], [1, "section"], [1, "text-center"], [3, "src"], [1, "col-md-8", "ml-auto"], [1, "tab-content"], [4, "ngIf"], [1, "line-primary"], ["role", "form", "novalidate", "", 3, "formGroup", "ngSubmit"], [1, "col-md-3", "align-self-center"], ["for", "#tagTitle", 1, "labels"], [1, "col-md-9", "align-self-center"], [1, "form-group"], ["id", "tagTitle", "type", "text", "required", "", "formControlName", "tagTitle", 1, "form-control", 3, "keyup"], ["for", "#tagSubTitle", 1, "labels"], ["id", "tagSubTitle", "name", "tagSubTitle", "required", "", "type", "text", "formControlName", "tagSubTitle", 1, "form-control", 3, "keyup"], ["for", "#tagCompany", 1, "labels"], ["id", "tagCompany", "name", "tagCompany", "required", "", "type", "tagCompany", "formControlName", "tagCompany", 1, "form-control", 3, "keyup"], ["for", "#tagPrice", 1, "labels"], ["id", "tagPrice", "name", "tagPrice", "required", "", "type", "number", "formControlName", "tagPrice", 1, "form-control"], ["for", "#tagUrl", 1, "labels"], ["id", "tagUrl", "name", "tagUrl", "required", "", "type", "url", "formControlName", "tagUrl", 1, "form-control"], ["for", "#tagAddress", 1, "labels"], ["id", "tagAddress", "name", "tagAddress", "required", "", "type", "text", "formControlName", "tagAddress", 1, "form-control"], ["for", "#tagAddress2", 1, "labels"], ["id", "tagAddress2", "name", "tagAddress2", "required", "", "type", "text", "formControlName", "tagAddress2", 1, "form-control"], ["for", "#tagCity", 1, "labels"], ["id", "tagCity", "name", "tagCity", "required", "", "type", "text", "formControlName", "tagCity", 1, "form-control", 3, "keyup"], ["for", "#tagState", 1, "labels"], ["id", "tagState", "name", "tagState", "required", "", "type", "text", "formControlName", "tagState", "minlength", "2", "maxlength", "2", "placeholder", "CA", 1, "form-control", 3, "keyup"], ["for", "#tagZip", 1, "labels"], ["id", "tagZip", "name", "tagZip", "required", "", "type", "text", "formControlName", "tagZip", 1, "form-control"], ["for", "#tagInfo", 1, "labels"], ["id", "tagInfo", "rows", "8", "name", "tagInfo", "required", "", "formControlName", "tagInfo", 1, "form-control"], [1, "row", "mt-5"], [1, "button-group", "col-md-12"], ["class", "btn btn-success", "type", "submit", 3, "disabled", 4, "ngIf"], ["class", "btn btn-success saving-button", "type", "button", "disabled", "", 4, "ngIf"], [1, "btn", "btn-danger", 3, "click"], ["type", "submit", 1, "btn", "btn-success", 3, "disabled"], ["type", "button", "disabled", "", 1, "btn", "btn-success", "saving-button"], ["role", "status", "aria-hidden", "true", 1, "spinner-border", "spinner-border-sm"]], template: function QRCodeDetailsComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
@@ -23471,15 +23599,19 @@ var QRCodeDetailsComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "div", 11);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 12);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 13);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "section", 14);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](16, "img", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "section", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "img", 17);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "div", 16);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "div", 13);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 17);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](20, QRCodeDetailsComponent_div_20_Template, 21, 4, "div", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 18);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 19);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](22, QRCodeDetailsComponent_div_22_Template, 91, 4, "div", 20);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -23488,11 +23620,11 @@ var QRCodeDetailsComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         } if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](18);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("src", ctx.qrCode.imageUrl, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.qrCodeId);
-        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControlName"]], styles: [".btn-danger[_ngcontent-%COMP%] {\n  color: #fff !important;\n}\n\n.btn-danger[_ngcontent-%COMP%]:hover {\n  cursor: pointer !important;\n}\n\n.form-control[_ngcontent-%COMP%] {\n  color: #000 !important;\n  font-weight: 500 !important;\n}\n\n.form-control[_ngcontent-%COMP%]:focus {\n  border: 2px solid #5e72e4 !important;\n}\n\n.field-valid[_ngcontent-%COMP%] {\n  border: 1px solid #2dce89 !important;\n}\n\n.field-invalid[_ngcontent-%COMP%] {\n  border: 2px solid #f5365c !important;\n}\n\n.button-group[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.saving-button[_ngcontent-%COMP%] {\n  display: flex !important;\n  align-items: center !important;\n  justify-content: center !important;\n}\n\n.saving-button[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  margin-right: 7px !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3FyY29kZWRldGFpbHMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDQyxzQkFBQTtBQUNEOztBQUVBO0VBQ0MsMEJBQUE7QUFDRDs7QUFFQTtFQUNDLHNCQUFBO0VBQ0EsMkJBQUE7QUFDRDs7QUFFQTtFQUNDLG9DQUFBO0FBQ0Q7O0FBRUE7RUFDQyxvQ0FBQTtBQUNEOztBQUVBO0VBQ0Msb0NBQUE7QUFDRDs7QUFFQTtFQUNDLGFBQUE7RUFDQSxtQkFBQTtFQUNBLDhCQUFBO0FBQ0Q7O0FBRUE7RUFDQyx3QkFBQTtFQUNBLDhCQUFBO0VBQ0Esa0NBQUE7QUFDRDs7QUFFQTtFQUNDLDRCQUFBO0FBQ0QiLCJmaWxlIjoicXJjb2RlZGV0YWlscy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5idG4tZGFuZ2VyIHtcblx0Y29sb3I6ICNmZmYgIWltcG9ydGFudDtcbn1cblxuLmJ0bi1kYW5nZXI6aG92ZXIge1xuXHRjdXJzb3I6IHBvaW50ZXIgIWltcG9ydGFudDtcbn1cblxuLmZvcm0tY29udHJvbCB7XG5cdGNvbG9yOiAjMDAwICFpbXBvcnRhbnQ7XG5cdGZvbnQtd2VpZ2h0OiA1MDAgIWltcG9ydGFudDtcbn1cblxuLmZvcm0tY29udHJvbDpmb2N1cyB7XG5cdGJvcmRlcjogMnB4IHNvbGlkICM1ZTcyZTQgIWltcG9ydGFudDtcbn1cblxuLmZpZWxkLXZhbGlkIHtcblx0Ym9yZGVyOiAxcHggc29saWQgIzJkY2U4OSAhaW1wb3J0YW50O1xufVxuXG4uZmllbGQtaW52YWxpZCB7XG5cdGJvcmRlcjogMnB4IHNvbGlkICNmNTM2NWMgIWltcG9ydGFudDtcbn1cblxuLmJ1dHRvbi1ncm91cCB7XG5cdGRpc3BsYXk6IGZsZXg7XG5cdGFsaWduLWl0ZW1zOiBjZW50ZXI7XG5cdGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn1cblxuLnNhdmluZy1idXR0b24ge1xuXHRkaXNwbGF5OiBmbGV4ICFpbXBvcnRhbnQ7XG5cdGFsaWduLWl0ZW1zOiBjZW50ZXIgIWltcG9ydGFudDtcblx0anVzdGlmeS1jb250ZW50OiBjZW50ZXIgIWltcG9ydGFudDtcbn1cblxuLnNhdmluZy1idXR0b24gc3BhbiB7XG5cdG1hcmdpbi1yaWdodDogN3B4ICFpbXBvcnRhbnQ7XG59XG4iXX0= */"] });
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormControlName"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["NumberValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["MinLengthValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_4__["MaxLengthValidator"]], styles: [".qrcode-container[_ngcontent-%COMP%] {\n  margin-top: -120px !important;\n  background-color: #fff;\n}\n\n.qrcode-card[_ngcontent-%COMP%] {\n  z-index: 999 !important;\n}\n\n.qrcode-section[_ngcontent-%COMP%] {\n  display: flex;\n  padding-top: 0rem !important;\n}\n\n.btn-danger[_ngcontent-%COMP%] {\n  color: #fff !important;\n}\n\n.btn-danger[_ngcontent-%COMP%]:hover {\n  cursor: pointer !important;\n}\n\n.form-control[_ngcontent-%COMP%] {\n  color: #000 !important;\n  font-weight: 500 !important;\n}\n\n.form-control[_ngcontent-%COMP%]:focus {\n  border: 2px solid #5e72e4 !important;\n}\n\n.field-valid[_ngcontent-%COMP%] {\n  border: 1px solid #2dce89 !important;\n}\n\n.field-invalid[_ngcontent-%COMP%] {\n  border: 2px solid #f5365c !important;\n}\n\n.button-group[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.saving-button[_ngcontent-%COMP%] {\n  display: flex !important;\n  align-items: center !important;\n  justify-content: center !important;\n}\n\n.saving-button[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  margin-right: 7px !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3FyY29kZWRldGFpbHMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDQyw2QkFBQTtFQUNBLHNCQUFBO0FBQ0Q7O0FBRUE7RUFDQyx1QkFBQTtBQUNEOztBQUVBO0VBQ0MsYUFBQTtFQUNBLDRCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxzQkFBQTtBQUNEOztBQUVBO0VBQ0MsMEJBQUE7QUFDRDs7QUFFQTtFQUNDLHNCQUFBO0VBQ0EsMkJBQUE7QUFDRDs7QUFFQTtFQUNDLG9DQUFBO0FBQ0Q7O0FBRUE7RUFDQyxvQ0FBQTtBQUNEOztBQUVBO0VBQ0Msb0NBQUE7QUFDRDs7QUFFQTtFQUNDLGFBQUE7RUFDQSxtQkFBQTtFQUNBLDhCQUFBO0FBQ0Q7O0FBRUE7RUFDQyx3QkFBQTtFQUNBLDhCQUFBO0VBQ0Esa0NBQUE7QUFDRDs7QUFFQTtFQUNDLDRCQUFBO0FBQ0QiLCJmaWxlIjoicXJjb2RlZGV0YWlscy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5xcmNvZGUtY29udGFpbmVyIHtcblx0bWFyZ2luLXRvcDogLTEyMHB4ICFpbXBvcnRhbnQ7XG5cdGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG59XG5cbi5xcmNvZGUtY2FyZCB7XG5cdHotaW5kZXg6IDk5OSAhaW1wb3J0YW50O1xufVxuXG4ucXJjb2RlLXNlY3Rpb24ge1xuXHRkaXNwbGF5OiBmbGV4O1xuXHRwYWRkaW5nLXRvcDogMHJlbSAhaW1wb3J0YW50O1xufVxuXG4uYnRuLWRhbmdlciB7XG5cdGNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XG59XG5cbi5idG4tZGFuZ2VyOmhvdmVyIHtcblx0Y3Vyc29yOiBwb2ludGVyICFpbXBvcnRhbnQ7XG59XG5cbi5mb3JtLWNvbnRyb2wge1xuXHRjb2xvcjogIzAwMCAhaW1wb3J0YW50O1xuXHRmb250LXdlaWdodDogNTAwICFpbXBvcnRhbnQ7XG59XG5cbi5mb3JtLWNvbnRyb2w6Zm9jdXMge1xuXHRib3JkZXI6IDJweCBzb2xpZCAjNWU3MmU0ICFpbXBvcnRhbnQ7XG59XG5cbi5maWVsZC12YWxpZCB7XG5cdGJvcmRlcjogMXB4IHNvbGlkICMyZGNlODkgIWltcG9ydGFudDtcbn1cblxuLmZpZWxkLWludmFsaWQge1xuXHRib3JkZXI6IDJweCBzb2xpZCAjZjUzNjVjICFpbXBvcnRhbnQ7XG59XG5cbi5idXR0b24tZ3JvdXAge1xuXHRkaXNwbGF5OiBmbGV4O1xuXHRhbGlnbi1pdGVtczogY2VudGVyO1xuXHRqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG5cbi5zYXZpbmctYnV0dG9uIHtcblx0ZGlzcGxheTogZmxleCAhaW1wb3J0YW50O1xuXHRhbGlnbi1pdGVtczogY2VudGVyICFpbXBvcnRhbnQ7XG5cdGp1c3RpZnktY29udGVudDogY2VudGVyICFpbXBvcnRhbnQ7XG59XG5cbi5zYXZpbmctYnV0dG9uIHNwYW4ge1xuXHRtYXJnaW4tcmlnaHQ6IDdweCAhaW1wb3J0YW50O1xufVxuIl19 */"] });
     return QRCodeDetailsComponent;
 }());
 
