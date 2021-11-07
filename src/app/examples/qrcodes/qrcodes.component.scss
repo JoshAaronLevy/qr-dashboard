@@ -18,6 +18,15 @@
 	height: 0px !important;
 }
 
+.qr-code-table tr td a {
+	color: #5e72e4 !important;
+}
+
+.qr-code-table tr td a:hover {
+	color: #333333 !important;
+	cursor: pointer !important;
+}
+
 .table-shopping th {
 	font-size: 14px;
 	font-weight: 700;

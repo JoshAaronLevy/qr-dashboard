@@ -58,65 +58,17 @@ export class QRCodeDetailsComponent implements OnInit {
 	ngOnInit() {
 		this.loading = true;
 		this.username = getStoredUser().username;
-		// this.qrCodeId = localStorage.getItem('id');
 		this.getQRCodeDetails();
 	}
 
 	getQRCodeDetails() {
-		// const QRCodes = Parse.Object.extend('Tags');
-		// const query = new Parse.Query(QRCodes);
-		// query.equalTo('objectId', this.qrCodeId);
 		this.qrCode = JSON.parse(localStorage.getItem("selectedQRCode"));
 		console.log(this.qrCode);
 		this.qrCodeId = this.qrCode.id;
-		this.qrCodeEdit = this.formBuilder.group({
-			tagTitle: this.qrCode.tagTitle,
-			tagSubTitle: this.qrCode.tagSubTitle,
-			tagCompany: this.qrCode.tagCompany,
-			tagPrice: this.qrCode.tagPrice,
-			tagUrl: this.qrCode.tagUrl,
-			tagAddress1: this.qrCode.tagAddress1,
-			tagAddress2: this.qrCode.tagAddress2,
-			tagCity: this.qrCode.tagCity,
-			tagState: this.qrCode.tagState,
-			tagZip: this.qrCode.tagZip,
-			tagInfo: this.qrCode.tagInfo
-		});
-		this.qrCode.imageUrl = `https://photos.homecards.com/rebeacons/Tag-${this.qrCode.tagPhotoRef}-1.jpg`;
-		this.loading = false;
-		// query.find().then((qrCode) => {
-		// 	if (qrCode.length > 0) {
-		// 		this.qrCode = parseResults(qrCode);
-		// 		this.qrCode = this.qrCode[0];
-		// 		this.qrCode.imageUrl = `https://photos.homecards.com/rebeacons/Tag-${this.qrCode.tagPhotoRef}-1.jpg`;
-		// 		this.images.push(
-		// 			{
-		// 				url: this.qrCode.imageUrl
-		// 			}
-		// 		);
-		// 		if (this.qrCode.tagPrice.startsWith('#') === true || this.qrCode.tagPrice.startsWith('$') === true) {
-		// 			this.qrCode.tagPrice = this.qrCode.tagPrice.slice(1);
-		// 		}
-		// 		if (this.qrCode.userEmail === this.username) {
-		// 			this.editEnabled = true;
-		// 		} else {
-		// 			this.editEnabled = false;
-		// 		}
-		// 		this.loading = false;
-		// 	} else {
-		// 		const error = 'Unable to retrieve QR Code details. Please try again.';
-		// 		this.presentQRCodeError(error);
-		// 	}
-		// }, (error) => {
-		// 	this.presentQRCodeError(error);
-		// 	return error;
-		// });
+		this.buildEditForm();
 	}
 
 	buildEditForm() {
-		// const Tags = Parse.Object.extend('Tags');
-		// const query = new Parse.Query(Tags);
-		// query.equalTo('objectId', this.qrCodeId);
 		this.qrCodeEdit = this.formBuilder.group({
 			tagTitle: this.qrCode.tagTitle,
 			tagSubTitle: this.qrCode.tagSubTitle,
@@ -132,28 +84,6 @@ export class QRCodeDetailsComponent implements OnInit {
 		});
 		this.qrCode.imageUrl = `https://photos.homecards.com/rebeacons/Tag-${this.qrCode.tagPhotoRef}-1.jpg`;
 		this.loading = false;
-		// query.find().then((qrCode) => {
-		// 	this.qrCode = parseResults(qrCode);
-		// 	this.qrCode = this.qrCode[0];
-		// 	this.qrCodeEdit = this.formBuilder.group({
-		// 		tagTitle: this.qrCode.tagTitle,
-		// 		tagSubTitle: this.qrCode.tagSubTitle,
-		// 		tagCompany: this.qrCode.tagCompany,
-		// 		tagPrice: this.qrCode.tagPrice,
-		// 		tagUrl: this.qrCode.tagUrl,
-		// 		tagAddress1: this.qrCode.tagAddress1,
-		// 		tagAddress2: this.qrCode.tagAddress2,
-		// 		tagCity: this.qrCode.tagCity,
-		// 		tagState: this.qrCode.tagState,
-		// 		tagZip: this.qrCode.tagZip,
-		// 		tagInfo: this.qrCode.tagInfo
-		// 	});
-		// 	this.qrCode.imageUrl = `https://photos.homecards.com/rebeacons/Tag-${this.qrCode.tagPhotoRef}-1.jpg`;
-		// 	this.loading = false;
-		// }, (error) => {
-		// 	this.loading = false;
-		// 	return this.presentQRCodeError(error);
-		// });
 	}
 
 	validateField(fieldName, minChars) {

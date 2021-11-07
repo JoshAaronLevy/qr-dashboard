@@ -45,7 +45,6 @@ export class QRCodesComponent implements OnInit {
 			} else {
 				this.qrcodesFound = false;
 			}
-			console.log("qrcodes:", this.qrcodes);
 			for (let i = 0; i < this.qrcodes.length; i++) {
 				this.qrcodes[i].imageUrl = '';
 				if (this.qrcodes[i].tagPhotoRef === undefined) {
