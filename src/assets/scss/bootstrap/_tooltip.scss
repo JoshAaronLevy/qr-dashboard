@@ -110,6 +110,7 @@
 
 // Wrapper for the tooltip content
 .tooltip-inner {
+  min-width: $tooltip-min-width;
   max-width: $tooltip-max-width;
   padding: $tooltip-padding-y $tooltip-padding-x;
   color: $tooltip-color;

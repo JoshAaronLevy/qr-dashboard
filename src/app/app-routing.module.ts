@@ -22,6 +22,8 @@ import { LoginpageComponent } from "./examples/loginpage/loginpage.component";
 import { PricingpageComponent } from "./examples/pricingpage/pricingpage.component";
 import { ProductpageComponent } from "./examples/productpage/productpage.component";
 import { ResetpageComponent } from "./examples/resetpage/resetpage.component";
+import { QRCodesComponent } from "./examples/qrcodes/qrcodes.component";
+import { QRCodeDetailsComponent } from "./examples/qrcodedetails/qrcodedetails.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "presentation", pathMatch: "full" },
@@ -49,8 +51,8 @@ const routes: Routes = [
   { path: "login", component: LoginpageComponent },
   { path: "signup", component: RegisterpageComponent },
   { path: "dashboard", component: PresentationComponent },
-  { path: "qrcodes", component: PresentationComponent },
-  { path: "qrcodes/:id", component: ProductpageComponent },
+  { path: "qrcodes", component: QRCodesComponent },
+  { path: "qrcodes/:id", component: QRCodeDetailsComponent },
   { path: "qrcodes/create", component: ProductpageComponent },
   { path: "account", component: AccountsettingsComponent }
 ];

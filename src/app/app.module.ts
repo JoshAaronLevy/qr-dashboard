@@ -46,6 +46,8 @@ import { ResetpageComponent } from "./examples/resetpage/resetpage.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { PictureUploadComponent } from "./components/picture-upload/picture-upload.component";
+import { QRCodesComponent } from "./examples/qrcodes/qrcodes.component";
+import { QRCodeDetailsComponent } from "./examples/qrcodedetails/qrcodedetails.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +68,8 @@ import { PictureUploadComponent } from "./components/picture-upload/picture-uplo
     ErrorComponent,
     InvoicepageComponent,
     LoginpageComponent,
+    QRCodesComponent,
+    QRCodeDetailsComponent,
     PricingpageComponent,
     ProductpageComponent,
     ResetpageComponent,
