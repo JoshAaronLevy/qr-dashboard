@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/qr-dashboard",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
