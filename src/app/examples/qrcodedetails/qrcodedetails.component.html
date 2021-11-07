@@ -14,261 +14,196 @@
 		</div>
 	</div>
 	<div class="bg-secondary">
-		<div class="container bg-white card mb-0">
+		<div class="container qrcode-card bg-white card">
 			<div class="row">
-				<div class="col-md-4">
-					<div class="section">
-						<section class="text-center">
-							<img [src]="qrCode.imageUrl" />
-							<!-- <app-picture-upload [avatar]="true"></app-picture-upload> -->
-						</section>
-					</div>
-				</div>
-				<div class="col-md-8 ml-auto">
-					<div class="section">
-						<div class="tab-content">
-							<div *ngIf="qrCodeId">
-								<div>
-									<header>
-										<h2>{{ qrCode.tagTitle }}</h2>
-									</header>
-									<hr class="line-primary" />
-									<br />
-									<form role="form" [formGroup]="qrCodeEdit" (ngSubmit)="editQRCode()" novalidate>
-										<div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#tagTitle">
-													Title
-												</label>
-											</div>
-											<div class="col-md-9 align-self-center">
-												<div class="form-group">
-													<input id="tagTitle" class="form-control" type="text" required
-														formControlName="tagTitle"
-														(keyup)="validateField('tagTitle', 1)" />
+				<div class="col-md-12 qrcode-container">
+					<div class="section qrcode-section">
+						<div class="col-md-4">
+							<div class="section">
+								<section class="text-center">
+									<img [src]="qrCode.imageUrl" />
+									<!-- <app-picture-upload [avatar]="true"></app-picture-upload> -->
+								</section>
+							</div>
+						</div>
+						<div class="col-md-8 ml-auto">
+							<div class="section">
+								<div class="tab-content">
+									<div *ngIf="qrCodeId">
+										<div>
+											<header>
+												<h2>{{ qrCode.tagTitle }}</h2>
+											</header>
+											<hr class="line-primary" />
+											<br />
+											<form role="form" [formGroup]="qrCodeEdit" (ngSubmit)="editQRCode()" novalidate>
+												<div class="row">
+													<div class="col-md-3 align-self-center">
+														<label class="labels" for="#tagTitle">
+															Title
+														</label>
+													</div>
+													<div class="col-md-9 align-self-center">
+														<div class="form-group">
+															<input id="tagTitle" class="form-control" type="text" required
+																formControlName="tagTitle"
+																(keyup)="validateField('tagTitle', 1)" />
+														</div>
+													</div>
 												</div>
-											</div>
-										</div>
-										<!-- <div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#lastName">
-													Last Name
-												</label>
-											</div>
-											<div class="col-md-9 align-self-center">
-												<div class="form-group">
-													<input id="lastName" class="form-control" name="lastName" required
-														type="text" formControlName="lastName"
-														(keyup)="validateField('lastName', 1)" />
+												<div class="row">
+													<div class="col-md-3 align-self-center">
+														<label class="labels" for="#tagSubTitle">
+															Subtitle
+														</label>
+													</div>
+													<div class="col-md-9 align-self-center">
+														<div class="form-group">
+															<input id="tagSubTitle" class="form-control" name="tagSubTitle" required
+																type="text" formControlName="tagSubTitle"
+																(keyup)="validateField('tagSubTitle', 1)" />
+														</div>
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#agentEmail"> Display Email </label>
-											</div>
-											<div class="col-md-9 align-self-center">
-												<div class="form-group">
-													<input id="agentEmail" class="form-control" name="agentEmail"
-														required type="agentEmail" (keyup)="evaluateEmail()"
-														formControlName="agentEmail" />
+												<div class="row">
+													<div class="col-md-3 align-self-center">
+														<label class="labels" for="#tagCompany"> Company </label>
+													</div>
+													<div class="col-md-9 align-self-center">
+														<div class="form-group">
+															<input id="tagCompany" class="form-control" name="tagCompany"
+																required type="tagCompany" (keyup)="evaluateEmail()"
+																formControlName="tagCompany" />
+														</div>
+													</div>
 												</div>
-											</div>
-										</div>
-										<div *ngIf="emailChanged" class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#confirmEmail">
-													Confirm New Email
-												</label>
-											</div>
-											<div class="col-md-9 align-self-center">
-												<div class="form-group">
-													<input id="confirmEmail" class="form-control" name="confirmEmail"
-														required type="email" (keyup)="evaluateEmail()"
-														formControlName="confirmEmail" />
+												<div class="row">
+													<div class="col-md-3 align-self-center">
+														<label class="labels" for="#tagPrice">
+															Price
+														</label>
+													</div>
+													<div class="col-md-9 align-self-center">
+														<div class="form-group">
+															<input class="form-control" id="tagPrice"
+																name="tagPrice" required type="number"
+																formControlName="tagPrice" />
+														</div>
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#agentPhoneMain">
-													Main Phone #
-												</label>
-											</div>
-											<div class="col-md-9 align-self-center">
-												<div class="form-group">
-													<input class="form-control" id="agentPhoneMain"
-														name="agentPhoneMain" required type="text"
-														formControlName="agentPhoneMain" />
+												<div class="row">
+													<div class="col-md-3 align-self-center">
+														<label class="labels" for="#tagUrl">
+															URL
+														</label>
+													</div>
+													<div class="col-md-9 align-self-center">
+														<div class="form-group">
+															<input class="form-control" id="tagUrl" name="tagUrl" required type="url" formControlName="tagUrl" />
+														</div>
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#agentPhoneMobile">
-													Mobile Phone #
-												</label>
-											</div>
-											<div class="col-md-9 align-self-center">
-												<div class="form-group">
-													<input class="form-control" id="agentPhoneMobile"
-														name="agentPhoneMobile" required type="text"
-														formControlName="agentPhoneMobile" />
+												<div class="row">
+													<div class="col-md-3 align-self-center">
+														<label class="labels" for="#tagAddress">
+															Address Line 1
+														</label>
+													</div>
+													<div class="col-md-9 align-self-center">
+														<div class="form-group">
+															<input class="form-control" id="tagAddress" name="tagAddress"
+																required type="text" formControlName="tagAddress" />
+														</div>
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#agentOfficeName">
-													Company
-												</label>
-											</div>
-											<div class="col-md-9 align-self-center">
-												<div class="form-group">
-													<input class="form-control" id="agentOfficeName"
-														name="agentOfficeName" required type="text"
-														formControlName="agentOfficeName" />
+												<div class="row">
+													<div class="col-md-3 align-self-center">
+														<label class="labels" for="#tagAddress2">
+															Address Line 2
+														</label>
+													</div>
+													<div class="col-md-9 align-self-center">
+														<div class="form-group">
+															<input class="form-control" id="tagAddress2" name="tagAddress2"
+																required type="text" formControlName="tagAddress2" />
+														</div>
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#website">
-													Website
-												</label>
-											</div>
-											<div class="col-md-9 align-self-center">
-												<div class="form-group">
-													<input class="form-control" id="website" name="website" required
-														type="text" formControlName="website" />
+												<div class="row">
+													<div class="col-md-3 align-self-center">
+														<label class="labels" for="#tagCity">
+															City
+														</label>
+													</div>
+													<div class="col-md-9 align-self-center">
+														<div class="form-group">
+															<input id="tagCity" class="form-control" name="tagCity" required
+																type="text" formControlName="tagCity"
+																(keyup)="validateField('tagCity', 1)" />
+														</div>
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#agentAddress">
-													Address Line 1
-												</label>
-											</div>
-											<div class="col-md-9 align-self-center">
-												<div class="form-group">
-													<input class="form-control" id="agentAddress" name="agentAddress"
-														required type="text" formControlName="agentAddress" />
+												<div class="row">
+													<div class="col-md-3 align-self-center">
+														<label class="labels" for="#tagState">
+															State
+														</label>
+													</div>
+													<div class="col-md-9 align-self-center">
+														<div class="form-group">
+															<input class="form-control" id="tagState" name="tagState"
+																required type="text" formControlName="tagState" minlength="2"
+																maxlength="2" placeholder="CA"
+																(keyup)="validateField('tagState', 2)" />
+														</div>
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#agentAddress2">
-													Address Line 2
-												</label>
-											</div>
-											<div class="col-md-9 align-self-center">
-												<div class="form-group">
-													<input class="form-control" id="agentAddress2" name="agentAddress2"
-														required type="text" formControlName="agentAddress2" />
+												<div class="row">
+													<div class="col-md-3 align-self-center">
+														<label class="labels" for="#tagZip">
+															Zip
+														</label>
+													</div>
+													<div class="col-md-9 align-self-center">
+														<div class="form-group">
+															<input class="form-control" id="tagZip" name="tagZip" required
+																type="text" formControlName="tagZip" />
+														</div>
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#agentCity">
-													City
-												</label>
-											</div>
-											<div class="col-md-9 align-self-center">
-												<div class="form-group">
-													<input id="agentCity" class="form-control" name="agentCity" required
-														type="text" formControlName="agentCity"
-														(keyup)="validateField('agentCity', 1)" />
+												<div class="row">
+													<div class="col-md-3 align-self-center">
+														<label class="labels" for="#tagInfo">
+															Details
+														</label>
+													</div>
+													<div class="col-md-9 align-self-center">
+														<div class="form-group">
+															<textarea class="form-control" id="tagInfo" rows="8" name="tagInfo"
+																required formControlName="tagInfo"></textarea>
+														</div>
+													</div>
 												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#agentState">
-													State
-												</label>
-											</div>
-											<div class="col-md-9 align-self-center">
-												<div class="form-group">
-													<input class="form-control" id="agentState" name="agentState"
-														required type="text" formControlName="agentState" minlength="2"
-														maxlength="2" placeholder="CA"
-														(keyup)="validateField('agentState', 2)" />
+												<div class="row mt-5">
+													<div class="button-group col-md-12">
+														<button *ngIf="!saving" [disabled]="saveDisabled"
+															class="btn btn-success" type="submit">
+															Save Changes
+														</button>
+														<button *ngIf="saving" class="btn btn-success saving-button"
+															type="button" disabled>
+															<span class="spinner-border spinner-border-sm" role="status"
+																aria-hidden="true"></span>
+															Saving...
+														</button>
+														<a class="btn btn-danger" (click)="cancelChanges()">
+															Cancel
+														</a>
+													</div>
 												</div>
-											</div>
+											</form>
 										</div>
-										<div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#agentZip">
-													Zip
-												</label>
-											</div>
-											<div class="col-md-9 align-self-center">
-												<div class="form-group">
-													<input class="form-control" id="agentZip" name="agentZip" required
-														type="text" formControlName="agentZip" />
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#faceBook">
-													Facebook
-												</label>
-											</div>
-											<div class="col-md-9 align-self-center">
-												<div class="form-group">
-													<input class="form-control" id="faceBook" name="faceBook" type="url"
-														formControlName="faceBook" />
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#linkedIn">
-													LinkedIn
-												</label>
-											</div>
-											<div class="col-md-9 align-self-center">
-												<div class="form-group">
-													<input class="form-control" id="linkedIn" name="linkedIn" type="url"
-														formControlName="linkedIn" />
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-3 align-self-center">
-												<label class="labels" for="#agentAboutMe">
-													About Me
-												</label>
-											</div>
-											<div class="col-md-9 align-self-center">
-												<div class="form-group">
-													<textarea class="form-control" id="agentAboutMe" name="agentAboutMe"
-														required formControlName="agentAboutMe"></textarea>
-												</div>
-											</div>
-										</div> -->
-										<div class="row mt-5">
-											<div class="button-group col-md-12">
-												<button *ngIf="!saving" [disabled]="saveDisabled"
-													class="btn btn-success" type="submit">
-													Save Changes
-												</button>
-												<button *ngIf="saving" class="btn btn-success saving-button"
-													type="button" disabled>
-													<span class="spinner-border spinner-border-sm" role="status"
-														aria-hidden="true"></span>
-													Saving...
-												</button>
-												<a class="btn btn-danger" (click)="cancelChanges()">
-													Cancel
-												</a>
-											</div>
-										</div>
-									</form>
+									</div>
 								</div>
 							</div>
 						</div>

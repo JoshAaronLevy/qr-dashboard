@@ -31,7 +31,7 @@ export class QRCodeDetailsComponent implements OnInit {
 		tagCompany: new FormControl(''),
 		tagPrice: new FormControl(''),
 		tagUrl: new FormControl(''),
-		tagAddress1: new FormControl(''),
+		tagAddress: new FormControl(''),
 		tagAddress2: new FormControl(''),
 		tagCity: new FormControl(''),
 		tagState: new FormControl(''),
@@ -75,7 +75,7 @@ export class QRCodeDetailsComponent implements OnInit {
 			tagCompany: this.qrCode.tagCompany,
 			tagPrice: this.qrCode.tagPrice,
 			tagUrl: this.qrCode.tagUrl,
-			tagAddress1: this.qrCode.tagAddress1,
+			tagAddress: this.qrCode.tagAddress,
 			tagAddress2: this.qrCode.tagAddress2,
 			tagCity: this.qrCode.tagCity,
 			tagState: this.qrCode.tagState,
@@ -135,7 +135,7 @@ export class QRCodeDetailsComponent implements OnInit {
 			qrCode.set('tagCompany', this.qrCodeEdit.value.tagCompany);
 			qrCode.set('tagPrice', this.qrCodeEdit.value.tagPrice);
 			qrCode.set('tagUrl', this.qrCodeEdit.value.tagUrl);
-			qrCode.set('tagAddress1', this.qrCodeEdit.value.tagAddress1);
+			qrCode.set('tagAddress', this.qrCodeEdit.value.tagAddress);
 			qrCode.set('tagAddress2', this.qrCodeEdit.value.tagAddress2);
 			qrCode.set('tagCity', this.qrCodeEdit.value.tagCity);
 			qrCode.set('tagState', this.qrCodeEdit.value.tagState);

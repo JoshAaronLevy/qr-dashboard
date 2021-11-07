@@ -1,3 +1,17 @@
+.qrcode-container {
+	margin-top: -120px !important;
+	background-color: #fff;
+}
+
+.qrcode-card {
+	z-index: 999 !important;
+}
+
+.qrcode-section {
+	display: flex;
+	padding-top: 0rem !important;
+}
+
 .btn-danger {
 	color: #fff !important;
 }
