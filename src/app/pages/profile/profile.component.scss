@@ -1,0 +1,70 @@
+.full-wrapper {
+	height: 100vh !important;
+}
+
+.bg-secondary {
+	height: 100% !important;
+}
+
+.qrcode-container {
+	margin-top: -100px !important;
+	background-color: #fff;
+}
+
+.qrcode-card {
+	z-index: 999 !important;
+}
+
+.qrcode-section {
+	display: flex;
+	padding-top: 0rem !important;
+}
+
+.title-header {
+	margin-top: 50px;
+}
+
+.profile-section {
+	padding-top: 2rem !important;
+}
+
+.btn-danger {
+	color: #fff !important;
+}
+
+.btn-danger:hover {
+	cursor: pointer !important;
+}
+
+.form-control {
+	color: #000 !important;
+	font-weight: 500 !important;
+}
+
+.form-control:focus {
+	border: 2px solid #5e72e4 !important;
+}
+
+.field-valid {
+	border: 1px solid #2dce89 !important;
+}
+
+.field-invalid {
+	border: 2px solid #f5365c !important;
+}
+
+.button-group {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.saving-button {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+}
+
+.saving-button span {
+	margin-right: 7px !important;
+}

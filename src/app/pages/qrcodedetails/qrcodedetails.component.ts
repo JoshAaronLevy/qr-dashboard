@@ -52,6 +52,7 @@ export class QRCodeDetailsComponent implements OnInit {
 	errorMsg: string;
 	tagPrice: any;
 	regexPattern = "/^[a-zA-Z0-9\(\);:&\-' ]*[a-zA-Z0-9\(\);:&\-']*$/";
+	qrImage: any;
 
 	constructor(
 		private formBuilder: FormBuilder,
@@ -89,7 +90,11 @@ export class QRCodeDetailsComponent implements OnInit {
 			tagZip: this.qrCode.tagZip,
 			tagInfo: this.qrCode.tagInfo
 		});
-		this.qrCode.imageUrl = `https://photos.homecards.com/rebeacons/Tag-${this.qrCode.tagPhotoRef}-1.jpg`;
+		if (this.qrCodeId !== "0") {
+			this.qrImage = `https://photos.homecards.com/rebeacons/Tag-${this.qrCode.tagPhotoRef}-1.jpg`;
+		} else {
+			this.qrImage = "../../../assets/img/image_placeholder.jpg";
+		}
 		this.loading = false;
 	}
 

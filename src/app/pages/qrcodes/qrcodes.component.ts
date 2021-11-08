@@ -63,4 +63,24 @@ export class QRCodesComponent implements OnInit {
 		localStorage.setItem('selectedQRCodeId', this.selectedQRCode.id);
 		this.router.navigate([`/qrcodes/${this.selectedQRCode.id}`]);
 	}
+
+	routeToCreate() {
+		this.selectedQRCode = {
+			id: "0",
+			tagTitle: "",
+			tagSubTitle: "",
+			tagCompany: "",
+			tagPrice: "",
+			tagUrl: "",
+			tagAddress: "",
+			tagAddress2: "",
+			tagCity: "",
+			tagState: "",
+			tagZip: "",
+			tagInfo: ""
+		};
+		localStorage.setItem('selectedQRCode', JSON.stringify(this.selectedQRCode));
+		localStorage.setItem('selectedQRCodeId', "0");
+		this.router.navigate([`/qrcodes/create`]);
+	}
 }

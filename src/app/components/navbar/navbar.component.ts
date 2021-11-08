@@ -12,6 +12,7 @@ export class NavbarComponent implements OnInit {
 	user: any;
 	displayName: string;
 	isCollapsed = true;
+	selectedQRCode: any;
 
 	constructor(private router: Router) {
 		router.events.subscribe(val => {
@@ -59,7 +60,31 @@ export class NavbarComponent implements OnInit {
 		});
 	}
 
-	goHome() {
+	routeToHome() {
 		this.router.navigate(['/qrcodes']);
+	}
+
+	routeToProfile() {
+		this.router.navigate(['/profile']);
+	}
+
+	routeToCreate() {
+		this.selectedQRCode = {
+			id: "0",
+			tagTitle: "",
+			tagSubTitle: "",
+			tagCompany: "",
+			tagPrice: "",
+			tagUrl: "",
+			tagAddress: "",
+			tagAddress2: "",
+			tagCity: "",
+			tagState: "",
+			tagZip: "",
+			tagInfo: ""
+		};
+		localStorage.setItem('selectedQRCode', JSON.stringify(this.selectedQRCode));
+		localStorage.setItem('selectedQRCodeId', "0");
+		this.router.navigate([`/qrcodes/create`]);
 	}
 }

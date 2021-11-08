@@ -1,9 +1,9 @@
-<div class="wrapper">
+<div class="wrapper full-wrapper">
 	<div class="section-shaped my-0 skew-separator skew-mini">
 		<div class="page-header page-header-small header-filter">
 			<div class="page-header-image" style="background-image: url('../../../assets/img/pages/photo-15.jpg');"></div>
 			<div class="container">
-				<div class="header-body text-center mb-7">
+				<div class="header-body title-header text-center mb-7">
 					<div class="row justify-content-center">
 						<div class="col-xl-5 col-lg-6 col-md-8 px-5">
 							<h1 class="text-white">QR Code Details</h1>
@@ -20,8 +20,8 @@
 					<div class="section qrcode-section">
 						<div class="col-md-4">
 							<div class="section">
-								<section class="text-center">
-									<img [src]="qrCode.imageUrl" />
+								<section class="text-center qr-code-image">
+									<img *ngIf="qrImage" [src]="qrImage" />
 									<!-- <app-picture-upload [avatar]="true"></app-picture-upload> -->
 								</section>
 							</div>
@@ -32,7 +32,8 @@
 									<div *ngIf="qrCodeId">
 										<div>
 											<header>
-												<h2>{{ qrCode.tagTitle }}</h2>
+												<h2 *ngIf="qrCode.tagTitle">{{ qrCode.tagTitle }}</h2>
+												<h2 *ngIf="!qrCode.tagTitle">Create QR Code</h2>
 											</header>
 											<hr class="line-primary" />
 											<br />

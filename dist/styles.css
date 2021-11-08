@@ -5973,7 +5973,7 @@ input[type=button].btn-block {
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: #212529;
+  color: #5e72e4 !important;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -5984,8 +5984,13 @@ input[type=button].btn-block {
   text-decoration: none;
   background-color: #f6f9fc;
 }
+.dropdown-item.hover, .dropdown-item:hover {
+  color: #212529 !important;
+  text-decoration: none;
+  background-color: #5e72e4;
+}
 .dropdown-item.active, .dropdown-item:active {
-  color: #fff;
+  color: #212529 !important;
   text-decoration: none;
   background-color: #5e72e4;
 }

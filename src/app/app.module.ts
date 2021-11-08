@@ -14,31 +14,28 @@ import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
 import { CarouselModule } from "ngx-bootstrap/carousel";
 import { ModalModule } from "ngx-bootstrap/modal";
 import { PopoverModule } from "ngx-bootstrap/popover";
-
 import { AppRoutingModule } from "./app-routing.module";
-import { AppComponent } from "./app.component";
 
-import { RegisterpageComponent } from "./pages/registerpage/registerpage.component";
-import { AccountsettingsComponent } from "./pages/accountsettings/accountsettings.component";
-import { LoginpageComponent } from "./pages/loginpage/loginpage.component";
-import { ProductpageComponent } from "./pages/productpage/productpage.component";
+import { AppComponent } from "./app.component";
+import { RegisterComponent } from "./pages/register/register.component";
+import { LoginComponent } from "./pages/login/login.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { FooterComponent } from "./components/footer/footer.component";
-import { PictureUploadComponent } from "./components/picture-upload/picture-upload.component";
 import { QRCodesComponent } from "./pages/qrcodes/qrcodes.component";
 import { QRCodeDetailsComponent } from "./pages/qrcodedetails/qrcodedetails.component";
+import { ProfileComponent } from "./pages/profile/profile.component";
+import { PictureUploadComponent } from "./components/picture-upload/picture-upload.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterpageComponent,
-    AccountsettingsComponent,
-    LoginpageComponent,
-    QRCodesComponent,
-    QRCodeDetailsComponent,
-    ProductpageComponent,
+    RegisterComponent,
+    LoginComponent,
     NavbarComponent,
     FooterComponent,
+    QRCodesComponent,
+    QRCodeDetailsComponent,
+    ProfileComponent,
     PictureUploadComponent
   ],
   imports: [

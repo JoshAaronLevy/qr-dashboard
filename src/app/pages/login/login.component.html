@@ -1,0 +1,65 @@
+<header class="header-4 skew-separator">
+	<div class="header-wrapper">
+		<div class="page-header header-video">
+			<div class="overlay"></div>
+			<div class="auth-container container text-center">
+				<div class="row">
+					<div class="col-lg-10 mx-auto">
+						<h2 class="video-text">QR Dashboard</h2>
+						<div class="auth-card col-lg-8 col-md-8 mx-auto">
+							<div class="card bg-secondary shadow border-0">
+								<div class="card-body px-lg-5 py-lg-5">
+									<div class="text-center text-muted mb-4">
+										<h4>Login</h4>
+									</div>
+									<div *ngIf="loginError" class="alert alert-danger" role="alert">
+										<strong>Login Failed:</strong> {{ errorMsg }}
+									</div>
+									<form role="form" [formGroup]="userLogin" (ngSubmit)="login()">
+										<div class="form-group mb-3">
+											<div class="input-group input-group-alternative">
+												<div class="input-group-prepend">
+													<span class="input-group-text">
+														<i class="fa-solid fa-user"></i>
+													</span>
+												</div>
+												<input class="form-control" formControlName="userName" placeholder="Email" type="email" />
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="input-group input-group-alternative">
+												<div class="input-group-prepend">
+													<span class="input-group-text">
+														<i class="fa-solid fa-lock"></i>
+													</span>
+												</div>
+												<input class="form-control" formControlName="password" placeholder="Password" type="password" />
+											</div>
+										</div>
+										<div class="custom-control custom-control-alternative custom-checkbox">
+											<input class="custom-control-input" id=" customCheckLogin2" type="checkbox" />
+											<label class="custom-control-label" for=" customCheckLogin2">
+												<span class="text-default opacity-5"> Remember me </span>
+											</label>
+										</div>
+										<div class="text-center">
+											<button *ngIf="!loading" class="btn btn-primary my-4" type="submit">
+												Login
+											</button>
+											<button *ngIf="loading" class="btn btn-primary my-4" type="submit" disabled="loading">
+												Signing In...
+											</button>
+										</div>
+									</form>
+									<div class="text-center text-muted mb-2">
+										<a class="auth-form-link" (click)="signUp()">Sign Up</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

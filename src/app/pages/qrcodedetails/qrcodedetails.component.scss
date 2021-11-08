@@ -1,5 +1,13 @@
+.full-wrapper {
+	height: 100vh !important;
+}
+
+.bg-secondary {
+	height: 100% !important;
+}
+
 .qrcode-container {
-	margin-top: -120px !important;
+	margin-top: -100px !important;
 	background-color: #fff;
 }
 
@@ -10,6 +18,10 @@
 .qrcode-section {
 	display: flex;
 	padding-top: 0rem !important;
+}
+
+.title-header {
+	margin-top: 50px;
 }
 
 .btn-danger {
@@ -51,4 +63,8 @@
 
 .saving-button span {
 	margin-right: 7px !important;
+}
+
+.qr-code-image img {
+	width: 100% !important;
 }
