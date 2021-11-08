@@ -3,7 +3,6 @@ import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { APP_BASE_HREF, CommonModule } from "@angular/common";
-import { NgxsModule } from '@ngxs/store';
 
 import { BsDropdownModule } from "ngx-bootstrap/dropdown";
 import { TooltipModule } from "ngx-bootstrap/tooltip";
@@ -53,10 +52,7 @@ import { PictureUploadComponent } from "./components/picture-upload/picture-uplo
     AlertModule.forRoot(),
     BsDatepickerModule.forRoot(),
     CarouselModule.forRoot(),
-    ModalModule.forRoot(),
-    // NgxsModule.forRoot([ZooState], {
-    //   developmentMode: !environment.production
-    // })
+    ModalModule.forRoot()
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent]

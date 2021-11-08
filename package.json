@@ -21,8 +21,6 @@
     "@angular/platform-browser-dynamic": "11.0.5",
     "@angular/router": "11.0.5",
     "@glidejs/glide": "3.4.1",
-    "@ngxs/logger-plugin": "^3.7.2-dev.master-eb1469e",
-    "@ngxs/store": "^3.7.2-dev.master-eb1469e",
     "choices.js": "9.0.1",
     "core-js": "3.8.2",
     "flatpickr": "4.6.9",
