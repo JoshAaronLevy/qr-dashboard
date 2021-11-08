@@ -85,9 +85,15 @@
 													</div>
 													<div class="col-md-9 align-self-center">
 														<div class="form-group">
-															<input class="form-control" id="tagPrice"
-																name="tagPrice" required type="number"
-																formControlName="tagPrice" />
+															<input 
+																id="tagPrice"
+																class="form-control"
+																name="tagPrice"
+																required
+																pattern="^[0-9_]*$"
+																formControlName="tagPrice"
+																(keyup)="evalPrice($event)"
+																(blur)="transformAmount($event)" />
 														</div>
 													</div>
 												</div>

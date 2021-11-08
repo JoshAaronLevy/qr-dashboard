@@ -6,11 +6,15 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { getStoredUser } from 'src/shared/userHelper';
 import { storeQRCode } from 'src/shared/qrCodeHelper';
 import swal from "sweetalert2";
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
 	selector: 'app-qrcodedetails',
 	templateUrl: 'qrcodedetails.component.html',
 	styleUrls: ['qrcodedetails.component.scss'],
+	providers: [
+		CurrencyPipe
+	]
 })
 export class QRCodeDetailsComponent implements OnInit {
 	qrCodeId: any;
@@ -46,10 +50,13 @@ export class QRCodeDetailsComponent implements OnInit {
 	fieldValid: boolean;
 	saveDisabled: boolean;
 	errorMsg: string;
+	tagPrice: any;
+	regexPattern = "/^[a-zA-Z0-9\(\);:&\-' ]*[a-zA-Z0-9\(\);:&\-']*$/";
 
 	constructor(
 		private formBuilder: FormBuilder,
 		public router: Router,
+		private currencyPipe: CurrencyPipe
 	) {
 		Parse.initialize(parse.appId, parse.javascript);
 		Parse.serverURL = parse.serverURL;
@@ -63,7 +70,7 @@ export class QRCodeDetailsComponent implements OnInit {
 
 	getQRCodeDetails() {
 		this.qrCode = JSON.parse(localStorage.getItem("selectedQRCode"));
-		console.log(this.qrCode);
+		console.log("qrCode:", this.qrCode);
 		this.qrCodeId = this.qrCode.id;
 		this.buildEditForm();
 	}
@@ -124,6 +131,36 @@ export class QRCodeDetailsComponent implements OnInit {
 				fieldId.classList.add("field-valid");
 			}
 		}
+	}
+
+	evalPrice(element) {
+		if (this.qrCodeEdit.value.tagPrice.length > 0) {
+			const acceptedVals = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "."];
+			const priceVal = this.qrCodeEdit.value.tagPrice;
+			const lastIndex = this.qrCodeEdit.value.tagPrice.length - 1;
+			for (let i = 0; i < this.qrCodeEdit.value.tagPrice.length; i++) {
+				if (i === lastIndex) {
+					console.log(this.qrCodeEdit.value.tagPrice[i]);
+					this.qrCodeEdit.value.tagPrice = this.qrCodeEdit.value.tagPrice.slice(0, lastIndex);
+				}
+			}
+			// for (let i = 0; i < acceptedVals.length; i++) {
+			// 	if (keyInput !== acceptedVals[i]) {
+			// 		console.log("Invalid key entry");
+			// 		this.qrCodeEdit.value.tagPrice = this.qrCodeEdit.value.tagPrice.slice(-1, 1);
+			// 	} else {
+			// 		console.log("Key entry valid");
+			// 	}
+			// }
+			console.log(element);
+			console.log(lastIndex);
+			console.log(this.qrCodeEdit.value.tagPrice);
+		}
+	}
+
+	transformAmount(element) {
+		this.tagPrice = this.currencyPipe.transform(this.qrCodeEdit.value.tagPrice, '$');
+		element.target.value = this.tagPrice;
 	}
 
 	editQRCode() {
