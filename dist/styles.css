@@ -25804,14 +25804,10 @@ hr.line-deafult {
 }
 .account-settings .card {
   position: relative;
-  top: -200px;
   z-index: 2;
 }
 .account-settings .skew-separator:after {
   background: #f4f5f7;
-}
-.account-settings .page-header .container {
-  padding-top: 0 !important;
 }
 .checkout-page .page-header {
   display: block;
