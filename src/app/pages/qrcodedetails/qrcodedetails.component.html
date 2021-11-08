@@ -17,7 +17,7 @@
 		<div class="container qrcode-card bg-white card">
 			<div class="row">
 				<div class="col-md-12 qrcode-container">
-					<div class="section qrcode-section">
+					<div *ngIf="!loadError && !loading" class="section qrcode-section">
 						<div class="col-md-4">
 							<div class="section">
 								<section class="text-center qr-code-image">

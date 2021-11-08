@@ -72,7 +72,26 @@ export class ProfileComponent implements OnInit, OnDestroy {
 	ngOnInit() {
 		this.saveDisabled = false;
 		this.loading = true;
-		this.checkUser();
+		const body = document.getElementsByTagName("body")[0];
+		body.classList.add("account-settings");
+		this.agentCity = document.getElementById("agentCity");
+		this.initializeData();
+	}
+
+	async initializeData() {
+		await this.presentLoadingModal();
+		await this.checkUser();
+	}
+
+	presentLoadingModal() {
+		swal.fire({
+			title: "Loading...",
+			showConfirmButton: false,
+			showCancelButton: false
+		});
+	}
+
+	async checkUser() {
 		this.user = getStoredUser();
 		this.originalUser = { ...this.user };
 		if (this.originalUser.isAgent === 'YES' || this.originalUser.isagentyn === 'YES') {
@@ -81,33 +100,30 @@ export class ProfileComponent implements OnInit, OnDestroy {
 			this.isAgent = false;
 		}
 		this.emailChanged = false;
-		const body = document.getElementsByTagName("body")[0];
-		body.classList.add("account-settings");
-		this.agentCity = document.getElementById("agentCity");
-	}
-
-	checkUser() {
 		const User = new Parse.User();
 		const query = new Parse.Query(User);
 		this.userId = getStoredUser().userId;
-		query.get(this.userId).then((user) => {
+		await query.get(this.userId).then((user) => {
 			this.user = parseResult(user);
 			if (this.isAgent === true) {
 				this.checkAgent();
 			} else {
 				this.userForm();
 			}
+			return this.user;
 		}, (error) => {
+			swal.close();
 			this.presentUserError(error);
+			return error;
 		});
 	}
 
-	checkAgent() {
+	async checkAgent() {
 		const Agents = Parse.Object.extend('Agents');
 		const query = new Parse.Query(Agents);
 		this.username = getStoredUser().username;
 		query.equalTo('agentID', this.username);
-		query.find().then((agent) => {
+		await query.find().then((agent) => {
 			if (agent.length > 0) {
 				this.agent = parseResults(agent);
 				this.agent = this.agent[0];
@@ -117,26 +133,30 @@ export class ProfileComponent implements OnInit, OnDestroy {
 			} else {
 				this.isAgent = false;
 			}
+			return this.agent;
 		}, (error) => {
 			this.isAgent = false;
+			swal.close();
+			this.presentUserError(error);
 			return error;
-			// this.presentUserError(error);
 		});
 	}
 
 	userForm() {
-		this.displayAgentForm = false;
-		this.displayUserForm = true;
 		this.userEdit = this.formBuilder.group({
 			firstName: this.user.firstName,
 			lastName: this.user.lastName,
 			email: this.user.email
 		});
+		this.displayAgentForm = false;
+		this.displayUserForm = true;
+		setTimeout(() => {
+			this.loading = false;
+			swal.close();
+		}, 500);
 	}
 
 	agentForm() {
-		this.displayAgentForm = true;
-		this.displayUserForm = false;
 		this.agentEdit = this.formBuilder.group({
 			firstName: this.agent.firstName,
 			lastName: this.agent.lastName,
@@ -155,6 +175,12 @@ export class ProfileComponent implements OnInit, OnDestroy {
 			linkedIn: this.agent.linkedIn,
 			agentAboutMe: this.agent.agentAboutMe
 		});
+		this.displayAgentForm = true;
+		this.displayUserForm = false;
+		setTimeout(() => {
+			this.loading = false;
+			swal.close();
+		}, 500);
 	}
 
 	validateField(fieldName, minChars) {
@@ -310,6 +336,19 @@ export class ProfileComponent implements OnInit, OnDestroy {
 			showConfirmButton: false,
 			icon: "success"
 		});
+	}
+
+	presentLoadingError(error) {
+		swal.fire({
+			title: "Error",
+			buttonsStyling: false,
+			customClass: {
+				confirmButton: "btn btn-danger",
+			},
+			icon: "error",
+			html: `<b>${error}</b>`
+		});
+		this.loading = false;
 	}
 
 	presentUserSuccess() {

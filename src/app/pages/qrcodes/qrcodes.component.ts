@@ -7,6 +7,7 @@ import * as parse from '../../../keys/parse';
 import { QRCodes } from '../../models/qrcode.model';
 import { Router } from '@angular/router';
 import { parseResults } from '../../../shared/parseResults';
+import swal from "sweetalert2";
 
 @Component({
 	selector: "app-qrcodes",
@@ -34,10 +35,27 @@ export class QRCodesComponent implements OnInit {
 		this.username = getStoredUser().username;
 		this.searchEnabled = false;
 		this.loading = true;
+		this.initializeData();
+	}
+
+	async initializeData() {
+		await this.presentLoadingModal();
+		await this.getQRCodes();
+	}
+
+	presentLoadingModal() {
+		swal.fire({
+			title: "Loading...",
+			showConfirmButton: false,
+			showCancelButton: false
+		});
+	}
+
+	async getQRCodes() {
 		const Tags = Parse.Object.extend('Tags');
 		const query = new Parse.Query(Tags);
 		query.equalTo('userEmail', this.username);
-		query.find().then((results) => {
+		await query.find().then((results) => {
 			results = parseResults(results);
 			this.qrcodes = results;
 			if (this.qrcodes.length > 0) {
@@ -53,7 +71,17 @@ export class QRCodesComponent implements OnInit {
 					this.qrcodes[i].imageUrl = `https://photos.homecards.com/rebeacons/Tag-${this.qrcodes[i].tagPhotoRef}-1.jpg`;
 				}
 			}
-			this.loading = false;
+			setTimeout(() => {
+				this.loading = false;
+				swal.close();
+			}, 500);
+			return this.qrcodes;
+		}, (error) => {
+			console.error(error);
+			setTimeout(() => {
+				this.loading = false;
+				swal.close();
+			}, 500);
 		});
 	}
 

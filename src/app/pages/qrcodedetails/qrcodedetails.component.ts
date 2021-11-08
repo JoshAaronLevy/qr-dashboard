@@ -22,6 +22,7 @@ export class QRCodeDetailsComponent implements OnInit {
 	images: any = [];
 	previousRoute: string;
 	loading: boolean;
+	loadError: boolean;
 	slideOpts = {
 		spaceBetween: 10,
 		slidesPerView: 'auto',
@@ -65,15 +66,40 @@ export class QRCodeDetailsComponent implements OnInit {
 
 	ngOnInit() {
 		this.loading = true;
+		this.loadError = false;
 		this.username = getStoredUser().username;
-		this.getQRCodeDetails();
+		this.initializeData();
+	}
+
+	async initializeData() {
+		await this.presentLoadingModal();
+		await this.getQRCodeDetails();
+	}
+
+	presentLoadingModal() {
+		swal.fire({
+			title: "Loading...",
+			showConfirmButton: false,
+			showCancelButton: false
+		});
 	}
 
 	getQRCodeDetails() {
 		this.qrCode = JSON.parse(localStorage.getItem("selectedQRCode"));
 		console.log("qrCode:", this.qrCode);
-		this.qrCodeId = this.qrCode.id;
-		this.buildEditForm();
+		if (this.qrCode.id) {
+			this.qrCodeId = this.qrCode.id;
+			if (this.qrCodeId !== "0") {
+				this.buildEditForm();
+			} else {
+				this.buildCreateForm();
+			}
+		} else {
+			setTimeout(() => {
+				swal.close();
+				this.presentLoadError();
+			}, 500);
+		}
 	}
 
 	buildEditForm() {
@@ -90,12 +116,32 @@ export class QRCodeDetailsComponent implements OnInit {
 			tagZip: this.qrCode.tagZip,
 			tagInfo: this.qrCode.tagInfo
 		});
-		if (this.qrCodeId !== "0") {
-			this.qrImage = `https://photos.homecards.com/rebeacons/Tag-${this.qrCode.tagPhotoRef}-1.jpg`;
-		} else {
-			this.qrImage = "../../../assets/img/image_placeholder.jpg";
-		}
-		this.loading = false;
+		this.qrImage = `https://photos.homecards.com/rebeacons/Tag-${this.qrCode.tagPhotoRef}-1.jpg`;
+		setTimeout(() => {
+			this.loading = false;
+			swal.close();
+		}, 500);
+	}
+
+	buildCreateForm() {
+		this.qrCodeEdit = this.formBuilder.group({
+			tagTitle: "",
+			tagSubTitle: "",
+			tagCompany: "",
+			tagPrice: "",
+			tagUrl: "",
+			tagAddress: "",
+			tagAddress2: "",
+			tagCity: "",
+			tagState: "",
+			tagZip: "",
+			tagInfo: ""
+		});
+		this.qrImage = "../../../assets/img/image_placeholder.jpg";
+		setTimeout(() => {
+			this.loading = false;
+			swal.close();
+		}, 500);
 	}
 
 	validateField(fieldName, minChars) {
@@ -172,6 +218,20 @@ export class QRCodeDetailsComponent implements OnInit {
 		});
 	}
 
+	presentLoadError() {
+		swal.fire({
+			title: "Error",
+			buttonsStyling: false,
+			customClass: {
+				confirmButton: "btn btn-danger",
+			},
+			icon: "error",
+			html: `<b>Unable to retrieve specified data</b>`
+		});
+		this.loading = false;
+		this.loadError = true;
+	}
+
 	presentQRCodeError(error) {
 		swal.fire({
 			title: "Save Failed",
@@ -187,7 +247,7 @@ export class QRCodeDetailsComponent implements OnInit {
 
 	routeToEditQRCode() {
 		storeQRCode(this.qrCode);
-		localStorage.setItem('tagId', this.qrCode.id);
+		localStorage.setItem('qrCodeId', this.qrCode.id);
 		localStorage.setItem('method', 'edit');
 		this.router.navigate(['/qrcodes/create']);
 	}

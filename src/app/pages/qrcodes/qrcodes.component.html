@@ -18,15 +18,15 @@
 			<div class="row">
 				<div class="col-md-12 qrcode-container">
 					<div class="section qrcode-section">
-						<section class="text-center qr-button">
+						<section *ngIf="!loading" class="text-center qr-button">
 							<button class="btn btn-primary" type="button" (click)="routeToCreate()">
 								Create QR Code
 							</button>
 						</section>
-						<div *ngIf="!qrcodesFound" class="text-center">
+						<div *ngIf="!qrcodesFound && !loading" class="text-center">
 							<h2>No QR Codes Found</h2>
 						</div>
-						<div *ngIf="qrcodesFound" class="table">
+						<div *ngIf="qrcodesFound && !loading" class="table">
 							<table class="table table-shopping">
 								<thead class="">
 									<tr>
