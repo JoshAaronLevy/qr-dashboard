@@ -1,12 +1,12 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
-import { RegisterpageComponent } from "./examples/registerpage/registerpage.component";
-import { AccountsettingsComponent } from "./examples/accountsettings/accountsettings.component";
-import { LoginpageComponent } from "./examples/loginpage/loginpage.component";
-import { ProductpageComponent } from "./examples/productpage/productpage.component";
-import { QRCodesComponent } from "./examples/qrcodes/qrcodes.component";
-import { QRCodeDetailsComponent } from "./examples/qrcodedetails/qrcodedetails.component";
+import { RegisterpageComponent } from "./pages/registerpage/registerpage.component";
+import { AccountsettingsComponent } from "./pages/accountsettings/accountsettings.component";
+import { LoginpageComponent } from "./pages/loginpage/loginpage.component";
+import { ProductpageComponent } from "./pages/productpage/productpage.component";
+import { QRCodesComponent } from "./pages/qrcodes/qrcodes.component";
+import { QRCodeDetailsComponent } from "./pages/qrcodedetails/qrcodedetails.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "qrcodes", pathMatch: "full" },

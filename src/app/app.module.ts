@@ -18,15 +18,15 @@ import { PopoverModule } from "ngx-bootstrap/popover";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
-import { RegisterpageComponent } from "./examples/registerpage/registerpage.component";
-import { AccountsettingsComponent } from "./examples/accountsettings/accountsettings.component";
-import { LoginpageComponent } from "./examples/loginpage/loginpage.component";
-import { ProductpageComponent } from "./examples/productpage/productpage.component";
+import { RegisterpageComponent } from "./pages/registerpage/registerpage.component";
+import { AccountsettingsComponent } from "./pages/accountsettings/accountsettings.component";
+import { LoginpageComponent } from "./pages/loginpage/loginpage.component";
+import { ProductpageComponent } from "./pages/productpage/productpage.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { PictureUploadComponent } from "./components/picture-upload/picture-upload.component";
-import { QRCodesComponent } from "./examples/qrcodes/qrcodes.component";
-import { QRCodeDetailsComponent } from "./examples/qrcodedetails/qrcodedetails.component";
+import { QRCodesComponent } from "./pages/qrcodes/qrcodes.component";
+import { QRCodeDetailsComponent } from "./pages/qrcodedetails/qrcodedetails.component";
 
 @NgModule({
   declarations: [
