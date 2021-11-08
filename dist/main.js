@@ -23305,9 +23305,7 @@ function QRCodeDetailsComponent_div_22_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "div", 25);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div", 26);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "input", 33);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function QRCodeDetailsComponent_div_22_Template_input_keyup_35_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r8.evalPrice($event); })("blur", function QRCodeDetailsComponent_div_22_Template_input_blur_35_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r9.transformAmount($event); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](35, "input", 33);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -23356,7 +23354,7 @@ function QRCodeDetailsComponent_div_22_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](61, "div", 25);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](62, "div", 26);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](63, "input", 41);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function QRCodeDetailsComponent_div_22_Template_input_keyup_63_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r10.validateField("tagCity", 1); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function QRCodeDetailsComponent_div_22_Template_input_keyup_63_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r8 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r8.validateField("tagCity", 1); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -23370,7 +23368,7 @@ function QRCodeDetailsComponent_div_22_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](68, "div", 25);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](69, "div", 26);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](70, "input", 43);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function QRCodeDetailsComponent_div_22_Template_input_keyup_70_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r11.validateField("tagState", 2); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("keyup", function QRCodeDetailsComponent_div_22_Template_input_keyup_70_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r9.validateField("tagState", 2); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -23404,7 +23402,7 @@ function QRCodeDetailsComponent_div_22_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](87, QRCodeDetailsComponent_div_22_button_87_Template, 2, 1, "button", 50);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](88, QRCodeDetailsComponent_div_22_button_88_Template, 3, 0, "button", 51);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](89, "a", 52);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function QRCodeDetailsComponent_div_22_Template_a_click_89_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r12.cancelChanges(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function QRCodeDetailsComponent_div_22_Template_a_click_89_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵrestoreView"](_r4); var ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"](); return ctx_r10.cancelChanges(); });
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](90, " Cancel ");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -23523,34 +23521,6 @@ var QRCodeDetailsComponent = /** @class */ (function () {
             }
         }
     };
-    QRCodeDetailsComponent.prototype.evalPrice = function (element) {
-        if (this.qrCodeEdit.value.tagPrice.length > 0) {
-            var acceptedVals = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "."];
-            var priceVal = this.qrCodeEdit.value.tagPrice;
-            var lastIndex = this.qrCodeEdit.value.tagPrice.length - 1;
-            for (var i = 0; i < this.qrCodeEdit.value.tagPrice.length; i++) {
-                if (i === lastIndex) {
-                    console.log(this.qrCodeEdit.value.tagPrice[i]);
-                    this.qrCodeEdit.value.tagPrice = this.qrCodeEdit.value.tagPrice.slice(0, lastIndex);
-                }
-            }
-            // for (let i = 0; i < acceptedVals.length; i++) {
-            // 	if (keyInput !== acceptedVals[i]) {
-            // 		console.log("Invalid key entry");
-            // 		this.qrCodeEdit.value.tagPrice = this.qrCodeEdit.value.tagPrice.slice(-1, 1);
-            // 	} else {
-            // 		console.log("Key entry valid");
-            // 	}
-            // }
-            console.log(element);
-            console.log(lastIndex);
-            console.log(this.qrCodeEdit.value.tagPrice);
-        }
-    };
-    QRCodeDetailsComponent.prototype.transformAmount = function (element) {
-        this.tagPrice = this.currencyPipe.transform(this.qrCodeEdit.value.tagPrice, '$');
-        element.target.value = this.tagPrice;
-    };
     QRCodeDetailsComponent.prototype.editQRCode = function () {
         var _this = this;
         var QRCodes = parse__WEBPACK_IMPORTED_MODULE_2__["Object"].extend('Tags');
@@ -23611,7 +23581,7 @@ var QRCodeDetailsComponent = /** @class */ (function () {
     QRCodeDetailsComponent.ɵfac = function QRCodeDetailsComponent_Factory(t) { return new (t || QRCodeDetailsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_8__["CurrencyPipe"])); };
     QRCodeDetailsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: QRCodeDetailsComponent, selectors: [["app-qrcodedetails"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵProvidersFeature"]([
                 _angular_common__WEBPACK_IMPORTED_MODULE_8__["CurrencyPipe"]
-            ])], decls: 23, vars: 2, consts: [[1, "wrapper"], [1, "section-shaped", "my-0", "skew-separator", "skew-mini"], [1, "page-header", "page-header-small", "header-filter"], [1, "page-header-image", 2, "background-image", "url('../../../assets/img/pages/photo-15.jpg')"], [1, "container"], [1, "header-body", "text-center", "mb-7"], [1, "row", "justify-content-center"], [1, "col-xl-5", "col-lg-6", "col-md-8", "px-5"], [1, "text-white"], [1, "bg-secondary"], [1, "container", "qrcode-card", "bg-white", "card"], [1, "row"], [1, "col-md-12", "qrcode-container"], [1, "section", "qrcode-section"], [1, "col-md-4"], [1, "section"], [1, "text-center"], [3, "src"], [1, "col-md-8", "ml-auto"], [1, "tab-content"], [4, "ngIf"], [1, "line-primary"], ["role", "form", "novalidate", "", 3, "formGroup", "ngSubmit"], [1, "col-md-3", "align-self-center"], ["for", "#tagTitle", 1, "labels"], [1, "col-md-9", "align-self-center"], [1, "form-group"], ["id", "tagTitle", "type", "text", "required", "", "formControlName", "tagTitle", 1, "form-control", 3, "keyup"], ["for", "#tagSubTitle", 1, "labels"], ["id", "tagSubTitle", "name", "tagSubTitle", "required", "", "type", "text", "formControlName", "tagSubTitle", 1, "form-control", 3, "keyup"], ["for", "#tagCompany", 1, "labels"], ["id", "tagCompany", "name", "tagCompany", "required", "", "type", "tagCompany", "formControlName", "tagCompany", 1, "form-control", 3, "keyup"], ["for", "#tagPrice", 1, "labels"], ["id", "tagPrice", "name", "tagPrice", "required", "", "pattern", "^[0-9_]*$", "formControlName", "tagPrice", 1, "form-control", 3, "keyup", "blur"], ["for", "#tagUrl", 1, "labels"], ["id", "tagUrl", "name", "tagUrl", "required", "", "type", "url", "formControlName", "tagUrl", 1, "form-control"], ["for", "#tagAddress", 1, "labels"], ["id", "tagAddress", "name", "tagAddress", "required", "", "type", "text", "formControlName", "tagAddress", 1, "form-control"], ["for", "#tagAddress2", 1, "labels"], ["id", "tagAddress2", "name", "tagAddress2", "required", "", "type", "text", "formControlName", "tagAddress2", 1, "form-control"], ["for", "#tagCity", 1, "labels"], ["id", "tagCity", "name", "tagCity", "required", "", "type", "text", "formControlName", "tagCity", 1, "form-control", 3, "keyup"], ["for", "#tagState", 1, "labels"], ["id", "tagState", "name", "tagState", "required", "", "type", "text", "formControlName", "tagState", "minlength", "2", "maxlength", "2", "placeholder", "CA", 1, "form-control", 3, "keyup"], ["for", "#tagZip", 1, "labels"], ["id", "tagZip", "name", "tagZip", "required", "", "type", "text", "formControlName", "tagZip", 1, "form-control"], ["for", "#tagInfo", 1, "labels"], ["id", "tagInfo", "rows", "8", "name", "tagInfo", "required", "", "formControlName", "tagInfo", 1, "form-control"], [1, "row", "mt-5"], [1, "button-group", "col-md-12"], ["class", "btn btn-success", "type", "submit", 3, "disabled", 4, "ngIf"], ["class", "btn btn-success saving-button", "type", "button", "disabled", "", 4, "ngIf"], [1, "btn", "btn-danger", 3, "click"], ["type", "submit", 1, "btn", "btn-success", 3, "disabled"], ["type", "button", "disabled", "", 1, "btn", "btn-success", "saving-button"], ["role", "status", "aria-hidden", "true", 1, "spinner-border", "spinner-border-sm"]], template: function QRCodeDetailsComponent_Template(rf, ctx) { if (rf & 1) {
+            ])], decls: 23, vars: 2, consts: [[1, "wrapper"], [1, "section-shaped", "my-0", "skew-separator", "skew-mini"], [1, "page-header", "page-header-small", "header-filter"], [1, "page-header-image", 2, "background-image", "url('../../../assets/img/pages/photo-15.jpg')"], [1, "container"], [1, "header-body", "text-center", "mb-7"], [1, "row", "justify-content-center"], [1, "col-xl-5", "col-lg-6", "col-md-8", "px-5"], [1, "text-white"], [1, "bg-secondary"], [1, "container", "qrcode-card", "bg-white", "card"], [1, "row"], [1, "col-md-12", "qrcode-container"], [1, "section", "qrcode-section"], [1, "col-md-4"], [1, "section"], [1, "text-center"], [3, "src"], [1, "col-md-8", "ml-auto"], [1, "tab-content"], [4, "ngIf"], [1, "line-primary"], ["role", "form", "novalidate", "", 3, "formGroup", "ngSubmit"], [1, "col-md-3", "align-self-center"], ["for", "#tagTitle", 1, "labels"], [1, "col-md-9", "align-self-center"], [1, "form-group"], ["id", "tagTitle", "type", "text", "required", "", "formControlName", "tagTitle", 1, "form-control", 3, "keyup"], ["for", "#tagSubTitle", 1, "labels"], ["id", "tagSubTitle", "name", "tagSubTitle", "required", "", "type", "text", "formControlName", "tagSubTitle", 1, "form-control", 3, "keyup"], ["for", "#tagCompany", 1, "labels"], ["id", "tagCompany", "name", "tagCompany", "required", "", "type", "tagCompany", "formControlName", "tagCompany", 1, "form-control", 3, "keyup"], ["for", "#tagPrice", 1, "labels"], ["id", "tagPrice", "name", "tagPrice", "required", "", "pattern", "^[0-9_]*$", "formControlName", "tagPrice", 1, "form-control"], ["for", "#tagUrl", 1, "labels"], ["id", "tagUrl", "name", "tagUrl", "required", "", "type", "url", "formControlName", "tagUrl", 1, "form-control"], ["for", "#tagAddress", 1, "labels"], ["id", "tagAddress", "name", "tagAddress", "required", "", "type", "text", "formControlName", "tagAddress", 1, "form-control"], ["for", "#tagAddress2", 1, "labels"], ["id", "tagAddress2", "name", "tagAddress2", "required", "", "type", "text", "formControlName", "tagAddress2", 1, "form-control"], ["for", "#tagCity", 1, "labels"], ["id", "tagCity", "name", "tagCity", "required", "", "type", "text", "formControlName", "tagCity", 1, "form-control", 3, "keyup"], ["for", "#tagState", 1, "labels"], ["id", "tagState", "name", "tagState", "required", "", "type", "text", "formControlName", "tagState", "minlength", "2", "maxlength", "2", "placeholder", "CA", 1, "form-control", 3, "keyup"], ["for", "#tagZip", 1, "labels"], ["id", "tagZip", "name", "tagZip", "required", "", "type", "text", "formControlName", "tagZip", 1, "form-control"], ["for", "#tagInfo", 1, "labels"], ["id", "tagInfo", "rows", "8", "name", "tagInfo", "required", "", "formControlName", "tagInfo", 1, "form-control"], [1, "row", "mt-5"], [1, "button-group", "col-md-12"], ["class", "btn btn-success", "type", "submit", 3, "disabled", 4, "ngIf"], ["class", "btn btn-success saving-button", "type", "button", "disabled", "", 4, "ngIf"], [1, "btn", "btn-danger", 3, "click"], ["type", "submit", 1, "btn", "btn-success", 3, "disabled"], ["type", "button", "disabled", "", 1, "btn", "btn-success", "saving-button"], ["role", "status", "aria-hidden", "true", 1, "spinner-border", "spinner-border-sm"]], template: function QRCodeDetailsComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 2);
