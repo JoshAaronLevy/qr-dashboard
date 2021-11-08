@@ -133,36 +133,6 @@ export class QRCodeDetailsComponent implements OnInit {
 		}
 	}
 
-	evalPrice(element) {
-		if (this.qrCodeEdit.value.tagPrice.length > 0) {
-			const acceptedVals = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "."];
-			const priceVal = this.qrCodeEdit.value.tagPrice;
-			const lastIndex = this.qrCodeEdit.value.tagPrice.length - 1;
-			for (let i = 0; i < this.qrCodeEdit.value.tagPrice.length; i++) {
-				if (i === lastIndex) {
-					console.log(this.qrCodeEdit.value.tagPrice[i]);
-					this.qrCodeEdit.value.tagPrice = this.qrCodeEdit.value.tagPrice.slice(0, lastIndex);
-				}
-			}
-			// for (let i = 0; i < acceptedVals.length; i++) {
-			// 	if (keyInput !== acceptedVals[i]) {
-			// 		console.log("Invalid key entry");
-			// 		this.qrCodeEdit.value.tagPrice = this.qrCodeEdit.value.tagPrice.slice(-1, 1);
-			// 	} else {
-			// 		console.log("Key entry valid");
-			// 	}
-			// }
-			console.log(element);
-			console.log(lastIndex);
-			console.log(this.qrCodeEdit.value.tagPrice);
-		}
-	}
-
-	transformAmount(element) {
-		this.tagPrice = this.currencyPipe.transform(this.qrCodeEdit.value.tagPrice, '$');
-		element.target.value = this.tagPrice;
-	}
-
 	editQRCode() {
 		const QRCodes = Parse.Object.extend('Tags');
 		const query = new Parse.Query(QRCodes);
