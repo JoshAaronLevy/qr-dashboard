@@ -72,6 +72,9 @@ export class ProfileComponent implements OnInit, OnDestroy {
 	ngOnInit() {
 		this.saveDisabled = false;
 		this.loading = true;
+		this.user = getStoredUser();
+		this.originalUser = { ...this.user };
+		console.log("this.originalUser:", this.originalUser);
 		const body = document.getElementsByTagName("body")[0];
 		body.classList.add("account-settings");
 		this.agentCity = document.getElementById("agentCity");
@@ -92,8 +95,6 @@ export class ProfileComponent implements OnInit, OnDestroy {
 	}
 
 	async checkUser() {
-		this.user = getStoredUser();
-		this.originalUser = { ...this.user };
 		if (this.originalUser.isAgent === 'YES' || this.originalUser.isagentyn === 'YES') {
 			this.isAgent = true;
 		} else {
@@ -104,6 +105,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
 		const query = new Parse.Query(User);
 		this.userId = getStoredUser().userId;
 		await query.get(this.userId).then((user) => {
+			console.log("user:", user);
 			this.user = parseResult(user);
 			if (this.isAgent === true) {
 				this.checkAgent();
@@ -118,12 +120,14 @@ export class ProfileComponent implements OnInit, OnDestroy {
 		});
 	}
 
-	async checkAgent() {
+	checkAgent() {
 		const Agents = Parse.Object.extend('Agents');
 		const query = new Parse.Query(Agents);
 		this.username = getStoredUser().username;
+		console.log("this.username:", this.username);
 		query.equalTo('agentID', this.username);
-		await query.find().then((agent) => {
+		query.find().then((agent) => {
+			console.log("agent:", agent);
 			if (agent.length > 0) {
 				this.agent = parseResults(agent);
 				this.agent = this.agent[0];
@@ -132,6 +136,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
 				this.agentForm();
 			} else {
 				this.isAgent = false;
+				this.presentLoadingError(`Unable to load profile info. Please try again.`);
 			}
 			return this.agent;
 		}, (error) => {

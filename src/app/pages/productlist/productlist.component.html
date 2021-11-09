@@ -31,7 +31,7 @@
 								<thead class="">
 									<tr>
 										<!-- <th class="text-center"></th> -->
-										<th>Title/Subtitle</th>
+										<th>Title/Details</th>
 										<th>Status</th>
 										<th>Category</th>
 										<th>Last Updated</th>
@@ -48,15 +48,15 @@
 										<td class="td-name">
 											<a (click)="viewProductDetails(product)">{{ product.productTitle }}</a> <br />
 											<small 
-												*ngIf="product.productInfo && product.productInfo.length > 60"
-												tooltip="{{ product.productInfo }}"
+												*ngIf="product.productDetails && product.productDetails.length > 60"
+												tooltip="{{ product.productDetails }}"
 												placement="bottom"
 												[adaptivePosition]="false"
 												containerClass="code-info-tooltip"
 												[delay]="500">
-												{{ product.productInfo | slice: 0:30 }}...
+												{{ product.productDetails | slice: 0:30 }}...
 											</small>
-											<small *ngIf="product.productInfo && product.productInfo.length < 30">{{ product.productInfo }}</small>
+											<small *ngIf="product.productDetails && product.productDetails.length < 30">{{ product.productDetails }}</small>
 										</td>
 										<td>
 											{{ product.productStatus }}
