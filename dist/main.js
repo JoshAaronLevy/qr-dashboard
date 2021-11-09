@@ -199,7 +199,7 @@ function ProductDetailsComponent_div_14_div_8_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](57, "div", 11);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](58, "div", 25);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](59, "label", 42);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](60, " Info ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](60, " Product Info ");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](61, "div", 27);
@@ -484,7 +484,7 @@ var ProductDetailsComponent = /** @class */ (function () {
     ProductDetailsComponent.ɵfac = function ProductDetailsComponent_Factory(t) { return new (t || ProductDetailsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_8__["CurrencyPipe"])); };
     ProductDetailsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: ProductDetailsComponent, selectors: [["app-productdetails"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵProvidersFeature"]([
                 _angular_common__WEBPACK_IMPORTED_MODULE_8__["CurrencyPipe"]
-            ])], decls: 15, vars: 1, consts: [[1, "wrapper", "full-wrapper"], [1, "section-shaped", "my-0", "skew-separator", "skew-mini"], [1, "page-header", "page-header-small", "header-filter"], [1, "page-header-image", 2, "background-image", "url('../../../assets/img/pages/photo-15.jpg')"], [1, "container"], [1, "header-body", "title-header", "text-center", "mb-7"], [1, "row", "justify-content-center"], [1, "col-xl-5", "col-lg-6", "col-md-8", "px-5"], [1, "text-white"], [1, "bg-secondary"], [1, "container", "product-card", "bg-white", "card"], [1, "row"], [1, "col-md-12", "product-container"], ["class", "section product-section", 4, "ngIf"], [1, "section", "product-section"], [1, "col-md-4"], [1, "section"], [1, "text-center", "qr-code-image"], [3, "src", 4, "ngIf"], [1, "col-md-8", "ml-auto"], [1, "tab-content"], [4, "ngIf"], [3, "src"], [1, "line-primary"], ["role", "form", "novalidate", "", 3, "formGroup", "ngSubmit"], [1, "col-md-3", "align-self-center"], ["for", "#productTitle", 1, "labels"], [1, "col-md-9", "align-self-center"], [1, "form-group"], ["id", "productTitle", "type", "text", "required", "", "formControlName", "productTitle", 1, "form-control", 3, "keyup"], ["for", "#productSubTitle", 1, "labels"], ["id", "productSubTitle", "name", "productSubTitle", "required", "", "type", "text", "formControlName", "productSubTitle", 1, "form-control", 3, "keyup"], ["for", "#productCategory", 1, "labels"], ["id", "productCategory", "name", "productCategory", "required", "", "type", "text", "formControlName", "productCategory", 1, "form-control", 3, "keyup"], ["for", "#productUrl", 1, "labels"], ["id", "productUrl", "name", "productUrl", "required", "", "type", "url", "formControlName", "productUrl", 1, "form-control"], ["for", "#productPrice", 1, "labels"], ["id", "productPrice", "name", "productPrice", "required", "", "pattern", "^[0-9_]*$", "formControlName", "productPrice", 1, "form-control"], ["for", "#productAddress", 1, "labels"], ["id", "productAddress", "name", "productAddress", "required", "", "type", "text", "formControlName", "productAddress", 1, "form-control"], ["for", "#productDetails", 1, "labels"], ["id", "productDetails", "rows", "8", "name", "productDetails", "required", "", "formControlName", "productDetails", 1, "form-control"], ["for", "#productInfo", 1, "labels"], ["id", "productInfo", "rows", "8", "name", "productInfo", "required", "", "formControlName", "productInfo", 1, "form-control"], [1, "row", "mt-5"], [1, "button-group", "col-md-12"], ["class", "btn btn-success", "type", "submit", 3, "disabled", 4, "ngIf"], ["class", "btn btn-success saving-button", "type", "button", "disabled", "", 4, "ngIf"], [1, "btn", "btn-danger", 3, "click"], ["type", "submit", 1, "btn", "btn-success", 3, "disabled"], ["type", "button", "disabled", "", 1, "btn", "btn-success", "saving-button"], ["role", "status", "aria-hidden", "true", 1, "spinner-border", "spinner-border-sm"]], template: function ProductDetailsComponent_Template(rf, ctx) { if (rf & 1) {
+            ])], decls: 15, vars: 1, consts: [[1, "wrapper", "full-wrapper"], [1, "section-shaped", "my-0", "skew-separator", "skew-mini"], [1, "page-header", "page-header-small", "header-filter"], [1, "page-header-image", 2, "background-image", "url('../../../assets/img/pages/photo-15.jpg')"], [1, "container"], [1, "header-body", "title-header", "text-center", "mb-7"], [1, "row", "justify-content-center"], [1, "col-xl-5", "col-lg-6", "col-md-8", "px-5"], [1, "text-white"], [1, "bg-secondary"], [1, "container", "product-card", "bg-white", "card"], [1, "row"], [1, "col-md-12", "product-container"], ["class", "section product-section", 4, "ngIf"], [1, "section", "product-section"], [1, "col-md-4"], [1, "section"], [1, "text-center", "qr-code-image"], [3, "src", 4, "ngIf"], [1, "col-md-8", "ml-auto"], [1, "tab-content"], [4, "ngIf"], [3, "src"], [1, "line-primary"], ["role", "form", "novalidate", "", 3, "formGroup", "ngSubmit"], [1, "col-md-3", "align-self-center"], ["for", "#productTitle", 1, "labels"], [1, "col-md-9", "align-self-center"], [1, "form-group"], ["id", "productTitle", "type", "text", "required", "", "formControlName", "productTitle", 1, "form-control", 3, "keyup"], ["for", "#productSubTitle", 1, "labels"], ["id", "productSubTitle", "name", "productSubTitle", "required", "", "type", "text", "formControlName", "productSubTitle", 1, "form-control", 3, "keyup"], ["for", "#productCategory", 1, "labels"], ["id", "productCategory", "name", "productCategory", "required", "", "type", "text", "formControlName", "productCategory", 1, "form-control", 3, "keyup"], ["for", "#productUrl", 1, "labels"], ["id", "productUrl", "name", "productUrl", "required", "", "type", "url", "formControlName", "productUrl", 1, "form-control"], ["for", "#productPrice", 1, "labels"], ["id", "productPrice", "name", "productPrice", "required", "", "pattern", "^[0-9_]*$", "formControlName", "productPrice", 1, "form-control"], ["for", "#productAddress", 1, "labels"], ["id", "productAddress", "name", "productAddress", "required", "", "type", "text", "formControlName", "productAddress", 1, "form-control"], ["for", "#productDetails", 1, "labels"], ["id", "productDetails", "rows", "3", "name", "productDetails", "required", "", "formControlName", "productDetails", 1, "form-control"], ["for", "#productInfo", 1, "labels"], ["id", "productInfo", "rows", "8", "name", "productInfo", "required", "", "formControlName", "productInfo", 1, "form-control"], [1, "row", "mt-5"], [1, "button-group", "col-md-12"], ["class", "btn btn-success", "type", "submit", 3, "disabled", 4, "ngIf"], ["class", "btn btn-success saving-button", "type", "button", "disabled", "", 4, "ngIf"], [1, "btn", "btn-danger", 3, "click"], ["type", "submit", 1, "btn", "btn-success", 3, "disabled"], ["type", "button", "disabled", "", 1, "btn", "btn-success", "saving-button"], ["role", "status", "aria-hidden", "true", 1, "spinner-border", "spinner-border-sm"]], template: function ProductDetailsComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 2);
@@ -594,10 +594,10 @@ function ProductListComponent_div_17_tbody_14_tr_1_small_5_Template(rf, ctx) { i
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
     var product_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpropertyInterpolate"]("tooltip", product_r7.productInfo);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpropertyInterpolate"]("tooltip", product_r7.productDetails);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("adaptivePosition", false)("delay", 500);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind3"](2, 4, product_r7.productInfo, 0, 30), "... ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind3"](2, 4, product_r7.productDetails, 0, 30), "... ");
 } }
 function ProductListComponent_div_17_tbody_14_tr_1_small_6_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "small");
@@ -606,7 +606,7 @@ function ProductListComponent_div_17_tbody_14_tr_1_small_6_Template(rf, ctx) { i
 } if (rf & 2) {
     var product_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](product_r7.productInfo);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](product_r7.productDetails);
 } }
 function ProductListComponent_div_17_tbody_14_tr_1_Template(rf, ctx) { if (rf & 1) {
     var _r13 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
@@ -642,9 +642,9 @@ function ProductListComponent_div_17_tbody_14_tr_1_Template(rf, ctx) { if (rf & 
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](product_r7.productTitle);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", product_r7.productInfo && product_r7.productInfo.length > 60);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", product_r7.productDetails && product_r7.productDetails.length > 60);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", product_r7.productInfo && product_r7.productInfo.length < 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", product_r7.productDetails && product_r7.productDetails.length < 30);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", product_r7.productStatus, " ");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
@@ -667,7 +667,7 @@ function ProductListComponent_div_17_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "thead", 22);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "tr");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "th");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Title/Subtitle");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Title/Details");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "th");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "Status");
@@ -1971,6 +1971,9 @@ var ProfileComponent = /** @class */ (function () {
     ProfileComponent.prototype.ngOnInit = function () {
         this.saveDisabled = false;
         this.loading = true;
+        this.user = Object(src_shared_userHelper__WEBPACK_IMPORTED_MODULE_4__["getStoredUser"])();
+        this.originalUser = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.user);
+        console.log("this.originalUser:", this.originalUser);
         var body = document.getElementsByTagName("body")[0];
         body.classList.add("account-settings");
         this.agentCity = document.getElementById("agentCity");
@@ -2005,8 +2008,6 @@ var ProfileComponent = /** @class */ (function () {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        this.user = Object(src_shared_userHelper__WEBPACK_IMPORTED_MODULE_4__["getStoredUser"])();
-                        this.originalUser = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, this.user);
                         if (this.originalUser.isAgent === 'YES' || this.originalUser.isagentyn === 'YES') {
                             this.isAgent = true;
                         }
@@ -2018,6 +2019,7 @@ var ProfileComponent = /** @class */ (function () {
                         query = new parse__WEBPACK_IMPORTED_MODULE_2__["Query"](User);
                         this.userId = Object(src_shared_userHelper__WEBPACK_IMPORTED_MODULE_4__["getStoredUser"])().userId;
                         return [4 /*yield*/, query.get(this.userId).then(function (user) {
+                                console.log("user:", user);
                                 _this.user = Object(src_shared_parseResults__WEBPACK_IMPORTED_MODULE_5__["parseResult"])(user);
                                 if (_this.isAgent === true) {
                                     _this.checkAgent();
@@ -2039,39 +2041,31 @@ var ProfileComponent = /** @class */ (function () {
         });
     };
     ProfileComponent.prototype.checkAgent = function () {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
-            var Agents, query;
-            var _this = this;
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        Agents = parse__WEBPACK_IMPORTED_MODULE_2__["Object"].extend('Agents');
-                        query = new parse__WEBPACK_IMPORTED_MODULE_2__["Query"](Agents);
-                        this.username = Object(src_shared_userHelper__WEBPACK_IMPORTED_MODULE_4__["getStoredUser"])().username;
-                        query.equalTo('agentID', this.username);
-                        return [4 /*yield*/, query.find().then(function (agent) {
-                                if (agent.length > 0) {
-                                    _this.agent = Object(src_shared_parseResults__WEBPACK_IMPORTED_MODULE_5__["parseResults"])(agent);
-                                    _this.agent = _this.agent[0];
-                                    _this.originalAgent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, _this.agent);
-                                    localStorage.setItem('agentId', _this.agent.id);
-                                    _this.agentForm();
-                                }
-                                else {
-                                    _this.isAgent = false;
-                                }
-                                return _this.agent;
-                            }, function (error) {
-                                _this.isAgent = false;
-                                sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.close();
-                                _this.presentUserError(error);
-                                return error;
-                            })];
-                    case 1:
-                        _a.sent();
-                        return [2 /*return*/];
-                }
-            });
+        var _this = this;
+        var Agents = parse__WEBPACK_IMPORTED_MODULE_2__["Object"].extend('Agents');
+        var query = new parse__WEBPACK_IMPORTED_MODULE_2__["Query"](Agents);
+        this.username = Object(src_shared_userHelper__WEBPACK_IMPORTED_MODULE_4__["getStoredUser"])().username;
+        console.log("this.username:", this.username);
+        query.equalTo('agentID', this.username);
+        query.find().then(function (agent) {
+            console.log("agent:", agent);
+            if (agent.length > 0) {
+                _this.agent = Object(src_shared_parseResults__WEBPACK_IMPORTED_MODULE_5__["parseResults"])(agent);
+                _this.agent = _this.agent[0];
+                _this.originalAgent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, _this.agent);
+                localStorage.setItem('agentId', _this.agent.id);
+                _this.agentForm();
+            }
+            else {
+                _this.isAgent = false;
+                _this.presentLoadingError("Unable to load profile info. Please try again.");
+            }
+            return _this.agent;
+        }, function (error) {
+            _this.isAgent = false;
+            sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.close();
+            _this.presentUserError(error);
+            return error;
         });
     };
     ProfileComponent.prototype.userForm = function () {
