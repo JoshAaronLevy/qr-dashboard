@@ -6,16 +6,16 @@
 	height: 100% !important;
 }
 
-.qrcode-container {
+.product-container {
 	margin-top: -100px !important;
 	background-color: #fff;
 }
 
-.qrcode-card {
+.product-card {
 	z-index: 999 !important;
 }
 
-.qrcode-section {
+.product-section {
 	padding-top: 2rem !important;
 }
 
@@ -23,7 +23,7 @@
 	margin-top: 50px;
 }
 
-.qr-button {
+.product-button {
 	margin-bottom: 20px;
 }
 
@@ -31,11 +31,11 @@
 	height: 0px !important;
 }
 
-.qr-code-table tr td a {
+.product-table tr td a {
 	color: #5e72e4 !important;
 }
 
-.qr-code-table tr td a:hover {
+.product-table tr td a:hover {
 	color: #333333 !important;
 	cursor: pointer !important;
 }
@@ -47,8 +47,6 @@
 
 .table-shopping .td-name small {
 	color: #444 !important;
-	font-weight: 500 !important;
-	font-size: 14px !important;
 }
 
 .td-name a:hover {

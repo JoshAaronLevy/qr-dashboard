@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
 	user: any;
 	displayName: string;
 	isCollapsed = true;
-	selectedQRCode: any;
+	selectedProduct: any;
 
 	constructor(private router: Router) {
 		router.events.subscribe(val => {
@@ -61,7 +61,11 @@ export class NavbarComponent implements OnInit {
 	}
 
 	routeToHome() {
-		this.router.navigate(['/qrcodes']);
+		this.router.navigate(['/products']);
+	}
+
+	routeToProducts() {
+		this.router.navigate(['/products']);
 	}
 
 	routeToProfile() {
@@ -69,22 +73,19 @@ export class NavbarComponent implements OnInit {
 	}
 
 	routeToCreate() {
-		this.selectedQRCode = {
+		this.selectedProduct = {
 			id: "0",
-			tagTitle: "",
-			tagSubTitle: "",
-			tagCompany: "",
-			tagPrice: "",
-			tagUrl: "",
-			tagAddress: "",
-			tagAddress2: "",
-			tagCity: "",
-			tagState: "",
-			tagZip: "",
-			tagInfo: ""
+			productTitle: "",
+			productSubTitle: "",
+			productCategory: "",
+			productUrl: "",
+			productPrice: "",
+			productAddress: "",
+			productDetails: "",
+			productInfo: ""
 		};
-		localStorage.setItem('selectedQRCode', JSON.stringify(this.selectedQRCode));
-		localStorage.setItem('selectedQRCodeId', "0");
-		this.router.navigate([`/qrcodes/create`]);
+		localStorage.setItem('selectedProduct', JSON.stringify(this.selectedProduct));
+		localStorage.setItem('selectedProductId', "0");
+		this.router.navigate([`/products/create`]);
 	}
 }

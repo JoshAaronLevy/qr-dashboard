@@ -6,7 +6,7 @@
 				<div class="header-body title-header text-center mb-7">
 					<div class="row justify-content-center">
 						<div class="col-xl-5 col-lg-6 col-md-8 px-5">
-							<h1 class="text-white">QR Code Details</h1>
+							<h1 class="text-white">Product Details</h1>
 						</div>
 					</div>
 				</div>
@@ -14,14 +14,14 @@
 		</div>
 	</div>
 	<div class="bg-secondary">
-		<div class="container qrcode-card bg-white card">
+		<div class="container product-card bg-white card">
 			<div class="row">
-				<div class="col-md-12 qrcode-container">
-					<div *ngIf="!loadError && !loading" class="section qrcode-section">
+				<div class="col-md-12 product-container">
+					<div *ngIf="!loadError && !loading" class="section product-section">
 						<div class="col-md-4">
 							<div class="section">
 								<section class="text-center qr-code-image">
-									<img *ngIf="qrImage" [src]="qrImage" />
+									<img *ngIf="productImage" [src]="productImage" />
 									<!-- <app-picture-upload [avatar]="true"></app-picture-upload> -->
 								</section>
 							</div>
@@ -29,163 +29,123 @@
 						<div class="col-md-8 ml-auto">
 							<div class="section">
 								<div class="tab-content">
-									<div *ngIf="qrCodeId">
+									<div *ngIf="productId">
 										<div>
 											<header>
-												<h2 *ngIf="qrCode.tagTitle">{{ qrCode.tagTitle }}</h2>
-												<h2 *ngIf="!qrCode.tagTitle">Create QR Code</h2>
+												<h2 *ngIf="product.productTitle">{{ product.productTitle }}</h2>
+												<h2 *ngIf="!product.productTitle">Create Product</h2>
 											</header>
 											<hr class="line-primary" />
 											<br />
-											<form role="form" [formGroup]="qrCodeEdit" (ngSubmit)="editQRCode()" novalidate>
+											<form role="form" [formGroup]="productEdit" (ngSubmit)="editProduct()" novalidate>
 												<div class="row">
 													<div class="col-md-3 align-self-center">
-														<label class="labels" for="#tagTitle">
+														<label class="labels" for="#productTitle">
 															Title
 														</label>
 													</div>
 													<div class="col-md-9 align-self-center">
 														<div class="form-group">
-															<input id="tagTitle" class="form-control" type="text" required
-																formControlName="tagTitle"
-																(keyup)="validateField('tagTitle', 1)" />
+															<input id="productTitle" class="form-control" type="text" required
+																formControlName="productTitle"
+																(keyup)="validateField('productTitle', 1)" />
 														</div>
 													</div>
 												</div>
 												<div class="row">
 													<div class="col-md-3 align-self-center">
-														<label class="labels" for="#tagSubTitle">
+														<label class="labels" for="#productSubTitle">
 															Subtitle
 														</label>
 													</div>
 													<div class="col-md-9 align-self-center">
 														<div class="form-group">
-															<input id="tagSubTitle" class="form-control" name="tagSubTitle" required
-																type="text" formControlName="tagSubTitle"
-																(keyup)="validateField('tagSubTitle', 1)" />
+															<input id="productSubTitle" class="form-control" name="productSubTitle" required
+																type="text" formControlName="productSubTitle"
+																(keyup)="validateField('productSubTitle', 1)" />
 														</div>
 													</div>
 												</div>
 												<div class="row">
 													<div class="col-md-3 align-self-center">
-														<label class="labels" for="#tagCompany"> Company </label>
+														<label class="labels" for="#productCategory">
+															Category
+														</label>
 													</div>
 													<div class="col-md-9 align-self-center">
 														<div class="form-group">
-															<input id="tagCompany" class="form-control" name="tagCompany"
-																required type="tagCompany" (keyup)="evaluateEmail()"
-																formControlName="tagCompany" />
+															<input id="productCategory" class="form-control" name="productCategory" required type="text"
+																formControlName="productCategory" (keyup)="validateField('productCategory', 1)" />
 														</div>
 													</div>
 												</div>
 												<div class="row">
 													<div class="col-md-3 align-self-center">
-														<label class="labels" for="#tagPrice">
+														<label class="labels" for="#productUrl">
+															URL
+														</label>
+													</div>
+													<div class="col-md-9 align-self-center">
+														<div class="form-group">
+															<input class="form-control" id="productUrl" name="productUrl" required type="url"
+																formControlName="productUrl" />
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-3 align-self-center">
+														<label class="labels" for="#productPrice">
 															Price
 														</label>
 													</div>
 													<div class="col-md-9 align-self-center">
 														<div class="form-group">
 															<input 
-																id="tagPrice"
+																id="productPrice"
 																class="form-control"
-																name="tagPrice"
+																name="productPrice"
 																required
 																pattern="^[0-9_]*$"
-																formControlName="tagPrice" />
+																formControlName="productPrice" />
 														</div>
 													</div>
 												</div>
 												<div class="row">
 													<div class="col-md-3 align-self-center">
-														<label class="labels" for="#tagUrl">
-															URL
+														<label class="labels" for="#productAddress">
+															Address
 														</label>
 													</div>
 													<div class="col-md-9 align-self-center">
 														<div class="form-group">
-															<input class="form-control" id="tagUrl" name="tagUrl" required type="url" formControlName="tagUrl" />
+															<input class="form-control" id="productAddress" name="productAddress"
+																required type="text" formControlName="productAddress" />
 														</div>
 													</div>
 												</div>
 												<div class="row">
 													<div class="col-md-3 align-self-center">
-														<label class="labels" for="#tagAddress">
-															Address Line 1
-														</label>
-													</div>
-													<div class="col-md-9 align-self-center">
-														<div class="form-group">
-															<input class="form-control" id="tagAddress" name="tagAddress"
-																required type="text" formControlName="tagAddress" />
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-3 align-self-center">
-														<label class="labels" for="#tagAddress2">
-															Address Line 2
-														</label>
-													</div>
-													<div class="col-md-9 align-self-center">
-														<div class="form-group">
-															<input class="form-control" id="tagAddress2" name="tagAddress2"
-																required type="text" formControlName="tagAddress2" />
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-3 align-self-center">
-														<label class="labels" for="#tagCity">
-															City
-														</label>
-													</div>
-													<div class="col-md-9 align-self-center">
-														<div class="form-group">
-															<input id="tagCity" class="form-control" name="tagCity" required
-																type="text" formControlName="tagCity"
-																(keyup)="validateField('tagCity', 1)" />
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-3 align-self-center">
-														<label class="labels" for="#tagState">
-															State
-														</label>
-													</div>
-													<div class="col-md-9 align-self-center">
-														<div class="form-group">
-															<input class="form-control" id="tagState" name="tagState"
-																required type="text" formControlName="tagState" minlength="2"
-																maxlength="2" placeholder="CA"
-																(keyup)="validateField('tagState', 2)" />
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-3 align-self-center">
-														<label class="labels" for="#tagZip">
-															Zip
-														</label>
-													</div>
-													<div class="col-md-9 align-self-center">
-														<div class="form-group">
-															<input class="form-control" id="tagZip" name="tagZip" required
-																type="text" formControlName="tagZip" />
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-3 align-self-center">
-														<label class="labels" for="#tagInfo">
+														<label class="labels" for="#productDetails">
 															Details
 														</label>
 													</div>
 													<div class="col-md-9 align-self-center">
 														<div class="form-group">
-															<textarea class="form-control" id="tagInfo" rows="8" name="tagInfo"
-																required formControlName="tagInfo"></textarea>
+															<textarea class="form-control" id="productDetails" rows="8" name="productDetails"
+																required formControlName="productDetails"></textarea>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-3 align-self-center">
+														<label class="labels" for="#productInfo">
+															Info
+														</label>
+													</div>
+													<div class="col-md-9 align-self-center">
+														<div class="form-group">
+															<textarea class="form-control" id="productInfo" rows="8" name="productInfo" required
+																formControlName="productInfo"></textarea>
 														</div>
 													</div>
 												</div>

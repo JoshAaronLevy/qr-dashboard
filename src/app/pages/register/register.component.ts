@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
 		this.signUpError = false;
 		this.username = getStoredUser().username;
 		if (this.username) {
-			this.router.navigate(['/qrcodes']);
+			this.router.navigate(['/products']);
 		}
 		this.userSignUp = this.formBuilder.group({
 			firstName: '',
@@ -112,7 +112,7 @@ export class RegisterComponent implements OnInit {
 		});
 		setTimeout(() => {
 			this.loading = false;
-			this.router.navigate(['/qrcodes']);
+			this.router.navigate(['/products']);
 		}, 1500);
 	}
 

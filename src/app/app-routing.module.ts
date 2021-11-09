@@ -3,17 +3,17 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { RegisterComponent } from "./pages/register/register.component";
 import { LoginComponent } from "./pages/login/login.component";
-import { QRCodesComponent } from "./pages/qrcodes/qrcodes.component";
-import { QRCodeDetailsComponent } from "./pages/qrcodedetails/qrcodedetails.component";
+import { ProductListComponent } from "./pages/productlist/productlist.component";
+import { ProductDetailsComponent } from "./pages/productdetails/productdetails.component";
 import { ProfileComponent } from "./pages/profile/profile.component";
 
 const routes: Routes = [
-  { path: "", redirectTo: "qrcodes", pathMatch: "full" },
+  { path: "", redirectTo: "products", pathMatch: "full" },
   { path: "login", component: LoginComponent },
   { path: "signup", component: RegisterComponent },
-  { path: "qrcodes", component: QRCodesComponent },
-  { path: "qrcodes/:id", component: QRCodeDetailsComponent },
-  { path: "qrcodes/create", component: QRCodeDetailsComponent },
+  { path: "products", component: ProductListComponent },
+  { path: "products/:id", component: ProductDetailsComponent },
+  { path: "products/create", component: ProductDetailsComponent },
   { path: "profile", component: ProfileComponent }
 ];
 

@@ -4,21 +4,21 @@ import * as Parse from 'parse';
 import * as parse from '../../../keys/parse';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { getStoredUser } from 'src/shared/userHelper';
-import { storeQRCode } from 'src/shared/qrCodeHelper';
 import swal from "sweetalert2";
 import { CurrencyPipe } from '@angular/common';
+import { storeProduct } from 'src/shared/productHelper';
 
 @Component({
-	selector: 'app-qrcodedetails',
-	templateUrl: 'qrcodedetails.component.html',
-	styleUrls: ['qrcodedetails.component.scss'],
+	selector: 'app-productdetails',
+	templateUrl: 'productdetails.component.html',
+	styleUrls: ['productdetails.component.scss'],
 	providers: [
 		CurrencyPipe
 	]
 })
-export class QRCodeDetailsComponent implements OnInit {
-	qrCodeId: any;
-	qrCode: any;
+export class ProductDetailsComponent implements OnInit {
+	productId: any;
+	product: any;
 	images: any = [];
 	previousRoute: string;
 	loading: boolean;
@@ -30,30 +30,27 @@ export class QRCodeDetailsComponent implements OnInit {
 		initialSlide: 0,
 		speed: 500
 	};
-	qrCodeEdit: FormGroup = new FormGroup({
-		tagTitle: new FormControl(''),
-		tagSubTitle: new FormControl(''),
-		tagCompany: new FormControl(''),
-		tagPrice: new FormControl(''),
-		tagUrl: new FormControl(''),
-		tagAddress: new FormControl(''),
-		tagAddress2: new FormControl(''),
-		tagCity: new FormControl(''),
-		tagState: new FormControl(''),
-		tagZip: new FormControl(''),
-		tagInfo: new FormControl('')
+	productEdit: FormGroup = new FormGroup({
+		productTitle: new FormControl(''),
+		productSubTitle: new FormControl(''),
+		productCategory: new FormControl(''),
+		productUrl: new FormControl(''),
+		productPrice: new FormControl(''),
+		productAddress: new FormControl(''),
+		productDetails: new FormControl(''),
+		productInfo: new FormControl('')
 	});
 	username: any;
 	editEnabled: boolean;
 	browser: any;
 	saving: boolean;
-	tagTitleInvalid: boolean;
+	productTitleInvalid: boolean;
 	fieldValid: boolean;
 	saveDisabled: boolean;
 	errorMsg: string;
-	tagPrice: any;
+	productPrice: any;
 	regexPattern = "/^[a-zA-Z0-9\(\);:&\-' ]*[a-zA-Z0-9\(\);:&\-']*$/";
-	qrImage: any;
+	productImage: any;
 
 	constructor(
 		private formBuilder: FormBuilder,
@@ -73,7 +70,7 @@ export class QRCodeDetailsComponent implements OnInit {
 
 	async initializeData() {
 		await this.presentLoadingModal();
-		await this.getQRCodeDetails();
+		await this.getProductDetails();
 	}
 
 	presentLoadingModal() {
@@ -84,12 +81,12 @@ export class QRCodeDetailsComponent implements OnInit {
 		});
 	}
 
-	getQRCodeDetails() {
-		this.qrCode = JSON.parse(localStorage.getItem("selectedQRCode"));
-		console.log("qrCode:", this.qrCode);
-		if (this.qrCode.id) {
-			this.qrCodeId = this.qrCode.id;
-			if (this.qrCodeId !== "0") {
+	getProductDetails() {
+		this.product = JSON.parse(localStorage.getItem("selectedProduct"));
+		console.log("product:", this.product);
+		if (this.product.id) {
+			this.productId = this.product.id;
+			if (this.productId !== "0") {
 				this.buildEditForm();
 			} else {
 				this.buildCreateForm();
@@ -103,20 +100,20 @@ export class QRCodeDetailsComponent implements OnInit {
 	}
 
 	buildEditForm() {
-		this.qrCodeEdit = this.formBuilder.group({
-			tagTitle: this.qrCode.tagTitle,
-			tagSubTitle: this.qrCode.tagSubTitle,
-			tagCompany: this.qrCode.tagCompany,
-			tagPrice: this.qrCode.tagPrice,
-			tagUrl: this.qrCode.tagUrl,
-			tagAddress: this.qrCode.tagAddress,
-			tagAddress2: this.qrCode.tagAddress2,
-			tagCity: this.qrCode.tagCity,
-			tagState: this.qrCode.tagState,
-			tagZip: this.qrCode.tagZip,
-			tagInfo: this.qrCode.tagInfo
+		this.productEdit = this.formBuilder.group({
+			productTitle: this.product.productTitle,
+			productSubTitle: this.product.productSubTitle,
+			productCategory: this.product.productCategory,
+			productUrl: this.product.productUrl,
+			productPrice: this.product.productPrice,
+			productAddress: this.product.productAddress,
+			productDetails: this.product.productDetails,
+			productInfo: this.product.productInfo
 		});
-		this.qrImage = `https://photos.homecards.com/rebeacons/Tag-${this.qrCode.tagPhotoRef}-1.jpg`;
+		this.productImage = `https://photos.homecards.com/rebeacons/Product-${this.product.productPhotoRef}-1.jpg`;
+		if (!this.productImage) {
+			this.productImage = "../../../assets/img/image_placeholder.jpg";
+		}
 		setTimeout(() => {
 			this.loading = false;
 			swal.close();
@@ -124,20 +121,17 @@ export class QRCodeDetailsComponent implements OnInit {
 	}
 
 	buildCreateForm() {
-		this.qrCodeEdit = this.formBuilder.group({
-			tagTitle: "",
-			tagSubTitle: "",
-			tagCompany: "",
-			tagPrice: "",
-			tagUrl: "",
-			tagAddress: "",
-			tagAddress2: "",
-			tagCity: "",
-			tagState: "",
-			tagZip: "",
-			tagInfo: ""
+		this.productEdit = this.formBuilder.group({
+			productTitle: "",
+			productSubTitle: "",
+			productCategory: "",
+			productUrl: "",
+			productPrice: "",
+			productAddress: "",
+			productDetails: "",
+			productInfo: ""
 		});
-		this.qrImage = "../../../assets/img/image_placeholder.jpg";
+		this.productImage = "../../../assets/img/image_placeholder.jpg";
 		setTimeout(() => {
 			this.loading = false;
 			swal.close();
@@ -158,12 +152,12 @@ export class QRCodeDetailsComponent implements OnInit {
 		} else if (!fieldId.classList.contains("field-invalid")) {
 			invalidApplied = false;
 		}
-		const value = this.qrCodeEdit.value[fieldName];
+		const value = this.productEdit.value[fieldName];
 		if (value.length < minChars) {
 			this.fieldValid = false;
 			this.saveDisabled = true;
-			if (fieldName === "tagTitle") {
-				this.tagTitleInvalid = true;
+			if (fieldName === "productTitle") {
+				this.productTitleInvalid = true;
 			}
 			this.errorMsg = `${fieldName} must have at least ${minChars} character(s)`;
 			if (validApplied) {
@@ -184,31 +178,28 @@ export class QRCodeDetailsComponent implements OnInit {
 		}
 	}
 
-	editQRCode() {
-		const QRCodes = Parse.Object.extend('Tags');
-		const query = new Parse.Query(QRCodes);
-		query.get(this.qrCodeId).then((qrCode) => {
-			qrCode.set('tagTitle', this.qrCodeEdit.value.tagTitle);
-			qrCode.set('tagSubTitle', this.qrCodeEdit.value.tagSubTitle);
-			qrCode.set('tagCompany', this.qrCodeEdit.value.tagCompany);
-			qrCode.set('tagPrice', this.qrCodeEdit.value.tagPrice);
-			qrCode.set('tagUrl', this.qrCodeEdit.value.tagUrl);
-			qrCode.set('tagAddress', this.qrCodeEdit.value.tagAddress);
-			qrCode.set('tagAddress2', this.qrCodeEdit.value.tagAddress2);
-			qrCode.set('tagCity', this.qrCodeEdit.value.tagCity);
-			qrCode.set('tagState', this.qrCodeEdit.value.tagState);
-			qrCode.set('tagZip', this.qrCodeEdit.value.tagZip);
-			qrCode.set('tagInfo', this.qrCodeEdit.value.tagInfo);
-			qrCode.save().then((response) => {
-				this.presentQRCodeSuccess();
+	editProduct() {
+		const Products = Parse.Object.extend('ProductInfo');
+		const query = new Parse.Query(Products);
+		query.get(this.productId).then((product) => {
+			product.set('productTitle', this.productEdit.value.productTitle);
+			product.set('productSubTitle', this.productEdit.value.productSubTitle);
+			product.set('productCategory', this.productEdit.value.productCategory);
+			product.set('productUrl', this.productEdit.value.productUrl);
+			product.set('productPrice', this.productEdit.value.productPrice);
+			product.set('productAddress', this.productEdit.value.productAddress);
+			product.set('productDetails', this.productEdit.value.productDetails);
+			product.set('productInfo', this.productEdit.value.productInfo);
+			product.save().then((response) => {
+				this.presentProductSuccess();
 				return response;
 			}).catch((error) => {
-				this.presentQRCodeError(error);
+				this.presentProductError(error);
 			});
 		});
 	}
 
-	presentQRCodeSuccess() {
+	presentProductSuccess() {
 		this.saving = false;
 		swal.fire({
 			title: "Success!",
@@ -232,7 +223,7 @@ export class QRCodeDetailsComponent implements OnInit {
 		this.loadError = true;
 	}
 
-	presentQRCodeError(error) {
+	presentProductError(error) {
 		swal.fire({
 			title: "Save Failed",
 			buttonsStyling: false,
@@ -245,15 +236,15 @@ export class QRCodeDetailsComponent implements OnInit {
 		this.loading = false;
 	}
 
-	routeToEditQRCode() {
-		storeQRCode(this.qrCode);
-		localStorage.setItem('qrCodeId', this.qrCode.id);
+	routeToEditProduct() {
+		storeProduct(this.product);
+		localStorage.setItem('productId', this.product.id);
 		localStorage.setItem('method', 'edit');
-		this.router.navigate(['/qrcodes/create']);
+		this.router.navigate(['/products/create']);
 	}
 
-	routeToQRCodes() {
-		this.router.navigate(['/qrcodes']);
+	routeToProducts() {
+		this.router.navigate(['/products']);
 	}
 
 	routeToAccount() {

@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
 		this.loginError = false;
 		this.user = getStoredUser();
 		if (this.user.sessionToken) {
-			this.router.navigate(['/qrcodes']);
+			this.router.navigate(['/products']);
 		}
 		this.userLogin = this.formBuilder.group({
 			userName: '',
@@ -65,7 +65,7 @@ export class LoginComponent implements OnInit {
 		});
 		setTimeout(() => {
 			this.loading = false;
-			this.router.navigate(['/qrcodes']);
+			this.router.navigate(['/products']);
 		}, 1500);
 	}
 

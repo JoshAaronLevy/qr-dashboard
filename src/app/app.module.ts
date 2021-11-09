@@ -20,10 +20,10 @@ import { RegisterComponent } from "./pages/register/register.component";
 import { LoginComponent } from "./pages/login/login.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { FooterComponent } from "./components/footer/footer.component";
-import { QRCodesComponent } from "./pages/qrcodes/qrcodes.component";
-import { QRCodeDetailsComponent } from "./pages/qrcodedetails/qrcodedetails.component";
+import { ProductDetailsComponent } from "./pages/productdetails/productdetails.component";
 import { ProfileComponent } from "./pages/profile/profile.component";
 import { PictureUploadComponent } from "./components/picture-upload/picture-upload.component";
+import { ProductListComponent } from "./pages/productlist/productlist.component";
 
 @NgModule({
   declarations: [
@@ -32,8 +32,8 @@ import { PictureUploadComponent } from "./components/picture-upload/picture-uplo
     LoginComponent,
     NavbarComponent,
     FooterComponent,
-    QRCodesComponent,
-    QRCodeDetailsComponent,
+    ProductListComponent,
+    ProductDetailsComponent,
     ProfileComponent,
     PictureUploadComponent
   ],
