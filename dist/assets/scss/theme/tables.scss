@@ -28,7 +28,8 @@
 
   td,
   th {
-    font-size: $table-body-font-size;
+    // font-size: $table-body-font-size;
+    font-size: 14px;
     white-space: nowrap;
   }
 
@@ -114,11 +115,11 @@
 
   .td-name {
     font-weight: $font-weight-normal;
-    font-size: 1.5em;
+    font-size: 1.25em;
 
     small {
       font-size: 0.75em;
-      font-weight: $font-weight-light;
+      font-weight: $font-weight-normal;
     }
   }
   .td-number {

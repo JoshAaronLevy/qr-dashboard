@@ -24130,7 +24130,7 @@ hr.line-deafult {
 }
 .table td,
 .table th {
-  font-size: 0.8125rem;
+  font-size: 14px;
   white-space: nowrap;
 }
 .table.align-items-center td,
@@ -24180,11 +24180,11 @@ hr.line-deafult {
 }
 .table-shopping .td-name {
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 .table-shopping .td-name small {
   font-size: 0.75em;
-  font-weight: 300;
+  font-weight: 400;
 }
 .table-shopping .td-number {
   font-weight: 300;

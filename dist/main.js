@@ -23,6 +23,843 @@ module.exports = __webpack_require__(/*! /Users/joshlevy/Desktop/qr-dashboard/sr
 
 /***/ }),
 
+/***/ "2gyl":
+/*!******************************************************************!*\
+  !*** ./src/app/pages/productdetails/productdetails.component.ts ***!
+  \******************************************************************/
+/*! exports provided: ProductDetailsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductDetailsComponent", function() { return ProductDetailsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "iInd");
+/* harmony import */ var parse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! parse */ "v0iw");
+/* harmony import */ var parse__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(parse__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _keys_parse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../keys/parse */ "DuhC");
+/* harmony import */ var _keys_parse__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_keys_parse__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var src_shared_userHelper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/shared/userHelper */ "O1WI");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var src_shared_productHelper__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! src/shared/productHelper */ "p+hK");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function ProductDetailsComponent_div_14_img_4_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "img", 22);
+} if (rf & 2) {
+    var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("src", ctx_r1.productImage, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeUrl"]);
+} }
+function ProductDetailsComponent_div_14_div_8_h2_3_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "h2");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r3.product.productTitle);
+} }
+function ProductDetailsComponent_div_14_div_8_h2_4_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "h2");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1, "Create Product");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} }
+function ProductDetailsComponent_div_14_div_8_button_66_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "button", 49);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1, " Save Changes ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("disabled", ctx_r5.saveDisabled);
+} }
+function ProductDetailsComponent_div_14_div_8_button_67_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "button", 50);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "span", 51);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, " Saving... ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} }
+function ProductDetailsComponent_div_14_div_8_Template(rf, ctx) { if (rf & 1) {
+    var _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "header");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](3, ProductDetailsComponent_div_14_div_8_h2_3_Template, 2, 1, "h2", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](4, ProductDetailsComponent_div_14_div_8_h2_4_Template, 2, 0, "h2", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](5, "hr", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](6, "br");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "form", 24);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngSubmit", function ProductDetailsComponent_div_14_div_8_Template_form_ngSubmit_7_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r8); var ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r7.editProduct(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "label", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, " Title ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "div", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "div", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "input", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup", function ProductDetailsComponent_div_14_div_8_Template_input_keyup_14_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r8); var ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r9.validateField("productTitle", 1); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "label", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](18, " Subtitle ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "div", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](20, "div", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "input", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup", function ProductDetailsComponent_div_14_div_8_Template_input_keyup_21_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r8); var ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r10.validateField("productSubTitle", 1); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](23, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](24, "label", 32);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](25, " Category ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](26, "div", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](27, "div", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](28, "input", 33);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup", function ProductDetailsComponent_div_14_div_8_Template_input_keyup_28_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r8); var ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r11.validateField("productCategory", 1); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](29, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](30, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "label", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](32, " URL ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](33, "div", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "div", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](35, "input", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](36, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](37, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](38, "label", 36);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](39, " Price ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](40, "div", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](41, "div", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](42, "input", 37);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](43, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](44, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](45, "label", 38);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](46, " Address ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](47, "div", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](48, "div", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](49, "input", 39);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](50, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](51, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](52, "label", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](53, " Details ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](54, "div", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](55, "div", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](56, "textarea", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](57, "div", 11);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](58, "div", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](59, "label", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](60, " Info ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](61, "div", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](62, "div", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](63, "textarea", 43);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](64, "div", 44);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](65, "div", 45);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](66, ProductDetailsComponent_div_14_div_8_button_66_Template, 2, 1, "button", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](67, ProductDetailsComponent_div_14_div_8_button_67_Template, 3, 0, "button", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](68, "a", 48);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ProductDetailsComponent_div_14_div_8_Template_a_click_68_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r8); var ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r12.cancelChanges(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](69, " Cancel ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r2.product.productTitle);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx_r2.product.productTitle);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("formGroup", ctx_r2.productEdit);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](59);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx_r2.saving);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r2.saving);
+} }
+function ProductDetailsComponent_div_14_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "section", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](4, ProductDetailsComponent_div_14_img_4_Template, 1, 1, "img", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "div", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "div", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](8, ProductDetailsComponent_div_14_div_8_Template, 70, 5, "div", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r0.productImage);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r0.productId);
+} }
+var ProductDetailsComponent = /** @class */ (function () {
+    function ProductDetailsComponent(formBuilder, router, currencyPipe) {
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.currencyPipe = currencyPipe;
+        this.images = [];
+        this.slideOpts = {
+            spaceBetween: 10,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            initialSlide: 0,
+            speed: 500
+        };
+        this.productEdit = new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormGroup"]({
+            productTitle: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
+            productSubTitle: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
+            productCategory: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
+            productUrl: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
+            productPrice: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
+            productAddress: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
+            productDetails: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
+            productInfo: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]('')
+        });
+        this.regexPattern = "/^[a-zA-Z0-9\(\);:&\-' ]*[a-zA-Z0-9\(\);:&\-']*$/";
+        parse__WEBPACK_IMPORTED_MODULE_3__["initialize"](_keys_parse__WEBPACK_IMPORTED_MODULE_4__["appId"], _keys_parse__WEBPACK_IMPORTED_MODULE_4__["javascript"]);
+        parse__WEBPACK_IMPORTED_MODULE_3__["serverURL"] = _keys_parse__WEBPACK_IMPORTED_MODULE_4__["serverURL"];
+    }
+    ProductDetailsComponent.prototype.ngOnInit = function () {
+        this.loading = true;
+        this.loadError = false;
+        this.username = Object(src_shared_userHelper__WEBPACK_IMPORTED_MODULE_6__["getStoredUser"])().username;
+        this.initializeData();
+    };
+    ProductDetailsComponent.prototype.initializeData = function () {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.presentLoadingModal()];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.getProductDetails()];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ProductDetailsComponent.prototype.presentLoadingModal = function () {
+        sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire({
+            title: "Loading...",
+            showConfirmButton: false,
+            showCancelButton: false
+        });
+    };
+    ProductDetailsComponent.prototype.getProductDetails = function () {
+        var _this = this;
+        this.product = JSON.parse(localStorage.getItem("selectedProduct"));
+        console.log("product:", this.product);
+        if (this.product.id) {
+            this.productId = this.product.id;
+            if (this.productId !== "0") {
+                this.buildEditForm();
+            }
+            else {
+                this.buildCreateForm();
+            }
+        }
+        else {
+            setTimeout(function () {
+                sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.close();
+                _this.presentLoadError();
+            }, 500);
+        }
+    };
+    ProductDetailsComponent.prototype.buildEditForm = function () {
+        var _this = this;
+        this.productEdit = this.formBuilder.group({
+            productTitle: this.product.productTitle,
+            productSubTitle: this.product.productSubTitle,
+            productCategory: this.product.productCategory,
+            productUrl: this.product.productUrl,
+            productPrice: this.product.productPrice,
+            productAddress: this.product.productAddress,
+            productDetails: this.product.productDetails,
+            productInfo: this.product.productInfo
+        });
+        this.productImage = "https://photos.homecards.com/rebeacons/Product-" + this.product.productPhotoRef + "-1.jpg";
+        if (!this.productImage) {
+            this.productImage = "../../../assets/img/image_placeholder.jpg";
+        }
+        setTimeout(function () {
+            _this.loading = false;
+            sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.close();
+        }, 500);
+    };
+    ProductDetailsComponent.prototype.buildCreateForm = function () {
+        var _this = this;
+        this.productEdit = this.formBuilder.group({
+            productTitle: "",
+            productSubTitle: "",
+            productCategory: "",
+            productUrl: "",
+            productPrice: "",
+            productAddress: "",
+            productDetails: "",
+            productInfo: ""
+        });
+        this.productImage = "../../../assets/img/image_placeholder.jpg";
+        setTimeout(function () {
+            _this.loading = false;
+            sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.close();
+        }, 500);
+    };
+    ProductDetailsComponent.prototype.validateField = function (fieldName, minChars) {
+        var fieldId = document.getElementById(fieldName);
+        var validApplied;
+        var invalidApplied;
+        if (fieldId.classList.contains("field-valid")) {
+            validApplied = true;
+        }
+        else if (!fieldId.classList.contains("field-valid")) {
+            validApplied = false;
+        }
+        if (fieldId.classList.contains("field-invalid")) {
+            invalidApplied = true;
+        }
+        else if (!fieldId.classList.contains("field-invalid")) {
+            invalidApplied = false;
+        }
+        var value = this.productEdit.value[fieldName];
+        if (value.length < minChars) {
+            this.fieldValid = false;
+            this.saveDisabled = true;
+            if (fieldName === "productTitle") {
+                this.productTitleInvalid = true;
+            }
+            this.errorMsg = fieldName + " must have at least " + minChars + " character(s)";
+            if (validApplied) {
+                fieldId.classList.remove("field-valid");
+            }
+            if (!invalidApplied) {
+                fieldId.classList.add("field-invalid");
+            }
+        }
+        else {
+            this.fieldValid = true;
+            this.saveDisabled = false;
+            if (invalidApplied) {
+                fieldId.classList.remove("field-invalid");
+            }
+            if (!validApplied) {
+                fieldId.classList.add("field-valid");
+            }
+        }
+    };
+    ProductDetailsComponent.prototype.editProduct = function () {
+        var _this = this;
+        var Products = parse__WEBPACK_IMPORTED_MODULE_3__["Object"].extend('ProductInfo');
+        var query = new parse__WEBPACK_IMPORTED_MODULE_3__["Query"](Products);
+        query.get(this.productId).then(function (product) {
+            product.set('productTitle', _this.productEdit.value.productTitle);
+            product.set('productSubTitle', _this.productEdit.value.productSubTitle);
+            product.set('productCategory', _this.productEdit.value.productCategory);
+            product.set('productUrl', _this.productEdit.value.productUrl);
+            product.set('productPrice', _this.productEdit.value.productPrice);
+            product.set('productAddress', _this.productEdit.value.productAddress);
+            product.set('productDetails', _this.productEdit.value.productDetails);
+            product.set('productInfo', _this.productEdit.value.productInfo);
+            product.save().then(function (response) {
+                _this.presentProductSuccess();
+                return response;
+            }).catch(function (error) {
+                _this.presentProductError(error);
+            });
+        });
+    };
+    ProductDetailsComponent.prototype.presentProductSuccess = function () {
+        this.saving = false;
+        sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire({
+            title: "Success!",
+            timer: 1500,
+            showConfirmButton: false,
+            icon: "success"
+        });
+    };
+    ProductDetailsComponent.prototype.presentLoadError = function () {
+        sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire({
+            title: "Error",
+            buttonsStyling: false,
+            customClass: {
+                confirmButton: "btn btn-danger",
+            },
+            icon: "error",
+            html: "<b>Unable to retrieve specified data</b>"
+        });
+        this.loading = false;
+        this.loadError = true;
+    };
+    ProductDetailsComponent.prototype.presentProductError = function (error) {
+        sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire({
+            title: "Save Failed",
+            buttonsStyling: false,
+            customClass: {
+                confirmButton: "btn btn-danger",
+            },
+            icon: "error",
+            html: "<b>" + error + "</b>"
+        });
+        this.loading = false;
+    };
+    ProductDetailsComponent.prototype.routeToEditProduct = function () {
+        Object(src_shared_productHelper__WEBPACK_IMPORTED_MODULE_9__["storeProduct"])(this.product);
+        localStorage.setItem('productId', this.product.id);
+        localStorage.setItem('method', 'edit');
+        this.router.navigate(['/products/create']);
+    };
+    ProductDetailsComponent.prototype.routeToProducts = function () {
+        this.router.navigate(['/products']);
+    };
+    ProductDetailsComponent.prototype.routeToAccount = function () {
+        this.router.navigate(['/account']);
+    };
+    ProductDetailsComponent.ɵfac = function ProductDetailsComponent_Factory(t) { return new (t || ProductDetailsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_8__["CurrencyPipe"])); };
+    ProductDetailsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: ProductDetailsComponent, selectors: [["app-productdetails"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵProvidersFeature"]([
+                _angular_common__WEBPACK_IMPORTED_MODULE_8__["CurrencyPipe"]
+            ])], decls: 15, vars: 1, consts: [[1, "wrapper", "full-wrapper"], [1, "section-shaped", "my-0", "skew-separator", "skew-mini"], [1, "page-header", "page-header-small", "header-filter"], [1, "page-header-image", 2, "background-image", "url('../../../assets/img/pages/photo-15.jpg')"], [1, "container"], [1, "header-body", "title-header", "text-center", "mb-7"], [1, "row", "justify-content-center"], [1, "col-xl-5", "col-lg-6", "col-md-8", "px-5"], [1, "text-white"], [1, "bg-secondary"], [1, "container", "product-card", "bg-white", "card"], [1, "row"], [1, "col-md-12", "product-container"], ["class", "section product-section", 4, "ngIf"], [1, "section", "product-section"], [1, "col-md-4"], [1, "section"], [1, "text-center", "qr-code-image"], [3, "src", 4, "ngIf"], [1, "col-md-8", "ml-auto"], [1, "tab-content"], [4, "ngIf"], [3, "src"], [1, "line-primary"], ["role", "form", "novalidate", "", 3, "formGroup", "ngSubmit"], [1, "col-md-3", "align-self-center"], ["for", "#productTitle", 1, "labels"], [1, "col-md-9", "align-self-center"], [1, "form-group"], ["id", "productTitle", "type", "text", "required", "", "formControlName", "productTitle", 1, "form-control", 3, "keyup"], ["for", "#productSubTitle", 1, "labels"], ["id", "productSubTitle", "name", "productSubTitle", "required", "", "type", "text", "formControlName", "productSubTitle", 1, "form-control", 3, "keyup"], ["for", "#productCategory", 1, "labels"], ["id", "productCategory", "name", "productCategory", "required", "", "type", "text", "formControlName", "productCategory", 1, "form-control", 3, "keyup"], ["for", "#productUrl", 1, "labels"], ["id", "productUrl", "name", "productUrl", "required", "", "type", "url", "formControlName", "productUrl", 1, "form-control"], ["for", "#productPrice", 1, "labels"], ["id", "productPrice", "name", "productPrice", "required", "", "pattern", "^[0-9_]*$", "formControlName", "productPrice", 1, "form-control"], ["for", "#productAddress", 1, "labels"], ["id", "productAddress", "name", "productAddress", "required", "", "type", "text", "formControlName", "productAddress", 1, "form-control"], ["for", "#productDetails", 1, "labels"], ["id", "productDetails", "rows", "8", "name", "productDetails", "required", "", "formControlName", "productDetails", 1, "form-control"], ["for", "#productInfo", 1, "labels"], ["id", "productInfo", "rows", "8", "name", "productInfo", "required", "", "formControlName", "productInfo", 1, "form-control"], [1, "row", "mt-5"], [1, "button-group", "col-md-12"], ["class", "btn btn-success", "type", "submit", 3, "disabled", 4, "ngIf"], ["class", "btn btn-success saving-button", "type", "button", "disabled", "", 4, "ngIf"], [1, "btn", "btn-danger", 3, "click"], ["type", "submit", 1, "btn", "btn-success", 3, "disabled"], ["type", "button", "disabled", "", 1, "btn", "btn-success", "saving-button"], ["role", "status", "aria-hidden", "true", 1, "spinner-border", "spinner-border-sm"]], template: function ProductDetailsComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "div", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "div", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "h1", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "Product Details");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "div", 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "div", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "div", 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, ProductDetailsComponent_div_14_Template, 9, 2, "div", 13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.loadError && !ctx.loading);
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControlName"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["PatternValidator"]], styles: [".full-wrapper[_ngcontent-%COMP%] {\n  height: 100vh !important;\n}\n\n.bg-secondary[_ngcontent-%COMP%] {\n  height: 100% !important;\n}\n\n.product-container[_ngcontent-%COMP%] {\n  margin-top: -100px !important;\n  background-color: #fff;\n}\n\n.product-card[_ngcontent-%COMP%] {\n  z-index: 999 !important;\n}\n\n.product-section[_ngcontent-%COMP%] {\n  display: flex;\n  padding-top: 0rem !important;\n}\n\n.title-header[_ngcontent-%COMP%] {\n  margin-top: 50px;\n}\n\n.btn-danger[_ngcontent-%COMP%] {\n  color: #fff !important;\n}\n\n.btn-danger[_ngcontent-%COMP%]:hover {\n  cursor: pointer !important;\n}\n\n.form-control[_ngcontent-%COMP%] {\n  color: #000 !important;\n  font-weight: 500 !important;\n}\n\n.form-control[_ngcontent-%COMP%]:focus {\n  border: 2px solid #5e72e4 !important;\n}\n\n.field-valid[_ngcontent-%COMP%] {\n  border: 1px solid #2dce89 !important;\n}\n\n.field-invalid[_ngcontent-%COMP%] {\n  border: 2px solid #f5365c !important;\n}\n\n.button-group[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.saving-button[_ngcontent-%COMP%] {\n  display: flex !important;\n  align-items: center !important;\n  justify-content: center !important;\n}\n\n.saving-button[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  margin-right: 7px !important;\n}\n\n.qr-code-image[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  width: 100% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2R1Y3RkZXRhaWxzLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Msd0JBQUE7QUFDRDs7QUFFQTtFQUNDLHVCQUFBO0FBQ0Q7O0FBRUE7RUFDQyw2QkFBQTtFQUNBLHNCQUFBO0FBQ0Q7O0FBRUE7RUFDQyx1QkFBQTtBQUNEOztBQUVBO0VBQ0MsYUFBQTtFQUNBLDRCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxnQkFBQTtBQUNEOztBQUVBO0VBQ0Msc0JBQUE7QUFDRDs7QUFFQTtFQUNDLDBCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxzQkFBQTtFQUNBLDJCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxvQ0FBQTtBQUNEOztBQUVBO0VBQ0Msb0NBQUE7QUFDRDs7QUFFQTtFQUNDLG9DQUFBO0FBQ0Q7O0FBRUE7RUFDQyxhQUFBO0VBQ0EsbUJBQUE7RUFDQSw4QkFBQTtBQUNEOztBQUVBO0VBQ0Msd0JBQUE7RUFDQSw4QkFBQTtFQUNBLGtDQUFBO0FBQ0Q7O0FBRUE7RUFDQyw0QkFBQTtBQUNEOztBQUVBO0VBQ0Msc0JBQUE7QUFDRCIsImZpbGUiOiJwcm9kdWN0ZGV0YWlscy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mdWxsLXdyYXBwZXIge1xuXHRoZWlnaHQ6IDEwMHZoICFpbXBvcnRhbnQ7XG59XG5cbi5iZy1zZWNvbmRhcnkge1xuXHRoZWlnaHQ6IDEwMCUgIWltcG9ydGFudDtcbn1cblxuLnByb2R1Y3QtY29udGFpbmVyIHtcblx0bWFyZ2luLXRvcDogLTEwMHB4ICFpbXBvcnRhbnQ7XG5cdGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG59XG5cbi5wcm9kdWN0LWNhcmQge1xuXHR6LWluZGV4OiA5OTkgIWltcG9ydGFudDtcbn1cblxuLnByb2R1Y3Qtc2VjdGlvbiB7XG5cdGRpc3BsYXk6IGZsZXg7XG5cdHBhZGRpbmctdG9wOiAwcmVtICFpbXBvcnRhbnQ7XG59XG5cbi50aXRsZS1oZWFkZXIge1xuXHRtYXJnaW4tdG9wOiA1MHB4O1xufVxuXG4uYnRuLWRhbmdlciB7XG5cdGNvbG9yOiAjZmZmICFpbXBvcnRhbnQ7XG59XG5cbi5idG4tZGFuZ2VyOmhvdmVyIHtcblx0Y3Vyc29yOiBwb2ludGVyICFpbXBvcnRhbnQ7XG59XG5cbi5mb3JtLWNvbnRyb2wge1xuXHRjb2xvcjogIzAwMCAhaW1wb3J0YW50O1xuXHRmb250LXdlaWdodDogNTAwICFpbXBvcnRhbnQ7XG59XG5cbi5mb3JtLWNvbnRyb2w6Zm9jdXMge1xuXHRib3JkZXI6IDJweCBzb2xpZCAjNWU3MmU0ICFpbXBvcnRhbnQ7XG59XG5cbi5maWVsZC12YWxpZCB7XG5cdGJvcmRlcjogMXB4IHNvbGlkICMyZGNlODkgIWltcG9ydGFudDtcbn1cblxuLmZpZWxkLWludmFsaWQge1xuXHRib3JkZXI6IDJweCBzb2xpZCAjZjUzNjVjICFpbXBvcnRhbnQ7XG59XG5cbi5idXR0b24tZ3JvdXAge1xuXHRkaXNwbGF5OiBmbGV4O1xuXHRhbGlnbi1pdGVtczogY2VudGVyO1xuXHRqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG5cbi5zYXZpbmctYnV0dG9uIHtcblx0ZGlzcGxheTogZmxleCAhaW1wb3J0YW50O1xuXHRhbGlnbi1pdGVtczogY2VudGVyICFpbXBvcnRhbnQ7XG5cdGp1c3RpZnktY29udGVudDogY2VudGVyICFpbXBvcnRhbnQ7XG59XG5cbi5zYXZpbmctYnV0dG9uIHNwYW4ge1xuXHRtYXJnaW4tcmlnaHQ6IDdweCAhaW1wb3J0YW50O1xufVxuXG4ucXItY29kZS1pbWFnZSBpbWcge1xuXHR3aWR0aDogMTAwJSAhaW1wb3J0YW50O1xufVxuIl19 */"] });
+    return ProductDetailsComponent;
+}());
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](ProductDetailsComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        args: [{
+                selector: 'app-productdetails',
+                templateUrl: 'productdetails.component.html',
+                styleUrls: ['productdetails.component.scss'],
+                providers: [
+                    _angular_common__WEBPACK_IMPORTED_MODULE_8__["CurrencyPipe"]
+                ]
+            }]
+    }], function () { return [{ type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }, { type: _angular_common__WEBPACK_IMPORTED_MODULE_8__["CurrencyPipe"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "6hMR":
+/*!************************************************************!*\
+  !*** ./src/app/pages/productlist/productlist.component.ts ***!
+  \************************************************************/
+/*! exports provided: ProductListComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProductListComponent", function() { return ProductListComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var src_shared_userHelper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/shared/userHelper */ "O1WI");
+/* harmony import */ var parse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! parse */ "v0iw");
+/* harmony import */ var parse__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(parse__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _keys_parse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../keys/parse */ "DuhC");
+/* harmony import */ var _keys_parse__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_keys_parse__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "iInd");
+/* harmony import */ var _shared_parseResults__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../shared/parseResults */ "dkLf");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
+/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-bootstrap/tooltip */ "Mfq2");
+
+// tslint:disable: no-shadowed-variable
+// tslint:disable: prefer-for-of
+
+
+
+
+
+
+
+
+
+
+
+function ProductListComponent_section_15_Template(rf, ctx) { if (rf & 1) {
+    var _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "section", 17);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "button", 18);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ProductListComponent_section_15_Template_button_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r4); var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r3.routeToCreate(); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, " Create Product ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} }
+function ProductListComponent_div_16_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 19);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "h2");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, "No Products Found");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} }
+function ProductListComponent_div_17_tbody_14_tr_1_small_5_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "small", 32);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "slice");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var product_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpropertyInterpolate"]("tooltip", product_r7.productInfo);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("adaptivePosition", false)("delay", 500);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind3"](2, 4, product_r7.productInfo, 0, 30), "... ");
+} }
+function ProductListComponent_div_17_tbody_14_tr_1_small_6_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "small");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var product_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](product_r7.productInfo);
+} }
+function ProductListComponent_div_17_tbody_14_tr_1_Template(rf, ctx) { if (rf & 1) {
+    var _r13 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "td", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "a", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ProductListComponent_div_17_tbody_14_tr_1_Template_a_click_2_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r13); var product_r7 = ctx.$implicit; var ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3); return ctx_r12.viewProductDetails(product_r7); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](4, "br");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](5, ProductListComponent_div_17_tbody_14_tr_1_small_5_Template, 3, 8, "small", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](6, ProductListComponent_div_17_tbody_14_tr_1_small_6_Template, 2, 1, "small", 29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](13, "date");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "button", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function ProductListComponent_div_17_tbody_14_tr_1_Template_button_click_15_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r13); var product_r7 = ctx.$implicit; var ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3); return ctx_r14.viewProductDetails(product_r7); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](16, "i", 31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var product_r7 = ctx.$implicit;
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](product_r7.productTitle);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", product_r7.productInfo && product_r7.productInfo.length > 60);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", product_r7.productInfo && product_r7.productInfo.length < 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", product_r7.productStatus, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", product_r7.productCategory, " ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](13, 6, product_r7.updatedAt, "shortDate"), " ");
+} }
+function ProductListComponent_div_17_tbody_14_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tbody", 24);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, ProductListComponent_div_17_tbody_14_tr_1_Template, 17, 9, "tr", 25);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx_r5.products);
+} }
+function ProductListComponent_div_17_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 20);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "table", 21);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "thead", 22);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "th");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "Title/Subtitle");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "th");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](7, "Status");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "th");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "Category");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "th");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, "Last Updated");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "th");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](13, "Actions");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, ProductListComponent_div_17_tbody_14_Template, 2, 1, "tbody", 23);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx_r2.loading);
+} }
+var ProductListComponent = /** @class */ (function () {
+    function ProductListComponent(router) {
+        this.router = router;
+        parse__WEBPACK_IMPORTED_MODULE_3__["initialize"](_keys_parse__WEBPACK_IMPORTED_MODULE_4__["appId"], _keys_parse__WEBPACK_IMPORTED_MODULE_4__["javascript"]);
+        parse__WEBPACK_IMPORTED_MODULE_3__["serverURL"] = _keys_parse__WEBPACK_IMPORTED_MODULE_4__["serverURL"];
+    }
+    ProductListComponent.prototype.ngOnInit = function () {
+        this.username = Object(src_shared_userHelper__WEBPACK_IMPORTED_MODULE_2__["getStoredUser"])().username;
+        this.searchEnabled = false;
+        this.loading = true;
+        this.initializeData();
+    };
+    ProductListComponent.prototype.initializeData = function () {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.presentLoadingModal()];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.getProducts()];
+                    case 2:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ProductListComponent.prototype.presentLoadingModal = function () {
+        sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire({
+            title: "Loading...",
+            showConfirmButton: false,
+            showCancelButton: false
+        });
+    };
+    ProductListComponent.prototype.getProducts = function () {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
+            var ProductInfo, query;
+            var _this = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        ProductInfo = parse__WEBPACK_IMPORTED_MODULE_3__["Object"].extend('ProductInfo');
+                        query = new parse__WEBPACK_IMPORTED_MODULE_3__["Query"](ProductInfo);
+                        query.equalTo('ownerEmail', this.username);
+                        return [4 /*yield*/, query.find().then(function (results) {
+                                console.log(results);
+                                results = Object(_shared_parseResults__WEBPACK_IMPORTED_MODULE_6__["parseResults"])(results);
+                                _this.products = results;
+                                if (_this.products.length > 0) {
+                                    _this.productsFound = true;
+                                }
+                                else {
+                                    _this.productsFound = false;
+                                }
+                                for (var i = 0; i < _this.products.length; i++) {
+                                    _this.products[i].imageUrl = '';
+                                    if (!_this.products[i].productPhotoRef) {
+                                        _this.products[i].imageUrl = "../../../assets/img/image_placeholder.jpg";
+                                    }
+                                    else {
+                                        _this.products[i].imageUrl = "https://photos.homecards.com/rebeacons/Product-" + _this.products[i].productPhotoRef + "-1001.jpg";
+                                    }
+                                    if (_this.products[i].productStatus === "A") {
+                                        _this.products[i].productStatus = "Active";
+                                    }
+                                    else {
+                                        _this.products[i].productStatus = "Inactive";
+                                    }
+                                }
+                                setTimeout(function () {
+                                    _this.loading = false;
+                                    sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.close();
+                                }, 500);
+                                return _this.products;
+                            }, function (error) {
+                                console.error(error);
+                                setTimeout(function () {
+                                    _this.loading = false;
+                                    sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.close();
+                                }, 500);
+                            })];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ProductListComponent.prototype.viewProductDetails = function (product) {
+        this.selectedProduct = product;
+        localStorage.setItem('selectedProduct', JSON.stringify(this.selectedProduct));
+        localStorage.setItem('selectedProductId', this.selectedProduct.id);
+        this.router.navigate(["/products/" + this.selectedProduct.id]);
+    };
+    ProductListComponent.prototype.routeToCreate = function () {
+        this.selectedProduct = {
+            id: "0",
+            tagTitle: "",
+            tagSubTitle: "",
+            tagCompany: "",
+            tagPrice: "",
+            tagUrl: "",
+            tagAddress: "",
+            tagAddress2: "",
+            tagCity: "",
+            tagState: "",
+            tagZip: "",
+            tagInfo: ""
+        };
+        localStorage.setItem('selectedProduct', JSON.stringify(this.selectedProduct));
+        localStorage.setItem('selectedProductId', "0");
+        this.router.navigate(["/products/create"]);
+    };
+    ProductListComponent.ɵfac = function ProductListComponent_Factory(t) { return new (t || ProductListComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"])); };
+    ProductListComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: ProductListComponent, selectors: [["app-products"]], decls: 18, vars: 3, consts: [[1, "wrapper", "full-wrapper"], [1, "section-shaped", "my-0", "skew-separator", "skew-mini"], [1, "page-header", "page-header-small", "header-filter"], [1, "page-header-image", 2, "background-image", "url('../../../assets/img/pages/photo-15.jpg')"], [1, "container"], [1, "header-body", "title-header", "text-center", "mb-7"], [1, "row", "justify-content-center"], [1, "col-xl-5", "col-lg-6", "col-md-8", "px-5"], [1, "text-white"], [1, "bg-secondary"], [1, "container", "product-card", "bg-white", "card"], [1, "row"], [1, "col-md-12", "product-container"], [1, "section", "product-section"], ["class", "text-center product-button", 4, "ngIf"], ["class", "text-center", 4, "ngIf"], ["class", "table", 4, "ngIf"], [1, "text-center", "product-button"], ["type", "button", 1, "btn", "btn-primary", 3, "click"], [1, "text-center"], [1, "table"], [1, "table", "table-shopping"], [1, ""], ["class", "product-table", 4, "ngIf"], [1, "product-table"], [4, "ngFor", "ngForOf"], [1, "td-name"], [3, "click"], ["placement", "bottom", "containerClass", "code-info-tooltip", 3, "tooltip", "adaptivePosition", "delay", 4, "ngIf"], [4, "ngIf"], [1, "btn", "btn-icon", "btn-primary", 3, "click"], [1, "fa-solid", "fa-eye"], ["placement", "bottom", "containerClass", "code-info-tooltip", 3, "tooltip", "adaptivePosition", "delay"]], template: function ProductListComponent_Template(rf, ctx) { if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 2);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "div", 3);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div", 4);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 5);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "div", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "div", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "h1", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "My Products");
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "div", 9);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "div", 10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "div", 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "div", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "div", 13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](15, ProductListComponent_section_15_Template, 3, 0, "section", 14);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](16, ProductListComponent_div_16_Template, 3, 0, "div", 15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](17, ProductListComponent_div_17_Template, 15, 1, "div", 16);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        } if (rf & 2) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](15);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.loading);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.productsFound && !ctx.loading);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.productsFound && !ctx.loading);
+        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgForOf"], ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_9__["TooltipDirective"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["SlicePipe"]], styles: [".full-wrapper[_ngcontent-%COMP%] {\n  height: 100vh !important;\n}\n\n.bg-secondary[_ngcontent-%COMP%] {\n  height: 100% !important;\n}\n\n.product-container[_ngcontent-%COMP%] {\n  margin-top: -100px !important;\n  background-color: #fff;\n}\n\n.product-card[_ngcontent-%COMP%] {\n  z-index: 999 !important;\n}\n\n.product-section[_ngcontent-%COMP%] {\n  padding-top: 2rem !important;\n}\n\n.title-header[_ngcontent-%COMP%] {\n  margin-top: 50px;\n}\n\n.product-button[_ngcontent-%COMP%] {\n  margin-bottom: 20px;\n}\n\n.panel-header-min[_ngcontent-%COMP%] {\n  height: 0px !important;\n}\n\n.product-table[_ngcontent-%COMP%]   tr[_ngcontent-%COMP%]   td[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  color: #5e72e4 !important;\n}\n\n.product-table[_ngcontent-%COMP%]   tr[_ngcontent-%COMP%]   td[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover {\n  color: #333333 !important;\n  cursor: pointer !important;\n}\n\n.table-shopping[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  font-size: 14px;\n  font-weight: 700;\n}\n\n.table-shopping[_ngcontent-%COMP%]   .td-name[_ngcontent-%COMP%]   small[_ngcontent-%COMP%] {\n  color: #444 !important;\n}\n\n.td-name[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover {\n  color: #444 !important;\n  text-decoration: none;\n}\n\n.btn-icon[_ngcontent-%COMP%] {\n  padding: 0.625rem 0.825rem !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3Byb2R1Y3RsaXN0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Msd0JBQUE7QUFDRDs7QUFFQTtFQUNDLHVCQUFBO0FBQ0Q7O0FBRUE7RUFDQyw2QkFBQTtFQUNBLHNCQUFBO0FBQ0Q7O0FBRUE7RUFDQyx1QkFBQTtBQUNEOztBQUVBO0VBQ0MsNEJBQUE7QUFDRDs7QUFFQTtFQUNDLGdCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxtQkFBQTtBQUNEOztBQUVBO0VBQ0Msc0JBQUE7QUFDRDs7QUFFQTtFQUNDLHlCQUFBO0FBQ0Q7O0FBRUE7RUFDQyx5QkFBQTtFQUNBLDBCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxlQUFBO0VBQ0EsZ0JBQUE7QUFDRDs7QUFFQTtFQUNDLHNCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxzQkFBQTtFQUNBLHFCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxxQ0FBQTtBQUNEIiwiZmlsZSI6InByb2R1Y3RsaXN0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZ1bGwtd3JhcHBlciB7XG5cdGhlaWdodDogMTAwdmggIWltcG9ydGFudDtcbn1cblxuLmJnLXNlY29uZGFyeSB7XG5cdGhlaWdodDogMTAwJSAhaW1wb3J0YW50O1xufVxuXG4ucHJvZHVjdC1jb250YWluZXIge1xuXHRtYXJnaW4tdG9wOiAtMTAwcHggIWltcG9ydGFudDtcblx0YmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbn1cblxuLnByb2R1Y3QtY2FyZCB7XG5cdHotaW5kZXg6IDk5OSAhaW1wb3J0YW50O1xufVxuXG4ucHJvZHVjdC1zZWN0aW9uIHtcblx0cGFkZGluZy10b3A6IDJyZW0gIWltcG9ydGFudDtcbn1cblxuLnRpdGxlLWhlYWRlciB7XG5cdG1hcmdpbi10b3A6IDUwcHg7XG59XG5cbi5wcm9kdWN0LWJ1dHRvbiB7XG5cdG1hcmdpbi1ib3R0b206IDIwcHg7XG59XG5cbi5wYW5lbC1oZWFkZXItbWluIHtcblx0aGVpZ2h0OiAwcHggIWltcG9ydGFudDtcbn1cblxuLnByb2R1Y3QtdGFibGUgdHIgdGQgYSB7XG5cdGNvbG9yOiAjNWU3MmU0ICFpbXBvcnRhbnQ7XG59XG5cbi5wcm9kdWN0LXRhYmxlIHRyIHRkIGE6aG92ZXIge1xuXHRjb2xvcjogIzMzMzMzMyAhaW1wb3J0YW50O1xuXHRjdXJzb3I6IHBvaW50ZXIgIWltcG9ydGFudDtcbn1cblxuLnRhYmxlLXNob3BwaW5nIHRoIHtcblx0Zm9udC1zaXplOiAxNHB4O1xuXHRmb250LXdlaWdodDogNzAwO1xufVxuXG4udGFibGUtc2hvcHBpbmcgLnRkLW5hbWUgc21hbGwge1xuXHRjb2xvcjogIzQ0NCAhaW1wb3J0YW50O1xufVxuXG4udGQtbmFtZSBhOmhvdmVyIHtcblx0Y29sb3I6ICM0NDQgIWltcG9ydGFudDtcblx0dGV4dC1kZWNvcmF0aW9uOiBub25lO1xufVxuXG4uYnRuLWljb24ge1xuXHRwYWRkaW5nOiAwLjYyNXJlbSAwLjgyNXJlbSAhaW1wb3J0YW50O1xufSJdfQ== */"] });
+    return ProductListComponent;
+}());
+
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](ProductListComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
+        args: [{
+                selector: "app-products",
+                templateUrl: "productlist.component.html",
+                styleUrls: ["productlist.component.scss"]
+            }]
+    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }]; }, null); })();
+
+
+/***/ }),
+
 /***/ "9uEI":
 /*!***********************************************************************!*\
   !*** ./src/app/components/picture-upload/picture-upload.component.ts ***!
@@ -274,7 +1111,7 @@ var LoginComponent = /** @class */ (function () {
         this.loginError = false;
         this.user = Object(_shared_userHelper__WEBPACK_IMPORTED_MODULE_6__["getStoredUser"])();
         if (this.user.sessionToken) {
-            this.router.navigate(['/qrcodes']);
+            this.router.navigate(['/products']);
         }
         this.userLogin = this.formBuilder.group({
             userName: '',
@@ -319,7 +1156,7 @@ var LoginComponent = /** @class */ (function () {
         });
         setTimeout(function () {
             _this.loading = false;
-            _this.router.navigate(['/qrcodes']);
+            _this.router.navigate(['/products']);
         }, 1500);
     };
     LoginComponent.prototype.presentResetPasswordPrompt = function () {
@@ -582,326 +1419,6 @@ var FooterComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "LxSD":
-/*!****************************************************!*\
-  !*** ./src/app/pages/qrcodes/qrcodes.component.ts ***!
-  \****************************************************/
-/*! exports provided: QRCodesComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QRCodesComponent", function() { return QRCodesComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var src_shared_userHelper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/shared/userHelper */ "O1WI");
-/* harmony import */ var parse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! parse */ "v0iw");
-/* harmony import */ var parse__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(parse__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _keys_parse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../keys/parse */ "DuhC");
-/* harmony import */ var _keys_parse__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_keys_parse__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "iInd");
-/* harmony import */ var _shared_parseResults__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../shared/parseResults */ "dkLf");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ "ofXK");
-/* harmony import */ var ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ngx-bootstrap/tooltip */ "Mfq2");
-
-// tslint:disable: no-shadowed-variable
-// tslint:disable: prefer-for-of
-
-
-
-
-
-
-
-
-
-
-
-function QRCodesComponent_section_15_Template(rf, ctx) { if (rf & 1) {
-    var _r4 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "section", 17);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "button", 18);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function QRCodesComponent_section_15_Template_button_click_1_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r4); var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](); return ctx_r3.routeToCreate(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, " Create QR Code ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} }
-function QRCodesComponent_div_16_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 19);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "h2");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, "No QR Codes Found");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} }
-function QRCodesComponent_div_17_tbody_13_tr_1_small_8_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "small", 34);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](2, "slice");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    var qrcode_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpropertyInterpolate"]("tooltip", qrcode_r7.tagInfo);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("adaptivePosition", false)("delay", 500);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind3"](2, 4, qrcode_r7.tagInfo, 0, 30), "... ");
-} }
-function QRCodesComponent_div_17_tbody_13_tr_1_small_9_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "small");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    var qrcode_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]().$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](qrcode_r7.tagInfo);
-} }
-function QRCodesComponent_div_17_tbody_13_tr_1_Template(rf, ctx) { if (rf & 1) {
-    var _r13 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 26);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "img", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "td", 28);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "a", 29);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function QRCodesComponent_div_17_tbody_13_tr_1_Template_a_click_5_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r13); var qrcode_r7 = ctx.$implicit; var ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3); return ctx_r12.viewQRCodeDetails(qrcode_r7); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](6);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](7, "br");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](8, QRCodesComponent_div_17_tbody_13_tr_1_small_8_Template, 3, 8, "small", 30);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](9, QRCodesComponent_div_17_tbody_13_tr_1_small_9_Template, 2, 1, "small", 31);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](13);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](14, "date");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "td");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "button", 32);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function QRCodesComponent_div_17_tbody_13_tr_1_Template_button_click_16_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r13); var qrcode_r7 = ctx.$implicit; var ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3); return ctx_r14.viewQRCodeDetails(qrcode_r7); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](17, "i", 33);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    var qrcode_r7 = ctx.$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpropertyInterpolate"]("alt", qrcode_r7.tagTitle);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("src", qrcode_r7.imageUrl, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeUrl"]);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](qrcode_r7.tagTitle);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", qrcode_r7.tagInfo && qrcode_r7.tagInfo.length > 60);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", qrcode_r7.tagInfo && qrcode_r7.tagInfo.length < 30);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", qrcode_r7.tagAddress, " ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"](" ", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind2"](14, 7, qrcode_r7.createdAt, "shortDate"), " ");
-} }
-function QRCodesComponent_div_17_tbody_13_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "tbody", 24);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, QRCodesComponent_div_17_tbody_13_tr_1_Template, 18, 10, "tr", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngForOf", ctx_r5.qrcodes);
-} }
-function QRCodesComponent_div_17_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 20);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "table", 21);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "thead", 22);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "th");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](5, "QR Code");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](6, "th", 19);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "th");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](8, "Location");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "th");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](10, "Created");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "th");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](12, "Actions");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](13, QRCodesComponent_div_17_tbody_13_Template, 2, 1, "tbody", 23);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](13);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx_r2.loading);
-} }
-var QRCodesComponent = /** @class */ (function () {
-    function QRCodesComponent(router) {
-        this.router = router;
-        parse__WEBPACK_IMPORTED_MODULE_3__["initialize"](_keys_parse__WEBPACK_IMPORTED_MODULE_4__["appId"], _keys_parse__WEBPACK_IMPORTED_MODULE_4__["javascript"]);
-        parse__WEBPACK_IMPORTED_MODULE_3__["serverURL"] = _keys_parse__WEBPACK_IMPORTED_MODULE_4__["serverURL"];
-    }
-    QRCodesComponent.prototype.ngOnInit = function () {
-        this.username = Object(src_shared_userHelper__WEBPACK_IMPORTED_MODULE_2__["getStoredUser"])().username;
-        this.searchEnabled = false;
-        this.loading = true;
-        this.initializeData();
-    };
-    QRCodesComponent.prototype.initializeData = function () {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.presentLoadingModal()];
-                    case 1:
-                        _a.sent();
-                        return [4 /*yield*/, this.getQRCodes()];
-                    case 2:
-                        _a.sent();
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    QRCodesComponent.prototype.presentLoadingModal = function () {
-        sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.fire({
-            title: "Loading...",
-            showConfirmButton: false,
-            showCancelButton: false
-        });
-    };
-    QRCodesComponent.prototype.getQRCodes = function () {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
-            var Tags, query;
-            var _this = this;
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        Tags = parse__WEBPACK_IMPORTED_MODULE_3__["Object"].extend('Tags');
-                        query = new parse__WEBPACK_IMPORTED_MODULE_3__["Query"](Tags);
-                        query.equalTo('userEmail', this.username);
-                        return [4 /*yield*/, query.find().then(function (results) {
-                                results = Object(_shared_parseResults__WEBPACK_IMPORTED_MODULE_6__["parseResults"])(results);
-                                _this.qrcodes = results;
-                                if (_this.qrcodes.length > 0) {
-                                    _this.qrcodesFound = true;
-                                }
-                                else {
-                                    _this.qrcodesFound = false;
-                                }
-                                for (var i = 0; i < _this.qrcodes.length; i++) {
-                                    _this.qrcodes[i].imageUrl = '';
-                                    if (_this.qrcodes[i].tagPhotoRef === undefined) {
-                                        _this.qrcodes[i].imageUrl = "https://photos.homecards.com/rebeacons/Tag-12345-1.jpg";
-                                    }
-                                    else {
-                                        _this.qrcodes[i].imageUrl = "https://photos.homecards.com/rebeacons/Tag-" + _this.qrcodes[i].tagPhotoRef + "-1.jpg";
-                                    }
-                                }
-                                setTimeout(function () {
-                                    _this.loading = false;
-                                    sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.close();
-                                }, 500);
-                                return _this.qrcodes;
-                            }, function (error) {
-                                console.error(error);
-                                setTimeout(function () {
-                                    _this.loading = false;
-                                    sweetalert2__WEBPACK_IMPORTED_MODULE_7___default.a.close();
-                                }, 500);
-                            })];
-                    case 1:
-                        _a.sent();
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    QRCodesComponent.prototype.viewQRCodeDetails = function (qrCode) {
-        this.selectedQRCode = qrCode;
-        localStorage.setItem('selectedQRCode', JSON.stringify(this.selectedQRCode));
-        localStorage.setItem('selectedQRCodeId', this.selectedQRCode.id);
-        this.router.navigate(["/qrcodes/" + this.selectedQRCode.id]);
-    };
-    QRCodesComponent.prototype.routeToCreate = function () {
-        this.selectedQRCode = {
-            id: "0",
-            tagTitle: "",
-            tagSubTitle: "",
-            tagCompany: "",
-            tagPrice: "",
-            tagUrl: "",
-            tagAddress: "",
-            tagAddress2: "",
-            tagCity: "",
-            tagState: "",
-            tagZip: "",
-            tagInfo: ""
-        };
-        localStorage.setItem('selectedQRCode', JSON.stringify(this.selectedQRCode));
-        localStorage.setItem('selectedQRCodeId', "0");
-        this.router.navigate(["/qrcodes/create"]);
-    };
-    QRCodesComponent.ɵfac = function QRCodesComponent_Factory(t) { return new (t || QRCodesComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"])); };
-    QRCodesComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: QRCodesComponent, selectors: [["app-qrcodes"]], decls: 18, vars: 3, consts: [[1, "wrapper", "full-wrapper"], [1, "section-shaped", "my-0", "skew-separator", "skew-mini"], [1, "page-header", "page-header-small", "header-filter"], [1, "page-header-image", 2, "background-image", "url('../../../assets/img/pages/photo-15.jpg')"], [1, "container"], [1, "header-body", "title-header", "text-center", "mb-7"], [1, "row", "justify-content-center"], [1, "col-xl-5", "col-lg-6", "col-md-8", "px-5"], [1, "text-white"], [1, "bg-secondary"], [1, "container", "qrcode-card", "bg-white", "card"], [1, "row"], [1, "col-md-12", "qrcode-container"], [1, "section", "qrcode-section"], ["class", "text-center qr-button", 4, "ngIf"], ["class", "text-center", 4, "ngIf"], ["class", "table", 4, "ngIf"], [1, "text-center", "qr-button"], ["type", "button", 1, "btn", "btn-primary", 3, "click"], [1, "text-center"], [1, "table"], [1, "table", "table-shopping"], [1, ""], ["class", "qr-code-table", 4, "ngIf"], [1, "qr-code-table"], [4, "ngFor", "ngForOf"], [1, "img-container"], [3, "src", "alt"], [1, "td-name"], [3, "click"], ["placement", "bottom", "containerClass", "code-info-tooltip", 3, "tooltip", "adaptivePosition", "delay", 4, "ngIf"], [4, "ngIf"], [1, "btn", "btn-icon", "btn-primary", 3, "click"], [1, "fa-solid", "fa-eye"], ["placement", "bottom", "containerClass", "code-info-tooltip", 3, "tooltip", "adaptivePosition", "delay"]], template: function QRCodesComponent_Template(rf, ctx) { if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 2);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "div", 3);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div", 4);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 5);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "div", 6);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "div", 7);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "h1", 8);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "My QR Codes");
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "div", 9);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "div", 10);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "div", 11);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "div", 12);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "div", 13);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](15, QRCodesComponent_section_15_Template, 3, 0, "section", 14);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](16, QRCodesComponent_div_16_Template, 3, 0, "div", 15);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](17, QRCodesComponent_div_17_Template, 14, 1, "div", 16);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        } if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](15);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.loading);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.qrcodesFound && !ctx.loading);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx.qrcodesFound && !ctx.loading);
-        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["NgForOf"], ngx_bootstrap_tooltip__WEBPACK_IMPORTED_MODULE_9__["TooltipDirective"]], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_8__["DatePipe"], _angular_common__WEBPACK_IMPORTED_MODULE_8__["SlicePipe"]], styles: [".full-wrapper[_ngcontent-%COMP%] {\n  height: 100vh !important;\n}\n\n.bg-secondary[_ngcontent-%COMP%] {\n  height: 100% !important;\n}\n\n.qrcode-container[_ngcontent-%COMP%] {\n  margin-top: -100px !important;\n  background-color: #fff;\n}\n\n.qrcode-card[_ngcontent-%COMP%] {\n  z-index: 999 !important;\n}\n\n.qrcode-section[_ngcontent-%COMP%] {\n  padding-top: 2rem !important;\n}\n\n.title-header[_ngcontent-%COMP%] {\n  margin-top: 50px;\n}\n\n.qr-button[_ngcontent-%COMP%] {\n  margin-bottom: 20px;\n}\n\n.panel-header-min[_ngcontent-%COMP%] {\n  height: 0px !important;\n}\n\n.qr-code-table[_ngcontent-%COMP%]   tr[_ngcontent-%COMP%]   td[_ngcontent-%COMP%]   a[_ngcontent-%COMP%] {\n  color: #5e72e4 !important;\n}\n\n.qr-code-table[_ngcontent-%COMP%]   tr[_ngcontent-%COMP%]   td[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover {\n  color: #333333 !important;\n  cursor: pointer !important;\n}\n\n.table-shopping[_ngcontent-%COMP%]   th[_ngcontent-%COMP%] {\n  font-size: 14px;\n  font-weight: 700;\n}\n\n.table-shopping[_ngcontent-%COMP%]   .td-name[_ngcontent-%COMP%]   small[_ngcontent-%COMP%] {\n  color: #444 !important;\n  font-weight: 500 !important;\n  font-size: 14px !important;\n}\n\n.td-name[_ngcontent-%COMP%]   a[_ngcontent-%COMP%]:hover {\n  color: #444 !important;\n  text-decoration: none;\n}\n\n.btn-icon[_ngcontent-%COMP%] {\n  padding: 0.625rem 0.825rem !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3FyY29kZXMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDQyx3QkFBQTtBQUNEOztBQUVBO0VBQ0MsdUJBQUE7QUFDRDs7QUFFQTtFQUNDLDZCQUFBO0VBQ0Esc0JBQUE7QUFDRDs7QUFFQTtFQUNDLHVCQUFBO0FBQ0Q7O0FBRUE7RUFDQyw0QkFBQTtBQUNEOztBQUVBO0VBQ0MsZ0JBQUE7QUFDRDs7QUFFQTtFQUNDLG1CQUFBO0FBQ0Q7O0FBRUE7RUFDQyxzQkFBQTtBQUNEOztBQUVBO0VBQ0MseUJBQUE7QUFDRDs7QUFFQTtFQUNDLHlCQUFBO0VBQ0EsMEJBQUE7QUFDRDs7QUFFQTtFQUNDLGVBQUE7RUFDQSxnQkFBQTtBQUNEOztBQUVBO0VBQ0Msc0JBQUE7RUFDQSwyQkFBQTtFQUNBLDBCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxzQkFBQTtFQUNBLHFCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxxQ0FBQTtBQUNEIiwiZmlsZSI6InFyY29kZXMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZnVsbC13cmFwcGVyIHtcblx0aGVpZ2h0OiAxMDB2aCAhaW1wb3J0YW50O1xufVxuXG4uYmctc2Vjb25kYXJ5IHtcblx0aGVpZ2h0OiAxMDAlICFpbXBvcnRhbnQ7XG59XG5cbi5xcmNvZGUtY29udGFpbmVyIHtcblx0bWFyZ2luLXRvcDogLTEwMHB4ICFpbXBvcnRhbnQ7XG5cdGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG59XG5cbi5xcmNvZGUtY2FyZCB7XG5cdHotaW5kZXg6IDk5OSAhaW1wb3J0YW50O1xufVxuXG4ucXJjb2RlLXNlY3Rpb24ge1xuXHRwYWRkaW5nLXRvcDogMnJlbSAhaW1wb3J0YW50O1xufVxuXG4udGl0bGUtaGVhZGVyIHtcblx0bWFyZ2luLXRvcDogNTBweDtcbn1cblxuLnFyLWJ1dHRvbiB7XG5cdG1hcmdpbi1ib3R0b206IDIwcHg7XG59XG5cbi5wYW5lbC1oZWFkZXItbWluIHtcblx0aGVpZ2h0OiAwcHggIWltcG9ydGFudDtcbn1cblxuLnFyLWNvZGUtdGFibGUgdHIgdGQgYSB7XG5cdGNvbG9yOiAjNWU3MmU0ICFpbXBvcnRhbnQ7XG59XG5cbi5xci1jb2RlLXRhYmxlIHRyIHRkIGE6aG92ZXIge1xuXHRjb2xvcjogIzMzMzMzMyAhaW1wb3J0YW50O1xuXHRjdXJzb3I6IHBvaW50ZXIgIWltcG9ydGFudDtcbn1cblxuLnRhYmxlLXNob3BwaW5nIHRoIHtcblx0Zm9udC1zaXplOiAxNHB4O1xuXHRmb250LXdlaWdodDogNzAwO1xufVxuXG4udGFibGUtc2hvcHBpbmcgLnRkLW5hbWUgc21hbGwge1xuXHRjb2xvcjogIzQ0NCAhaW1wb3J0YW50O1xuXHRmb250LXdlaWdodDogNTAwICFpbXBvcnRhbnQ7XG5cdGZvbnQtc2l6ZTogMTRweCAhaW1wb3J0YW50O1xufVxuXG4udGQtbmFtZSBhOmhvdmVyIHtcblx0Y29sb3I6ICM0NDQgIWltcG9ydGFudDtcblx0dGV4dC1kZWNvcmF0aW9uOiBub25lO1xufVxuXG4uYnRuLWljb24ge1xuXHRwYWRkaW5nOiAwLjYyNXJlbSAwLjgyNXJlbSAhaW1wb3J0YW50O1xufSJdfQ== */"] });
-    return QRCodesComponent;
-}());
-
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](QRCodesComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
-        args: [{
-                selector: "app-qrcodes",
-                templateUrl: "qrcodes.component.html",
-                styleUrls: ["qrcodes.component.scss"]
-            }]
-    }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] }]; }, null); })();
-
-
-/***/ }),
-
 /***/ "O1WI":
 /*!**********************************!*\
   !*** ./src/shared/userHelper.ts ***!
@@ -1030,566 +1547,6 @@ var AppComponent = /** @class */ (function () {
                 styleUrls: ["./app.component.scss"]
             }]
     }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }]; }, null); })();
-
-
-/***/ }),
-
-/***/ "W+bR":
-/*!****************************************************************!*\
-  !*** ./src/app/pages/qrcodedetails/qrcodedetails.component.ts ***!
-  \****************************************************************/
-/*! exports provided: QRCodeDetailsComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QRCodeDetailsComponent", function() { return QRCodeDetailsComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "iInd");
-/* harmony import */ var parse__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! parse */ "v0iw");
-/* harmony import */ var parse__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(parse__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _keys_parse__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../keys/parse */ "DuhC");
-/* harmony import */ var _keys_parse__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_keys_parse__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
-/* harmony import */ var src_shared_userHelper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/shared/userHelper */ "O1WI");
-/* harmony import */ var src_shared_qrCodeHelper__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/shared/qrCodeHelper */ "ZV+A");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! sweetalert2 */ "PSD3");
-/* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common */ "ofXK");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function QRCodeDetailsComponent_div_14_img_4_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](0, "img", 22);
-} if (rf & 2) {
-    var ctx_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("src", ctx_r1.qrImage, _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsanitizeUrl"]);
-} }
-function QRCodeDetailsComponent_div_14_div_8_h2_3_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "h2");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    var ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate"](ctx_r3.qrCode.tagTitle);
-} }
-function QRCodeDetailsComponent_div_14_div_8_h2_4_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "h2");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1, "Create QR Code");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} }
-function QRCodeDetailsComponent_div_14_div_8_button_87_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "button", 55);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](1, " Save Changes ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    var ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("disabled", ctx_r5.saveDisabled);
-} }
-function QRCodeDetailsComponent_div_14_div_8_button_88_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "button", 56);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](1, "span", 57);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](2, " Saving... ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} }
-function QRCodeDetailsComponent_div_14_div_8_Template(rf, ctx) { if (rf & 1) {
-    var _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "header");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](3, QRCodeDetailsComponent_div_14_div_8_h2_3_Template, 2, 1, "h2", 21);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](4, QRCodeDetailsComponent_div_14_div_8_h2_4_Template, 2, 0, "h2", 21);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](5, "hr", 23);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](6, "br");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "form", 24);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngSubmit", function QRCodeDetailsComponent_div_14_div_8_Template_form_ngSubmit_7_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r8); var ctx_r7 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r7.editQRCode(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](9, "div", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "label", 26);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, " Title ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "div", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "div", 28);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](14, "input", 29);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup", function QRCodeDetailsComponent_div_14_div_8_Template_input_keyup_14_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r8); var ctx_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r9.validateField("tagTitle", 1); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](16, "div", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "label", 30);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](18, " Subtitle ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](19, "div", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](20, "div", 28);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "input", 31);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup", function QRCodeDetailsComponent_div_14_div_8_Template_input_keyup_21_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r8); var ctx_r10 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r10.validateField("tagSubTitle", 1); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](23, "div", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](24, "label", 32);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](25, " Company ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](26, "div", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](27, "div", 28);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](28, "input", 33);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup", function QRCodeDetailsComponent_div_14_div_8_Template_input_keyup_28_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r8); var ctx_r11 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r11.evaluateEmail(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](29, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](30, "div", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "label", 34);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](32, " Price ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](33, "div", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "div", 28);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](35, "input", 35);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](36, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](37, "div", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](38, "label", 36);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](39, " URL ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](40, "div", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](41, "div", 28);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](42, "input", 37);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](43, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](44, "div", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](45, "label", 38);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](46, " Address Line 1 ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](47, "div", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](48, "div", 28);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](49, "input", 39);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](50, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](51, "div", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](52, "label", 40);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](53, " Address Line 2 ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](54, "div", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](55, "div", 28);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](56, "input", 41);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](57, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](58, "div", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](59, "label", 42);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](60, " City ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](61, "div", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](62, "div", 28);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](63, "input", 43);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup", function QRCodeDetailsComponent_div_14_div_8_Template_input_keyup_63_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r8); var ctx_r12 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r12.validateField("tagCity", 1); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](64, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](65, "div", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](66, "label", 44);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](67, " State ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](68, "div", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](69, "div", 28);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](70, "input", 45);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("keyup", function QRCodeDetailsComponent_div_14_div_8_Template_input_keyup_70_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r8); var ctx_r13 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r13.validateField("tagState", 2); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](71, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](72, "div", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](73, "label", 46);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](74, " Zip ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](75, "div", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](76, "div", 28);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](77, "input", 47);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](78, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](79, "div", 25);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](80, "label", 48);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](81, " Details ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](82, "div", 27);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](83, "div", 28);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](84, "textarea", 49);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](85, "div", 50);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](86, "div", 51);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](87, QRCodeDetailsComponent_div_14_div_8_button_87_Template, 2, 1, "button", 52);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](88, QRCodeDetailsComponent_div_14_div_8_button_88_Template, 3, 0, "button", 53);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](89, "a", 54);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function QRCodeDetailsComponent_div_14_div_8_Template_a_click_89_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r8); var ctx_r14 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2); return ctx_r14.cancelChanges(); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](90, " Cancel ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    var ctx_r2 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r2.qrCode.tagTitle);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx_r2.qrCode.tagTitle);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("formGroup", ctx_r2.qrCodeEdit);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](80);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx_r2.saving);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r2.saving);
-} }
-function QRCodeDetailsComponent_div_14_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 14);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 15);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 16);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "section", 17);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](4, QRCodeDetailsComponent_div_14_img_4_Template, 1, 1, "img", 18);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 19);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "div", 16);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "div", 20);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](8, QRCodeDetailsComponent_div_14_div_8_Template, 91, 5, "div", 21);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-} if (rf & 2) {
-    var ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r0.qrImage);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", ctx_r0.qrCodeId);
-} }
-var QRCodeDetailsComponent = /** @class */ (function () {
-    function QRCodeDetailsComponent(formBuilder, router, currencyPipe) {
-        this.formBuilder = formBuilder;
-        this.router = router;
-        this.currencyPipe = currencyPipe;
-        this.images = [];
-        this.slideOpts = {
-            spaceBetween: 10,
-            slidesPerView: 'auto',
-            centeredSlides: true,
-            initialSlide: 0,
-            speed: 500
-        };
-        this.qrCodeEdit = new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormGroup"]({
-            tagTitle: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
-            tagSubTitle: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
-            tagCompany: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
-            tagPrice: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
-            tagUrl: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
-            tagAddress: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
-            tagAddress2: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
-            tagCity: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
-            tagState: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
-            tagZip: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"](''),
-            tagInfo: new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]('')
-        });
-        this.regexPattern = "/^[a-zA-Z0-9\(\);:&\-' ]*[a-zA-Z0-9\(\);:&\-']*$/";
-        parse__WEBPACK_IMPORTED_MODULE_3__["initialize"](_keys_parse__WEBPACK_IMPORTED_MODULE_4__["appId"], _keys_parse__WEBPACK_IMPORTED_MODULE_4__["javascript"]);
-        parse__WEBPACK_IMPORTED_MODULE_3__["serverURL"] = _keys_parse__WEBPACK_IMPORTED_MODULE_4__["serverURL"];
-    }
-    QRCodeDetailsComponent.prototype.ngOnInit = function () {
-        this.loading = true;
-        this.loadError = false;
-        this.username = Object(src_shared_userHelper__WEBPACK_IMPORTED_MODULE_6__["getStoredUser"])().username;
-        this.initializeData();
-    };
-    QRCodeDetailsComponent.prototype.initializeData = function () {
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function () {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"])(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.presentLoadingModal()];
-                    case 1:
-                        _a.sent();
-                        return [4 /*yield*/, this.getQRCodeDetails()];
-                    case 2:
-                        _a.sent();
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    QRCodeDetailsComponent.prototype.presentLoadingModal = function () {
-        sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire({
-            title: "Loading...",
-            showConfirmButton: false,
-            showCancelButton: false
-        });
-    };
-    QRCodeDetailsComponent.prototype.getQRCodeDetails = function () {
-        var _this = this;
-        this.qrCode = JSON.parse(localStorage.getItem("selectedQRCode"));
-        console.log("qrCode:", this.qrCode);
-        if (this.qrCode.id) {
-            this.qrCodeId = this.qrCode.id;
-            if (this.qrCodeId !== "0") {
-                this.buildEditForm();
-            }
-            else {
-                this.buildCreateForm();
-            }
-        }
-        else {
-            setTimeout(function () {
-                sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.close();
-                _this.presentLoadError();
-            }, 500);
-        }
-    };
-    QRCodeDetailsComponent.prototype.buildEditForm = function () {
-        var _this = this;
-        this.qrCodeEdit = this.formBuilder.group({
-            tagTitle: this.qrCode.tagTitle,
-            tagSubTitle: this.qrCode.tagSubTitle,
-            tagCompany: this.qrCode.tagCompany,
-            tagPrice: this.qrCode.tagPrice,
-            tagUrl: this.qrCode.tagUrl,
-            tagAddress: this.qrCode.tagAddress,
-            tagAddress2: this.qrCode.tagAddress2,
-            tagCity: this.qrCode.tagCity,
-            tagState: this.qrCode.tagState,
-            tagZip: this.qrCode.tagZip,
-            tagInfo: this.qrCode.tagInfo
-        });
-        this.qrImage = "https://photos.homecards.com/rebeacons/Tag-" + this.qrCode.tagPhotoRef + "-1.jpg";
-        setTimeout(function () {
-            _this.loading = false;
-            sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.close();
-        }, 500);
-    };
-    QRCodeDetailsComponent.prototype.buildCreateForm = function () {
-        var _this = this;
-        this.qrCodeEdit = this.formBuilder.group({
-            tagTitle: "",
-            tagSubTitle: "",
-            tagCompany: "",
-            tagPrice: "",
-            tagUrl: "",
-            tagAddress: "",
-            tagAddress2: "",
-            tagCity: "",
-            tagState: "",
-            tagZip: "",
-            tagInfo: ""
-        });
-        this.qrImage = "../../../assets/img/image_placeholder.jpg";
-        setTimeout(function () {
-            _this.loading = false;
-            sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.close();
-        }, 500);
-    };
-    QRCodeDetailsComponent.prototype.validateField = function (fieldName, minChars) {
-        var fieldId = document.getElementById(fieldName);
-        var validApplied;
-        var invalidApplied;
-        if (fieldId.classList.contains("field-valid")) {
-            validApplied = true;
-        }
-        else if (!fieldId.classList.contains("field-valid")) {
-            validApplied = false;
-        }
-        if (fieldId.classList.contains("field-invalid")) {
-            invalidApplied = true;
-        }
-        else if (!fieldId.classList.contains("field-invalid")) {
-            invalidApplied = false;
-        }
-        var value = this.qrCodeEdit.value[fieldName];
-        if (value.length < minChars) {
-            this.fieldValid = false;
-            this.saveDisabled = true;
-            if (fieldName === "tagTitle") {
-                this.tagTitleInvalid = true;
-            }
-            this.errorMsg = fieldName + " must have at least " + minChars + " character(s)";
-            if (validApplied) {
-                fieldId.classList.remove("field-valid");
-            }
-            if (!invalidApplied) {
-                fieldId.classList.add("field-invalid");
-            }
-        }
-        else {
-            this.fieldValid = true;
-            this.saveDisabled = false;
-            if (invalidApplied) {
-                fieldId.classList.remove("field-invalid");
-            }
-            if (!validApplied) {
-                fieldId.classList.add("field-valid");
-            }
-        }
-    };
-    QRCodeDetailsComponent.prototype.editQRCode = function () {
-        var _this = this;
-        var QRCodes = parse__WEBPACK_IMPORTED_MODULE_3__["Object"].extend('Tags');
-        var query = new parse__WEBPACK_IMPORTED_MODULE_3__["Query"](QRCodes);
-        query.get(this.qrCodeId).then(function (qrCode) {
-            qrCode.set('tagTitle', _this.qrCodeEdit.value.tagTitle);
-            qrCode.set('tagSubTitle', _this.qrCodeEdit.value.tagSubTitle);
-            qrCode.set('tagCompany', _this.qrCodeEdit.value.tagCompany);
-            qrCode.set('tagPrice', _this.qrCodeEdit.value.tagPrice);
-            qrCode.set('tagUrl', _this.qrCodeEdit.value.tagUrl);
-            qrCode.set('tagAddress', _this.qrCodeEdit.value.tagAddress);
-            qrCode.set('tagAddress2', _this.qrCodeEdit.value.tagAddress2);
-            qrCode.set('tagCity', _this.qrCodeEdit.value.tagCity);
-            qrCode.set('tagState', _this.qrCodeEdit.value.tagState);
-            qrCode.set('tagZip', _this.qrCodeEdit.value.tagZip);
-            qrCode.set('tagInfo', _this.qrCodeEdit.value.tagInfo);
-            qrCode.save().then(function (response) {
-                _this.presentQRCodeSuccess();
-                return response;
-            }).catch(function (error) {
-                _this.presentQRCodeError(error);
-            });
-        });
-    };
-    QRCodeDetailsComponent.prototype.presentQRCodeSuccess = function () {
-        this.saving = false;
-        sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire({
-            title: "Success!",
-            timer: 1500,
-            showConfirmButton: false,
-            icon: "success"
-        });
-    };
-    QRCodeDetailsComponent.prototype.presentLoadError = function () {
-        sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire({
-            title: "Error",
-            buttonsStyling: false,
-            customClass: {
-                confirmButton: "btn btn-danger",
-            },
-            icon: "error",
-            html: "<b>Unable to retrieve specified data</b>"
-        });
-        this.loading = false;
-        this.loadError = true;
-    };
-    QRCodeDetailsComponent.prototype.presentQRCodeError = function (error) {
-        sweetalert2__WEBPACK_IMPORTED_MODULE_8___default.a.fire({
-            title: "Save Failed",
-            buttonsStyling: false,
-            customClass: {
-                confirmButton: "btn btn-danger",
-            },
-            icon: "error",
-            html: "<b>" + error + "</b>"
-        });
-        this.loading = false;
-    };
-    QRCodeDetailsComponent.prototype.routeToEditQRCode = function () {
-        Object(src_shared_qrCodeHelper__WEBPACK_IMPORTED_MODULE_7__["storeQRCode"])(this.qrCode);
-        localStorage.setItem('qrCodeId', this.qrCode.id);
-        localStorage.setItem('method', 'edit');
-        this.router.navigate(['/qrcodes/create']);
-    };
-    QRCodeDetailsComponent.prototype.routeToQRCodes = function () {
-        this.router.navigate(['/qrcodes']);
-    };
-    QRCodeDetailsComponent.prototype.routeToAccount = function () {
-        this.router.navigate(['/account']);
-    };
-    QRCodeDetailsComponent.ɵfac = function QRCodeDetailsComponent_Factory(t) { return new (t || QRCodeDetailsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_9__["CurrencyPipe"])); };
-    QRCodeDetailsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: QRCodeDetailsComponent, selectors: [["app-qrcodedetails"]], features: [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵProvidersFeature"]([
-                _angular_common__WEBPACK_IMPORTED_MODULE_9__["CurrencyPipe"]
-            ])], decls: 15, vars: 1, consts: [[1, "wrapper", "full-wrapper"], [1, "section-shaped", "my-0", "skew-separator", "skew-mini"], [1, "page-header", "page-header-small", "header-filter"], [1, "page-header-image", 2, "background-image", "url('../../../assets/img/pages/photo-15.jpg')"], [1, "container"], [1, "header-body", "title-header", "text-center", "mb-7"], [1, "row", "justify-content-center"], [1, "col-xl-5", "col-lg-6", "col-md-8", "px-5"], [1, "text-white"], [1, "bg-secondary"], [1, "container", "qrcode-card", "bg-white", "card"], [1, "row"], [1, "col-md-12", "qrcode-container"], ["class", "section qrcode-section", 4, "ngIf"], [1, "section", "qrcode-section"], [1, "col-md-4"], [1, "section"], [1, "text-center", "qr-code-image"], [3, "src", 4, "ngIf"], [1, "col-md-8", "ml-auto"], [1, "tab-content"], [4, "ngIf"], [3, "src"], [1, "line-primary"], ["role", "form", "novalidate", "", 3, "formGroup", "ngSubmit"], [1, "col-md-3", "align-self-center"], ["for", "#tagTitle", 1, "labels"], [1, "col-md-9", "align-self-center"], [1, "form-group"], ["id", "tagTitle", "type", "text", "required", "", "formControlName", "tagTitle", 1, "form-control", 3, "keyup"], ["for", "#tagSubTitle", 1, "labels"], ["id", "tagSubTitle", "name", "tagSubTitle", "required", "", "type", "text", "formControlName", "tagSubTitle", 1, "form-control", 3, "keyup"], ["for", "#tagCompany", 1, "labels"], ["id", "tagCompany", "name", "tagCompany", "required", "", "type", "tagCompany", "formControlName", "tagCompany", 1, "form-control", 3, "keyup"], ["for", "#tagPrice", 1, "labels"], ["id", "tagPrice", "name", "tagPrice", "required", "", "pattern", "^[0-9_]*$", "formControlName", "tagPrice", 1, "form-control"], ["for", "#tagUrl", 1, "labels"], ["id", "tagUrl", "name", "tagUrl", "required", "", "type", "url", "formControlName", "tagUrl", 1, "form-control"], ["for", "#tagAddress", 1, "labels"], ["id", "tagAddress", "name", "tagAddress", "required", "", "type", "text", "formControlName", "tagAddress", 1, "form-control"], ["for", "#tagAddress2", 1, "labels"], ["id", "tagAddress2", "name", "tagAddress2", "required", "", "type", "text", "formControlName", "tagAddress2", 1, "form-control"], ["for", "#tagCity", 1, "labels"], ["id", "tagCity", "name", "tagCity", "required", "", "type", "text", "formControlName", "tagCity", 1, "form-control", 3, "keyup"], ["for", "#tagState", 1, "labels"], ["id", "tagState", "name", "tagState", "required", "", "type", "text", "formControlName", "tagState", "minlength", "2", "maxlength", "2", "placeholder", "CA", 1, "form-control", 3, "keyup"], ["for", "#tagZip", 1, "labels"], ["id", "tagZip", "name", "tagZip", "required", "", "type", "text", "formControlName", "tagZip", 1, "form-control"], ["for", "#tagInfo", 1, "labels"], ["id", "tagInfo", "rows", "8", "name", "tagInfo", "required", "", "formControlName", "tagInfo", 1, "form-control"], [1, "row", "mt-5"], [1, "button-group", "col-md-12"], ["class", "btn btn-success", "type", "submit", 3, "disabled", 4, "ngIf"], ["class", "btn btn-success saving-button", "type", "button", "disabled", "", 4, "ngIf"], [1, "btn", "btn-danger", 3, "click"], ["type", "submit", 1, "btn", "btn-success", 3, "disabled"], ["type", "button", "disabled", "", 1, "btn", "btn-success", "saving-button"], ["role", "status", "aria-hidden", "true", 1, "spinner-border", "spinner-border-sm"]], template: function QRCodeDetailsComponent_Template(rf, ctx) { if (rf & 1) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 2);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](3, "div", 3);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](4, "div", 4);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](5, "div", 5);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](6, "div", 6);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](7, "div", 7);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](8, "h1", 8);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "QR Code Details");
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "div", 9);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](11, "div", 10);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "div", 11);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](13, "div", 12);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](14, QRCodeDetailsComponent_div_14_Template, 9, 2, "div", 13);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        } if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](14);
-            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngIf", !ctx.loadError && !ctx.loading);
-        } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_9__["NgIf"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["ɵangular_packages_forms_forms_y"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControlStatusGroup"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormGroupDirective"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["DefaultValueAccessor"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["RequiredValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["NgControlStatus"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControlName"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["PatternValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["MinLengthValidator"], _angular_forms__WEBPACK_IMPORTED_MODULE_5__["MaxLengthValidator"]], styles: [".full-wrapper[_ngcontent-%COMP%] {\n  height: 100vh !important;\n}\n\n.bg-secondary[_ngcontent-%COMP%] {\n  height: 100% !important;\n}\n\n.qrcode-container[_ngcontent-%COMP%] {\n  margin-top: -100px !important;\n  background-color: #fff;\n}\n\n.qrcode-card[_ngcontent-%COMP%] {\n  z-index: 999 !important;\n}\n\n.qrcode-section[_ngcontent-%COMP%] {\n  display: flex;\n  padding-top: 0rem !important;\n}\n\n.title-header[_ngcontent-%COMP%] {\n  margin-top: 50px;\n}\n\n.btn-danger[_ngcontent-%COMP%] {\n  color: #fff !important;\n}\n\n.btn-danger[_ngcontent-%COMP%]:hover {\n  cursor: pointer !important;\n}\n\n.form-control[_ngcontent-%COMP%] {\n  color: #000 !important;\n  font-weight: 500 !important;\n}\n\n.form-control[_ngcontent-%COMP%]:focus {\n  border: 2px solid #5e72e4 !important;\n}\n\n.field-valid[_ngcontent-%COMP%] {\n  border: 1px solid #2dce89 !important;\n}\n\n.field-invalid[_ngcontent-%COMP%] {\n  border: 2px solid #f5365c !important;\n}\n\n.button-group[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.saving-button[_ngcontent-%COMP%] {\n  display: flex !important;\n  align-items: center !important;\n  justify-content: center !important;\n}\n\n.saving-button[_ngcontent-%COMP%]   span[_ngcontent-%COMP%] {\n  margin-right: 7px !important;\n}\n\n.qr-code-image[_ngcontent-%COMP%]   img[_ngcontent-%COMP%] {\n  width: 100% !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uLy4uL3FyY29kZWRldGFpbHMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDQyx3QkFBQTtBQUNEOztBQUVBO0VBQ0MsdUJBQUE7QUFDRDs7QUFFQTtFQUNDLDZCQUFBO0VBQ0Esc0JBQUE7QUFDRDs7QUFFQTtFQUNDLHVCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxhQUFBO0VBQ0EsNEJBQUE7QUFDRDs7QUFFQTtFQUNDLGdCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxzQkFBQTtBQUNEOztBQUVBO0VBQ0MsMEJBQUE7QUFDRDs7QUFFQTtFQUNDLHNCQUFBO0VBQ0EsMkJBQUE7QUFDRDs7QUFFQTtFQUNDLG9DQUFBO0FBQ0Q7O0FBRUE7RUFDQyxvQ0FBQTtBQUNEOztBQUVBO0VBQ0Msb0NBQUE7QUFDRDs7QUFFQTtFQUNDLGFBQUE7RUFDQSxtQkFBQTtFQUNBLDhCQUFBO0FBQ0Q7O0FBRUE7RUFDQyx3QkFBQTtFQUNBLDhCQUFBO0VBQ0Esa0NBQUE7QUFDRDs7QUFFQTtFQUNDLDRCQUFBO0FBQ0Q7O0FBRUE7RUFDQyxzQkFBQTtBQUNEIiwiZmlsZSI6InFyY29kZWRldGFpbHMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZnVsbC13cmFwcGVyIHtcblx0aGVpZ2h0OiAxMDB2aCAhaW1wb3J0YW50O1xufVxuXG4uYmctc2Vjb25kYXJ5IHtcblx0aGVpZ2h0OiAxMDAlICFpbXBvcnRhbnQ7XG59XG5cbi5xcmNvZGUtY29udGFpbmVyIHtcblx0bWFyZ2luLXRvcDogLTEwMHB4ICFpbXBvcnRhbnQ7XG5cdGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG59XG5cbi5xcmNvZGUtY2FyZCB7XG5cdHotaW5kZXg6IDk5OSAhaW1wb3J0YW50O1xufVxuXG4ucXJjb2RlLXNlY3Rpb24ge1xuXHRkaXNwbGF5OiBmbGV4O1xuXHRwYWRkaW5nLXRvcDogMHJlbSAhaW1wb3J0YW50O1xufVxuXG4udGl0bGUtaGVhZGVyIHtcblx0bWFyZ2luLXRvcDogNTBweDtcbn1cblxuLmJ0bi1kYW5nZXIge1xuXHRjb2xvcjogI2ZmZiAhaW1wb3J0YW50O1xufVxuXG4uYnRuLWRhbmdlcjpob3ZlciB7XG5cdGN1cnNvcjogcG9pbnRlciAhaW1wb3J0YW50O1xufVxuXG4uZm9ybS1jb250cm9sIHtcblx0Y29sb3I6ICMwMDAgIWltcG9ydGFudDtcblx0Zm9udC13ZWlnaHQ6IDUwMCAhaW1wb3J0YW50O1xufVxuXG4uZm9ybS1jb250cm9sOmZvY3VzIHtcblx0Ym9yZGVyOiAycHggc29saWQgIzVlNzJlNCAhaW1wb3J0YW50O1xufVxuXG4uZmllbGQtdmFsaWQge1xuXHRib3JkZXI6IDFweCBzb2xpZCAjMmRjZTg5ICFpbXBvcnRhbnQ7XG59XG5cbi5maWVsZC1pbnZhbGlkIHtcblx0Ym9yZGVyOiAycHggc29saWQgI2Y1MzY1YyAhaW1wb3J0YW50O1xufVxuXG4uYnV0dG9uLWdyb3VwIHtcblx0ZGlzcGxheTogZmxleDtcblx0YWxpZ24taXRlbXM6IGNlbnRlcjtcblx0anVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xufVxuXG4uc2F2aW5nLWJ1dHRvbiB7XG5cdGRpc3BsYXk6IGZsZXggIWltcG9ydGFudDtcblx0YWxpZ24taXRlbXM6IGNlbnRlciAhaW1wb3J0YW50O1xuXHRqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlciAhaW1wb3J0YW50O1xufVxuXG4uc2F2aW5nLWJ1dHRvbiBzcGFuIHtcblx0bWFyZ2luLXJpZ2h0OiA3cHggIWltcG9ydGFudDtcbn1cblxuLnFyLWNvZGUtaW1hZ2UgaW1nIHtcblx0d2lkdGg6IDEwMCUgIWltcG9ydGFudDtcbn1cbiJdfQ== */"] });
-    return QRCodeDetailsComponent;
-}());
-
-/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](QRCodeDetailsComponent, [{
-        type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"],
-        args: [{
-                selector: 'app-qrcodedetails',
-                templateUrl: 'qrcodedetails.component.html',
-                styleUrls: ['qrcodedetails.component.scss'],
-                providers: [
-                    _angular_common__WEBPACK_IMPORTED_MODULE_9__["CurrencyPipe"]
-                ]
-            }]
-    }], function () { return [{ type: _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormBuilder"] }, { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }, { type: _angular_common__WEBPACK_IMPORTED_MODULE_9__["CurrencyPipe"] }]; }, null); })();
 
 
 /***/ }),
@@ -2439,10 +2396,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/login/login.component */ "D8EZ");
 /* harmony import */ var _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/navbar/navbar.component */ "hrlM");
 /* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./components/footer/footer.component */ "LmEr");
-/* harmony import */ var _pages_qrcodes_qrcodes_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/qrcodes/qrcodes.component */ "LxSD");
-/* harmony import */ var _pages_qrcodedetails_qrcodedetails_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/qrcodedetails/qrcodedetails.component */ "W+bR");
-/* harmony import */ var _pages_profile_profile_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/profile/profile.component */ "Y5Lh");
-/* harmony import */ var _components_picture_upload_picture_upload_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./components/picture-upload/picture-upload.component */ "9uEI");
+/* harmony import */ var _pages_productdetails_productdetails_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/productdetails/productdetails.component */ "2gyl");
+/* harmony import */ var _pages_profile_profile_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/profile/profile.component */ "Y5Lh");
+/* harmony import */ var _components_picture_upload_picture_upload_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./components/picture-upload/picture-upload.component */ "9uEI");
+/* harmony import */ var _pages_productlist_productlist_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./pages/productlist/productlist.component */ "6hMR");
  // this is needed!
 
 
@@ -2506,10 +2463,10 @@ var AppModule = /** @class */ (function () {
         _pages_login_login_component__WEBPACK_IMPORTED_MODULE_17__["LoginComponent"],
         _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_18__["NavbarComponent"],
         _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_19__["FooterComponent"],
-        _pages_qrcodes_qrcodes_component__WEBPACK_IMPORTED_MODULE_20__["QRCodesComponent"],
-        _pages_qrcodedetails_qrcodedetails_component__WEBPACK_IMPORTED_MODULE_21__["QRCodeDetailsComponent"],
-        _pages_profile_profile_component__WEBPACK_IMPORTED_MODULE_22__["ProfileComponent"],
-        _components_picture_upload_picture_upload_component__WEBPACK_IMPORTED_MODULE_23__["PictureUploadComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["CommonModule"],
+        _pages_productlist_productlist_component__WEBPACK_IMPORTED_MODULE_23__["ProductListComponent"],
+        _pages_productdetails_productdetails_component__WEBPACK_IMPORTED_MODULE_20__["ProductDetailsComponent"],
+        _pages_profile_profile_component__WEBPACK_IMPORTED_MODULE_21__["ProfileComponent"],
+        _components_picture_upload_picture_upload_component__WEBPACK_IMPORTED_MODULE_22__["PictureUploadComponent"]], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_4__["CommonModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_2__["ReactiveFormsModule"],
         _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterModule"],
@@ -2524,10 +2481,10 @@ var AppModule = /** @class */ (function () {
                     _pages_login_login_component__WEBPACK_IMPORTED_MODULE_17__["LoginComponent"],
                     _components_navbar_navbar_component__WEBPACK_IMPORTED_MODULE_18__["NavbarComponent"],
                     _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_19__["FooterComponent"],
-                    _pages_qrcodes_qrcodes_component__WEBPACK_IMPORTED_MODULE_20__["QRCodesComponent"],
-                    _pages_qrcodedetails_qrcodedetails_component__WEBPACK_IMPORTED_MODULE_21__["QRCodeDetailsComponent"],
-                    _pages_profile_profile_component__WEBPACK_IMPORTED_MODULE_22__["ProfileComponent"],
-                    _components_picture_upload_picture_upload_component__WEBPACK_IMPORTED_MODULE_23__["PictureUploadComponent"]
+                    _pages_productlist_productlist_component__WEBPACK_IMPORTED_MODULE_23__["ProductListComponent"],
+                    _pages_productdetails_productdetails_component__WEBPACK_IMPORTED_MODULE_20__["ProductDetailsComponent"],
+                    _pages_profile_profile_component__WEBPACK_IMPORTED_MODULE_21__["ProfileComponent"],
+                    _components_picture_upload_picture_upload_component__WEBPACK_IMPORTED_MODULE_22__["PictureUploadComponent"]
                 ],
                 imports: [
                     _angular_common__WEBPACK_IMPORTED_MODULE_4__["CommonModule"],
@@ -2550,41 +2507,6 @@ var AppModule = /** @class */ (function () {
                 bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_15__["AppComponent"]]
             }]
     }], null, null); })();
-
-
-/***/ }),
-
-/***/ "ZV+A":
-/*!************************************!*\
-  !*** ./src/shared/qrCodeHelper.ts ***!
-  \************************************/
-/*! exports provided: storeQRCode, getStoredQRCode, clearQRCode */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "storeQRCode", function() { return storeQRCode; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStoredQRCode", function() { return getStoredQRCode; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearQRCode", function() { return clearQRCode; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
-
-function storeQRCode(qrCode) {
-    if (qrCode.attributes) {
-        qrCode = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({ id: qrCode.id }, qrCode.attributes);
-    }
-    else {
-        qrCode = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, qrCode);
-    }
-    localStorage.setItem('id', qrCode.id);
-}
-function getStoredQRCode() {
-    return {
-        id: localStorage.getItem('id')
-    };
-}
-function clearQRCode() {
-    localStorage.clear();
-}
 
 
 /***/ }),
@@ -2693,7 +2615,7 @@ var RegisterComponent = /** @class */ (function () {
         this.signUpError = false;
         this.username = Object(src_shared_userHelper__WEBPACK_IMPORTED_MODULE_6__["getStoredUser"])().username;
         if (this.username) {
-            this.router.navigate(['/qrcodes']);
+            this.router.navigate(['/products']);
         }
         this.userSignUp = this.formBuilder.group({
             firstName: '',
@@ -2792,7 +2714,7 @@ var RegisterComponent = /** @class */ (function () {
         });
         setTimeout(function () {
             _this.loading = false;
-            _this.router.navigate(['/qrcodes']);
+            _this.router.navigate(['/products']);
         }, 1500);
     };
     RegisterComponent.prototype.login = function () {
@@ -2937,7 +2859,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _c0 = function () { return ["/"]; };
-var _c1 = function () { return ["/qrcodes"]; };
 var NavbarComponent = /** @class */ (function () {
     function NavbarComponent(router) {
         var _this = this;
@@ -2987,32 +2908,32 @@ var NavbarComponent = /** @class */ (function () {
         });
     };
     NavbarComponent.prototype.routeToHome = function () {
-        this.router.navigate(['/qrcodes']);
+        this.router.navigate(['/products']);
+    };
+    NavbarComponent.prototype.routeToProducts = function () {
+        this.router.navigate(['/products']);
     };
     NavbarComponent.prototype.routeToProfile = function () {
         this.router.navigate(['/profile']);
     };
     NavbarComponent.prototype.routeToCreate = function () {
-        this.selectedQRCode = {
+        this.selectedProduct = {
             id: "0",
-            tagTitle: "",
-            tagSubTitle: "",
-            tagCompany: "",
-            tagPrice: "",
-            tagUrl: "",
-            tagAddress: "",
-            tagAddress2: "",
-            tagCity: "",
-            tagState: "",
-            tagZip: "",
-            tagInfo: ""
+            productTitle: "",
+            productSubTitle: "",
+            productCategory: "",
+            productUrl: "",
+            productPrice: "",
+            productAddress: "",
+            productDetails: "",
+            productInfo: ""
         };
-        localStorage.setItem('selectedQRCode', JSON.stringify(this.selectedQRCode));
-        localStorage.setItem('selectedQRCodeId', "0");
-        this.router.navigate(["/qrcodes/create"]);
+        localStorage.setItem('selectedProduct', JSON.stringify(this.selectedProduct));
+        localStorage.setItem('selectedProductId', "0");
+        this.router.navigate(["/products/create"]);
     };
     NavbarComponent.ɵfac = function NavbarComponent_Factory(t) { return new (t || NavbarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"])); };
-    NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavbarComponent, selectors: [["app-navbar"]], decls: 41, vars: 9, consts: [["id", "navbar-main", 1, "navbar", "navbar-main", "navbar-expand-lg", "navbar-dark", "headroom"], [1, "container"], [1, "navbar-brand", "icon-logo", "mr-lg-5", 3, "routerLink"], [1, "fa-solid", "fa-qrcode"], ["aria-controls", "navbar_global", "aria-label", "Toggle navigation", "id", "navbar_global", "type", "button", 1, "navbar-toggler", 3, "click"], [1, "navbar-toggler-icon"], ["id", "navbar_global", 1, "navbar-collapse"], [1, "navbar-collapse-header"], [1, "row"], [1, "col-6", "collapse-brand"], [3, "routerLink"], ["src", "assets/img/brand/blue.png"], [1, "col-6", "collapse-close"], [1, "navbar-nav", "navbar-nav-hover", "align-items-lg-center", "ml-lg-auto"], [1, "nav-item", "dropdown"], ["data-toggle", "dropdown", "href", "#", "role", "button", 1, "nav-link"], [1, "fa-solid", "fa-user", "d-lg-none"], [1, "nav-link-inner--text"], ["aria-labelledby", "navbarDropdownMenuLink", 1, "dropdown-menu"], [1, "dropdown-item", 3, "routerLink"], [1, "fa-solid", "fa-id-card"], [1, "dropdown-item", 3, "click"], [1, "fa-solid", "fa-arrow-right-from-bracket"]], template: function NavbarComponent_Template(rf, ctx) { if (rf & 1) {
+    NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavbarComponent, selectors: [["app-navbar"]], decls: 41, vars: 7, consts: [["id", "navbar-main", 1, "navbar", "navbar-main", "navbar-expand-lg", "navbar-dark", "headroom"], [1, "container"], [1, "navbar-brand", "icon-logo", "mr-lg-5", 3, "routerLink"], [1, "fa-solid", "fa-qrcode"], ["aria-controls", "navbar_global", "aria-label", "Toggle navigation", "id", "navbar_global", "type", "button", 1, "navbar-toggler", 3, "click"], [1, "navbar-toggler-icon"], ["id", "navbar_global", 1, "navbar-collapse"], [1, "navbar-collapse-header"], [1, "row"], [1, "col-6", "collapse-brand"], [3, "routerLink"], ["src", "assets/img/brand/blue.png"], [1, "col-6", "collapse-close"], [1, "navbar-nav", "navbar-nav-hover", "align-items-lg-center", "ml-lg-auto"], [1, "nav-item", "dropdown"], ["data-toggle", "dropdown", "href", "#", "role", "button", 1, "nav-link"], [1, "fa-solid", "fa-user", "d-lg-none"], [1, "nav-link-inner--text"], ["aria-labelledby", "navbarDropdownMenuLink", 1, "dropdown-menu"], [1, "dropdown-item", 3, "click"], [1, "fa-solid", "fa-id-card"], [1, "fa-solid", "fa-arrow-right-from-bracket"]], template: function NavbarComponent_Template(rf, ctx) { if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "nav", 0);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "a", 2);
@@ -3044,18 +2965,19 @@ var NavbarComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "a", 15);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "i", 16);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "span", 17);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "QR Codes");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](21, "Products");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 18);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "a", 19);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NavbarComponent_Template_a_click_23_listener() { return ctx.routeToProducts(); });
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](24, "i", 20);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "My QR Codes ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "My Products ");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "a", 21);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "a", 19);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NavbarComponent_Template_a_click_26_listener() { return ctx.routeToCreate(); });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "i", 22);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, "Create QR Code ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "i", 21);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, "Create Product ");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -3067,14 +2989,14 @@ var NavbarComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "div", 18);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "a", 21);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "a", 19);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NavbarComponent_Template_a_click_35_listener() { return ctx.routeToProfile(); });
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](36, "i", 20);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](37, "My Profile ");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "a", 21);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](38, "a", 19);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NavbarComponent_Template_a_click_38_listener() { return ctx.signOut(); });
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](39, "i", 22);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](39, "i", 21);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](40, "Sign Out ");
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -3085,16 +3007,14 @@ var NavbarComponent = /** @class */ (function () {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         } if (rf & 2) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](6, _c0));
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](5, _c0));
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵattribute"]("aria-expanded", !ctx.isCollapsed);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](7, _c0));
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](6, _c0));
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵattribute"]("aria-expanded", !ctx.isCollapsed);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](8, _c1));
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](20);
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"]("Hi, ", ctx.displayName, "!");
         } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJuYXZiYXIuY29tcG9uZW50LnNjc3MifQ== */"] });
     return NavbarComponent;
@@ -3108,6 +3028,41 @@ var NavbarComponent = /** @class */ (function () {
                 styleUrls: ["./navbar.component.scss"]
             }]
     }], function () { return [{ type: _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "p+hK":
+/*!*************************************!*\
+  !*** ./src/shared/productHelper.ts ***!
+  \*************************************/
+/*! exports provided: storeProduct, getStoredProduct, clearProduct */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "storeProduct", function() { return storeProduct; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStoredProduct", function() { return getStoredProduct; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clearProduct", function() { return clearProduct; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+
+function storeProduct(product) {
+    if (product.attributes) {
+        product = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({ id: product.id }, product.attributes);
+    }
+    else {
+        product = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__assign"])({}, product);
+    }
+    localStorage.setItem('id', product.id);
+}
+function getStoredProduct() {
+    return {
+        id: localStorage.getItem('id')
+    };
+}
+function clearProduct() {
+    localStorage.clear();
+}
 
 
 /***/ }),
@@ -3126,8 +3081,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "iInd");
 /* harmony import */ var _pages_register_register_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/register/register.component */ "fNfI");
 /* harmony import */ var _pages_login_login_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/login/login.component */ "D8EZ");
-/* harmony import */ var _pages_qrcodes_qrcodes_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/qrcodes/qrcodes.component */ "LxSD");
-/* harmony import */ var _pages_qrcodedetails_qrcodedetails_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/qrcodedetails/qrcodedetails.component */ "W+bR");
+/* harmony import */ var _pages_productlist_productlist_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/productlist/productlist.component */ "6hMR");
+/* harmony import */ var _pages_productdetails_productdetails_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/productdetails/productdetails.component */ "2gyl");
 /* harmony import */ var _pages_profile_profile_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/profile/profile.component */ "Y5Lh");
 
 
@@ -3139,12 +3094,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var routes = [
-    { path: "", redirectTo: "qrcodes", pathMatch: "full" },
+    { path: "", redirectTo: "products", pathMatch: "full" },
     { path: "login", component: _pages_login_login_component__WEBPACK_IMPORTED_MODULE_3__["LoginComponent"] },
     { path: "signup", component: _pages_register_register_component__WEBPACK_IMPORTED_MODULE_2__["RegisterComponent"] },
-    { path: "qrcodes", component: _pages_qrcodes_qrcodes_component__WEBPACK_IMPORTED_MODULE_4__["QRCodesComponent"] },
-    { path: "qrcodes/:id", component: _pages_qrcodedetails_qrcodedetails_component__WEBPACK_IMPORTED_MODULE_5__["QRCodeDetailsComponent"] },
-    { path: "qrcodes/create", component: _pages_qrcodedetails_qrcodedetails_component__WEBPACK_IMPORTED_MODULE_5__["QRCodeDetailsComponent"] },
+    { path: "products", component: _pages_productlist_productlist_component__WEBPACK_IMPORTED_MODULE_4__["ProductListComponent"] },
+    { path: "products/:id", component: _pages_productdetails_productdetails_component__WEBPACK_IMPORTED_MODULE_5__["ProductDetailsComponent"] },
+    { path: "products/create", component: _pages_productdetails_productdetails_component__WEBPACK_IMPORTED_MODULE_5__["ProductDetailsComponent"] },
     { path: "profile", component: _pages_profile_profile_component__WEBPACK_IMPORTED_MODULE_6__["ProfileComponent"] }
 ];
 var AppRoutingModule = /** @class */ (function () {
